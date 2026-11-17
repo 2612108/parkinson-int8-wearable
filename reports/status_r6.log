@@ -1,6 +1,10 @@
-2026-11-17T05:57:35+07:00
-p56w0: nguynthqunhlu/parkinson-p56w0 has status "KernelWorkerStatus.RUNNING"
-p56w1: nguynthqunhlu/parkinson-p56w1 has status "KernelWorkerStatus.RUNNING"
-p56w2: nguynthqunhlu/parkinson-p56w2 has status "KernelWorkerStatus.RUNNING"
-p56y0: nguynthqunhlu/parkinson-p56y0 has status "KernelWorkerStatus.RUNNING"
-p56y1: nguynthqunhlu/parkinson-p56y1 has status "KernelWorkerStatus.RUNNING"
+2026-11-17T10:21:43+07:00
+p56w0: nguynthqunhlu/parkinson-p56w0 has status "KernelWorkerStatus.COMPLETE"
+  pulled p56w0
+p56w1: nguynthqunhlu/parkinson-p56w1 has status "KernelWorkerStatus.COMPLETE"
+  pulled p56w1
+p56w2: nguynthqunhlu/parkinson-p56w2 has status "KernelWorkerStatus.COMPLETE"
+  pulled p56w2
+p56y0: nguynthqunhlu/parkinson-p56y0 has status "KernelWorkerStatus.COMPLETE"
+p56y1: nguynthqunhlu/parkinson-p56y1 has status "KernelWorkerStatus.COMPLETE"
+  pulled p56y1

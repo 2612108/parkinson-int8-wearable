@@ -10,3 +10,19 @@
       7 b1_bench/gen_real_qat_sr
       7 b1_bench/gen_real_qat
       7 b1_bench/gen_real_ptq
+---after
+a2c0847 Initial import: scripts, Kaggle notebooks, firmware sources, results, manuscript (BSPC R6)
+864
+     14 b1_bench/variants
+     13 b3_causal/main
+     13 b2_e2e/main
+     10 b6_fold/main
+     10 b5_a16/main
+     10 b1_bench/main
+      7 b4_rf/main
+      7 b1_bench/gen_real_qat_sr
+      7 b1_bench/gen_real_qat
+      7 b1_bench/gen_real_ptq
+      6 b1_bench/dummy
+      2 b0_smoke/main
+size-pack: 83.44 MiB

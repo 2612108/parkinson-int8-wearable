@@ -1,0 +1,22 @@
+import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+plt.rcParams.update({'font.size':7.8,'font.family':'serif'})
+fig,ax=plt.subplots(figsize=(7.2,3.9)); ax.set_xlim(0,100); ax.set_ylim(0,56); ax.axis('off')
+def box(x,y,w,h,t,fc='white'):
+    ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.4,rounding_size=1.2',fc=fc,ec='0.3',lw=0.8))
+    ax.text(x+w/2,y+h/2,t,ha='center',va='center')
+def arr(x1,y1,x2,y2): ax.annotate('',xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(arrowstyle='->',lw=0.8,color='0.3'))
+box(1,44,17,9,'PADS smartwatches\nboth wrists, 11 tasks\n276 PD / 79 HC')
+box(23,44,22,9,'Resample to 50 Hz;\nband-pass 0.5–20 Hz\n(zero-phase or causal);\n4-s windows')
+box(50,44,22,9,'Outer 5-fold CV\nby participant (seed sets\nfolds and initialization)')
+box(77,44,22,9,'Training participants:\n80% train, 20% validation\n(~57, of whom ~13 HC)')
+arr(18.5,48.5,22.5,48.5); arr(45.5,48.5,49.5,48.5); arr(72.5,48.5,76.5,48.5)
+box(1,26,30,12,'Train FP32 DS-TCN (22.7k)\nwith / without sensor\nrandomization; QAT fine-tuning',fc='#eef3fb')
+box(35,26,30,12,'Convert: PTQ int8 (min/max;\n300 or 2000 calibration windows\nfrom training data, 10 draws),\nCLE + PTQ, PTQ 16x8, QAT int8',fc='#fdf1e6')
+box(69,26,30,12,'Temperature and threshold\nper variant on validation\nparticipants (Platt scaling\nin sensitivity analysis)')
+arr(80,43.5,20,38.5); arr(31.5,32,34.5,32); arr(65.5,32,68.5,32)
+box(69,5,30,13,'Test participants of the fold:\nclean, 14 simulated shifts,\ncausal input to\nzero-phase models')
+box(35,5,30,13,'Metrics: within-fold AUROC\n(corrected t), pooled AUROC\n(planned), BA, sensitivity,\nspecificity, ECE, agreement')
+box(1,5,30,13,'ESP32-S3 (TFLM + ESP-NN):\nfold-0 models, whole-fold\nreplay (8378 windows), latency,\nbit-exactness, on-device\npreprocessing',fc='#e9f6ec')
+arr(84,25.5,84,18.5); arr(45,25.5,20,18.5); arr(68.5,11.5,65.5,11.5)
+fig.tight_layout(); fig.savefig('/mnt/user-data/outputs/PARKINSON/paper_bspc/Figure_1.pdf'); fig.savefig('/tmp/Figure_1.png',dpi=110)

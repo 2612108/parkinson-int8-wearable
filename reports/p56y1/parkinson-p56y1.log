@@ -1,0 +1,103 @@
+[{"stream_name":"stderr","time":13.813990987,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":13.814137731,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":13.814145342,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":13.814161977,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":14.936068167,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":14.936129827,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":14.936136475,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":14.936141254,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":16.739774172,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":19.721579907,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":19.721633919,"data":"I0000 00:00:1794869759.285028      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":43.799234828,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":43.799350633,"data":"I0000 00:00:1794869783.356685      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":61.158245362,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":61.158326934,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":61.158335907,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":62.032064036,"data":"\u001b[0mWriting src/monipar_io.py\n"}
+,{"stream_name":"stdout","time":62.055673973,"data":"Writing src/evalkit.py\n"}
+,{"stream_name":"stdout","time":62.078507711,"data":"Writing src/pads_io.py\n"}
+,{"stream_name":"stdout","time":62.099789149,"data":"Writing src/features.py\n"}
+,{"stream_name":"stdout","time":62.151337993,"data":"Writing scripts/p56x_quant_extra.py\n"}
+,{"stream_name":"stdout","time":62.243931828,"data":"3ca022e21bf49bfd33f823d769659eb2  scripts/p56x_quant_extra.py\r\n"}
+,{"stream_name":"stdout","time":1533.928232391,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1533.928317336,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1533.928323045,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":1533.928326669,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1533.928330417,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1533.928344429,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":1533.928347428,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1533.928350402,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":1533.928353349,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":1533.928356186,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":1533.928358978,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":1533.928361585,"data":"    \r\n"}
+,{"stream_name":"stdout","time":1533.928364538,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":1533.928371314,"data":"raw {\"fp32_epochs\": 2, \"fp32_ft_epochs\": 1, \"cle_check_maxdiff\": [2.384185791015625e-07, 2.384185791015625e-07], \"qat_epochs\": 1, \"fp32_sr_epochs\": 2, \"qat_sr_epochs\": 1, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 49488, \"ptqm300_0\": 49208, \"ptqk300_0\": 49208, \"ptqp300_0\": 49208, \"ptqm2k_0\": 49208, \"ptqk2k_0\": 49208, \"ptqp2k_0\": 49208, \"ptqc300_0\": 49488, \"ptqc2k_0\": 49488, \"ptqcb300_0\": 49488, \"ptqcb2k_0\": 49488, \"qat\": 50888, \"ptq_sr\": 49488, \"qat_sr\": 50888}, \"fold\": 4, \"sec\": 270.2, \"maxrss_gb\": 3.44}\r\n"}
+,{"stream_name":"stdout","time":1533.928380514,"data":"xong 1449.7\r\n"}
+,{"stream_name":"stdout","time":13824.149800989,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":13824.149864448,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":13824.149880417,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":13824.149884914,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":13824.149888657,"data":"    \r\n"}
+,{"stream_name":"stdout","time":13824.149892195,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":13824.149897715,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:465: UserWarning: Warning: Enabling `experimental_preserve_all_tensors` with the BUILTIN or AUTO op resolver is intended for debugging purposes only. Be aware that this can significantly increase memory usage by storing all intermediate tensors. If you encounter memory problems or are not actively debugging, consider disabling this option.\r\n"}
+,{"stream_name":"stdout","time":13824.149903164,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.149907314,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.149928835,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.149935372,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":13824.149941745,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":13824.149960158,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":13824.149964552,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":13824.149968493,"data":"    \r\n"}
+,{"stream_name":"stdout","time":13824.149972369,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":13824.149976455,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:465: UserWarning: Warning: Enabling `experimental_preserve_all_tensors` with the BUILTIN or AUTO op resolver is intended for debugging purposes only. Be aware that this can significantly increase memory usage by storing all intermediate tensors. If you encounter memory problems or are not actively debugging, consider disabling this option.\r\n"}
+,{"stream_name":"stdout","time":13824.149981754,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.149987084,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.149991562,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.149997467,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150006914,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150009638,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150013098,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150031787,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150036849,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150041306,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150046041,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150050586,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150055625,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150059462,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":13824.150063859,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":13824.150067739,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":13824.150087665,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":13824.150091881,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":13824.150096238,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":13824.15010009,"data":"    \r\n"}
+,{"stream_name":"stdout","time":13824.150109446,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":13824.150138061,"data":"raw {\"fp32_epochs\": 25, \"fp32_ft_epochs\": 5, \"cle_check_maxdiff\": [9.5367431640625e-06, 1.2874603271484375e-05], \"qat_epochs\": 5, \"fp32_sr_epochs\": 30, \"qat_sr_epochs\": 5, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 49488, \"ptqm300_0\": 49208, \"ptqk300_0\": 49208, \"ptqp300_0\": 49208, \"ptqm2k_0\": 49208, \"ptqk2k_0\": 49208, \"ptqp2k_0\": 49208, \"ptqc300_0\": 49488, \"ptqc2k_0\": 49488, \"ptqcb300_0\": 49488, \"ptqcb2k_0\": 49488, \"ptqd300_1\": 49488, \"ptqd2k_1\": 49488, \"ptqm300_1\": 49208, \"ptqk300_1\": 49208, \"ptqp300_1\": 49208, \"ptqm2k_1\": 49208, \"ptqk2k_1\": 49208, \"ptqp2k_1\": 49208, \"ptqc300_1\": 49488, \"ptqc2k_1\": 49488, \"ptqcb300_1\": 49488, \"ptqcb2k_1\": 49488, \"ptqd300_2\": 49488, \"ptqd2k_2\": 49488, \"ptqm300_2\": 49208, \"ptqk300_2\": 49208, \"ptqp300_2\": 49208, \"ptqm2k_2\": 49208, \"ptqk2k_2\": 49208, \"ptqp2k_2\": 49208, \"ptqc300_2\": 49488, \"ptqc2k_2\": 49488, \"ptqcb300_2\": 49488, \"ptqcb2k_2\": 49488, \"ptqd300_3\": 49488, \"ptqd2k_3\": 49488, \"ptqm300_3\": 49208, \"ptqk300_3\": 49208, \"ptqp300_3\": 49208, \"ptqm2k_3\": 49208, \"ptqk2k_3\": 49208, \"ptqp2k_3\": 49208, \"ptqc300_3\": 49488, \"ptqc2k_3\": 49488, \"ptqcb300_3\": 49488, \"ptqcb2k_3\": 49488, \"ptqd300_4\": 49488, \"ptqd2k_4\": 49488, \"ptqm300_4\": 49208, \"ptqk300_4\": 49208, \"ptqp300_4\": 49208, \"ptqm2k_4\": 49208, \"ptqk2k_4\": 49208, \"ptqp2k_4\": 49208, \"ptqc300_4\": 49488, \"ptqc2k_4\": 49488, \"ptqcb300_4\": 49488, \"ptqcb2k_4\": 49488, \"ptqd300_5\": 49488, \"ptqd2k_5\": 49488, \"ptqm300_5\": 49208, \"ptqk300_5\": 49208, \"ptqp300_5\": 49208, \"ptqm2k_5\": 49208, \"ptqk2k_5\": 49208, \"ptqp2k_5\": 49208, \"ptqc300_5\": 49488, \"ptqc2k_5\": 49488, \"ptqcb300_5\": 49488, \"ptqcb2k_5\": 49488, \"ptqd300_6\": 49488, \"ptqd2k_6\": 49488, \"ptqm300_6\": 49208, \"ptqk300_6\": 49208, \"ptqp300_6\": 49208, \"ptqm2k_6\": 49208, \"ptqk2k_6\": 49208, \"ptqp2k_6\": 49208, \"ptqc300_6\": 49488, \"ptqc2k_6\": 49488, \"ptqcb300_6\": 49488, \"ptqcb2k_6\": 49488, \"ptqd300_7\": 49488, \"ptqd2k_7\": 49488, \"ptqm300_7\": 49208, \"ptqk300_7\": 49208, \"ptqp300_7\": 49208, \"ptqm2k_7\": 49208, \"ptqk2k_7\": 49208, \"ptqp2k_7\": 49208, \"ptqc300_7\": 49488, \"ptqc2k_7\": 49488, \"ptqcb300_7\": 49488, \"ptqcb2k_7\": 49488, \"ptqd300_8\": 49488, \"ptqd2k_8\": 49488, \"ptqm300_8\": 49208, \"ptqk300_8\": 49208, \"ptqp300_8\": 49208, \"ptqm2k_8\": 49208, \"ptqk2k_8\": 49208, \"ptqp2k_8\": 49208, \"ptqc300_8\": 49488, \"ptqc2k_8\": 49488, \"ptqcb300_8\": 49488, \"ptqcb2k_8\": 49488, \"ptqd300_9\": 49488, \"ptqd2k_9\": 49488, \"ptqm300_9\": 49208, \"ptqk300_9\": 49208, \"ptqp300_9\": 49208, \"ptqm2k_9\": 49208, \"ptqk2k_9\": 49208, \"ptqp2k_9\": 49208, \"ptqc300_9\": 49488, \"ptqc2k_9\": 49488, \"ptqcb300_9\": 49488, \"ptqcb2k_9\": 49488, \"qat\": 50888, \"ptq_sr\": 49488, \"qat_sr\": 50888}, \"fold\": 4, \"sec\": 2639.5, \"maxrss_gb\": 6.3}\r\n"}
+,{"stream_name":"stdout","time":13824.150174031,"data":"xong 12274.5\r\n"}
+,{"stream_name":"stdout","time":13824.274459874,"data":"-rw-r--r-- 1 root root 246495 Nov 17 02:45 reports/p56y1_run.log\r\n"}
+,{"stream_name":"stdout","time":13824.274498505,"data":"\r\n"}
+,{"stream_name":"stdout","time":13824.274502256,"data":"reports/p56m:\r\n"}
+,{"stream_name":"stdout","time":13824.274505217,"data":"total 8\r\n"}
+,{"stream_name":"stdout","time":13824.274508409,"data":"drwxr-xr-x 2 root root 4096 Nov 16 22:55 .\r\n"}
+,{"stream_name":"stdout","time":13824.274511139,"data":"drwxr-xr-x 4 root root 4096 Nov 17 02:46 ..\r\n"}
+,{"stream_name":"stdout","time":13824.27451384,"data":"\r\n"}
+,{"stream_name":"stdout","time":13824.274516384,"data":"reports/p56y1:\r\n"}
+,{"stream_name":"stdout","time":13824.274551047,"data":"total 1432\r\n"}
+,{"stream_name":"stdout","time":13824.274556255,"data":"drwxr-xr-x 3 root root    4096 Nov 17 02:45 .\r\n"}
+,{"stream_name":"stdout","time":13824.274560925,"data":"drwxr-xr-x 4 root root    4096 Nov 17 02:46 ..\r\n"}
+,{"stream_name":"stdout","time":13824.274565538,"data":"-rw-r--r-- 1 root root   83528 Nov 17 02:38 calib.jsonl\r\n"}
+,{"stream_name":"stdout","time":13824.27456948,"data":"-rw-r--r-- 1 root root   13877 Nov 17 02:45 fold_meta.jsonl\r\n"}
+,{"stream_name":"stdout","time":13824.274573232,"data":"drwxr-xr-x 2 root root    4096 Nov 17 00:02 models\r\n"}
+,{"stream_name":"stdout","time":13824.274577284,"data":"-rw-r--r-- 1 root root 1124500 Nov 17 02:45 patient_preds_PD_vs_HC_raw.csv\r\n"}
+,{"stream_name":"stdout","time":13824.274581331,"data":"-rw-r--r-- 1 root root     856 Nov 17 02:45 run_info.json\r\n"}
+,{"stream_name":"stdout","time":13824.274585415,"data":"-rw-r--r-- 1 root root  220787 Nov 17 02:45 shift_results.csv\r\n"}
+,{"stream_name":"stderr","time":13827.856477637,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":13827.856528072,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":13828.086437301,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":13828.086472336,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":13829.081485242,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":13829.188005943,"data":"[NbConvertApp] Writing 80319 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":13832.534573589,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":13833.438310085,"data":"[NbConvertApp] Writing 645809 bytes to __results__.html\n"}
+]

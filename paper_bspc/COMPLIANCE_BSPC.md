@@ -8,7 +8,7 @@ ISSN 1746-8094 (print) / 1746-8108 (online). Chỉ mục: Web of Science Core Co
 |---|---|---|
 | Loại bài | Full paper "should normally be about 5,000 words" (đoạn trích Guide for Authors, 17/11/2026) | Văn xuôi thân bài ≈ 5906 từ (không kể bảng, hình, tài liệu); 3 hình + 9 bảng; phần chi tiết đã chuyển sang Supplementary (S1–S4). Dài hơn mức "normally about" khoảng 15–20% — nếu biên tập yêu cầu rút, chuyển tiếp Bảng 1 và mục 4.7 sang Supplementary |
 | Tóm tắt | Không quá 250 từ, một đoạn | 247 từ, không trích dẫn ✔ |
-| Từ khóa | (?) chưa xác nhận được giới hạn — trang Guide chặn truy cập tự động (403) cả từ công cụ lẫn trình duyệt trong ứng dụng | 7 từ khóa; nếu giới hạn là 6, bỏ "Cross-validation" |
+| Từ khóa | 1–7 từ khóa, tiếng Anh, tránh cụm có "and"/"of" (Guide for Authors, anh xác nhận 17/11/2026) | 7 từ khóa, không có "and"/"of" ✔ |
 | Highlights | Bắt buộc, file riêng, 3–5 ý, ≤ 85 ký tự | 5 ý, 73–82 ký tự (`highlights.docx`) ✔ |
 | Graphical abstract | Khuyến khích (không bắt buộc) | Chưa làm — có thể dùng lại Figure 1, chữ phải đọc được ở 13 cm |
 | Template | elsarticle chính thức (`preprint,12pt`, `elsarticle-num`, `\journal{}`) | ✔ TeX Live elsarticle.cls; biên dịch sạch, 25 trang |

@@ -11,7 +11,7 @@ find . -path ./.git -prune -o -path ./.venv -prune -o -path ./data -prune -o -pa
 done
 git add -A
 if git diff --cached --quiet; then echo "nothing to commit"; else
-  git commit -q -m "$MSG" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+  git commit -q -m "$MSG" -m "Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01WqnLXUDtvpnoCRAFWVXAPF" && echo "committed: $MSG"
 fi
 git push -q origin HEAD:main 2>&1 | tail -3

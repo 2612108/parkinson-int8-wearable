@@ -13,6 +13,8 @@
 \usepackage{textcomp}
 \usepackage[hidelinks]{hyperref}
 \usepackage{lineno}
+\usepackage[skip=6pt]{caption}
+\setlength{\emergencystretch}{2em}
 
 \journal{Biomedical Signal Processing and Control}
 
@@ -74,7 +76,7 @@ This paper is an empirical evaluation of these issues for one task and one tiny 
 \caption{Comparison with prior work.}
 \label{tab:related}
 \centering\scriptsize\setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
 \toprule
 Study & Data & Participant split & INT8 & On MCU \\
 \midrule
@@ -86,7 +88,7 @@ Nikandish et al.~\cite{Nikandish2026} & ECG & n.a. & yes & n.r. \\
 El Allam~\cite{ElAllam2026} & ECG & yes & yes & yes \\
 This work & PADS & yes & yes & yes (whole fold) \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize MCU: microcontroller. n.r.: not reported. n.a.: not applicable. $^{a}$Preprint.}
 \end{table}
@@ -137,18 +139,19 @@ Table~\ref{tab:fam} lists the run families and where each is reported. A run is 
 \label{tab:fam}
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}llll@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llp{0.33\linewidth}l@{}}
 \toprule
 Runs & Filter, seeds & Purpose & Reported in \\
 \midrule
 a & zero-phase, 0 & planned primary run & Tables~\ref{tab:hyp}, \ref{tab:runs}, \ref{tab:board} \\
-z0--z2 & zero-phase, 0--2 & replication with the specified network & Table~\ref{tab:runs}; device replay (z0) \\
-r0--r2 & zero-phase, 0--2 & as z, calibration stored; 10 draws per model & Tables~\ref{tab:runs}--\ref{tab:dec}, Figs.~\ref{fig:shift}, \ref{fig:draws} \\
-k0--k2 & causal, 0--2 & device-matched filter & Tables~\ref{tab:runs}, \ref{tab:quant}, \ref{tab:board}; streaming (k0) \\
-w0--w2, y0--y1 & zero-phase 0--2, causal 0--1 & six calibration methods per draw & Table~\ref{tab:clip} \\
+z0--z2 & zero-phase, 0--2 & replication, specified network & Table~\ref{tab:runs}; replay (z0) \\
+r0--r2 & zero-phase, 0--2 & as z; calibration stored, ten draws per model & Tables~\ref{tab:runs}--\ref{tab:dec}; Figs.~\ref{fig:shift}, \ref{fig:draws} \\
+k0--k2 & causal, 0--2 & device-matched filter & Tables~\ref{tab:runs}, \ref{tab:quant}, \ref{tab:board} \\
+w0--w2 & zero-phase, 0--2 & six calibration methods per draw & Table~\ref{tab:clip} \\
+y0--y1 & causal, 0--1 & six calibration methods per draw & Table~\ref{tab:clip} \\
 q0--q1, v0--v1 & zero-phase, 0--3 & fold 0 retrained 5$\times$; ranges, fidelity & Section~\ref{sec:calib} \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize Benchmark networks and feature models (Table~\ref{tab:main}) come from a separate seed-0 run. Five runs with a script error (no BN after the depthwise convolutions) are reported in Supplementary Table~S1.}
 \end{table}
@@ -168,7 +171,7 @@ Feature models were at least as accurate as every network (Table~\ref{tab:main})
 \label{tab:main}
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}lccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccc@{}}
 \toprule
  & & \multicolumn{2}{c}{PD vs HC} & \multicolumn{2}{c}{PD vs DD} \\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}
@@ -183,7 +186,7 @@ DS-TCN & 22.7k & 0.856 (0.807--0.901) & 0.882 (0.023) & 0.635 & 0.681 (0.119)$^{
 DS-TCN, invariant input & 22.7k & 0.807 (0.756--0.856) & 0.846 (0.062) & 0.633 & 0.624 (0.124)$^{a}$ \\
 DS-TCN, attention pooling & -- & 0.846 (0.796--0.889) & 0.847 (0.048) & 0.551 & 0.566 (0.019) \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize Networks: one seed. Feature models, seeds 1 and 2 (PD vs HC, pooled): random forest 0.908 and 0.912, XGBoost 0.888 and 0.918. $^{a}$One fold near chance.}
 \end{table}
@@ -197,7 +200,7 @@ Seeds 1 and 2 of the planned replication were first executed by a script in whic
 \label{tab:hyp}
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}llcccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llcccc@{}}
 \toprule
  & & \multicolumn{2}{c}{Pooled (planned)} & \multicolumn{2}{c}{Fold-normalized} \\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}
@@ -213,7 +216,7 @@ H3 & 0 & $+0.133$ ($+0.058$, $+0.210$) & \textbf{$<$0.001} & $+0.058$ ($+0.003$,
  & 1 & $+0.055$ ($+0.011$, $+0.099$) & \textbf{0.030} & $-0.008$ ($-0.040$, $+0.024$) & 0.81 \\
  & 2 & $+0.000$ ($-0.079$, $+0.073$) & 1.00 & $+0.003$ ($-0.028$, $+0.037$) & 0.95 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize H1: PTQ$-$FP32, clean; $p$ one-sided against the $-0.02$ margin. H2, H3: two-sided bootstrap $p$. H2: loss of PTQ minus loss of FP32 (clean minus 14-shift mean). H3: QAT+SR minus PTQ, 14-shift mean. Bold: supported.}
 \end{table}
@@ -232,7 +235,7 @@ PTQ with 300 calibration windows lost on average 0.028 (zero-phase) and 0.017 (c
 \label{tab:runs}
 \centering\scriptsize
 \setlength{\tabcolsep}{2pt}
-\begin{tabular}{@{}lllccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllccccc@{}}
 \toprule
 Run & Filter & Seed & FP32 & PTQ int8 & PTQ, 2000 & PTQ $16\times8$ & QAT int8 \\
 \midrule
@@ -248,7 +251,7 @@ k0 & Causal & 0 & 0.875 & $0.000$ ($-0.018$) & $-0.024$ & $0.000$ & $-0.003$ ($-
 k1 & Causal & 1 & 0.856 & $-0.028$ ($-0.060$) & $-0.041$ & $-0.002$ & $+0.005$ ($-0.012$) \\
 k2 & Causal & 2 & 0.849 & $-0.024$ ($-0.089$) & $-0.100$ & $0.000$ & $-0.001$ ($-0.027$) \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize Each row is one cross-validation run (five folds), identified by the run label used in all other tables and figures; runs with the same seed share folds. Runs r0--r2 repeat z0--z2 with calibration parameters stored. Five runs affected by a script error (no BN after the depthwise convolutions) are listed in Supplementary Table~S1. Worst fold: most negative of the five fold differences.}
 \end{table}
@@ -258,7 +261,7 @@ k2 & Causal & 2 & 0.849 & $-0.024$ ($-0.089$) & $-0.100$ & $0.000$ & $-0.001$ ($
 \label{tab:quant}
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
 \toprule
  & \multicolumn{2}{c}{Zero-phase filter} & \multicolumn{2}{c}{Causal (device) filter} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-5}
@@ -275,7 +278,7 @@ FP32 + SR & $-0.022$ ($-0.061$, $+0.017$) & $-0.074$ & $-0.028$ ($-0.070$, $+0.0
 PTQ + SR$^{b}$ & $-0.031$ ($-0.146$, $+0.084$) & $-0.368$ & $+0.001$ ($-0.029$, $+0.031$) & $-0.036$ \\
 QAT + SR & $-0.019$ ($-0.064$, $+0.026$) & $-0.085$ & $-0.025$ ($-0.065$, $+0.016$) & $-0.090$ \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize $^{a}$Relative to the fine-tuned FP32 model. $^{b}$Relative to FP32 + SR. Worst: most negative unit.}
 \end{table}
@@ -286,7 +289,7 @@ At the decision level (Table~\ref{tab:dec}), PTQ lowered BA and sensitivity, whi
 \caption{Clean decision metrics (runs r0--r2, mean over 15 fold--seed units). Decisions use the threshold refitted for each variant on validation participants.}
 \label{tab:dec}
 \centering\footnotesize
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
 \toprule
 Variant & AUROC & BA & Sensitivity & Specificity & ECE & Agreement \\
 \midrule
@@ -298,7 +301,7 @@ QAT int8 & 0.873 & 0.778 & 0.759 & 0.797 & 0.124 & 0.854 \\
 QAT + SR & 0.848 & 0.758 & 0.783 & 0.734 & 0.144 & 0.867 \\
 FP32 fine-tuned & 0.877 & 0.761 & 0.807 & 0.715 & 0.122 & 0.910 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 \begin{figure}[!t]
@@ -319,7 +322,7 @@ Across all folds, clipping the calibration inputs removed almost all large losse
 \label{tab:clip}
 \centering\scriptsize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
 \toprule
  & \multicolumn{3}{c}{300 windows} & \multicolumn{3}{c}{2000 windows} \\
 \cmidrule(lr){2-4}\cmidrule(lr){5-7}
@@ -335,7 +338,7 @@ Per-tensor KL & $-0.009$ & 2.8\% & $-0.095$ & $-0.006$ & 0.4\% & $-0.075$ \\
 Method chosen on validation$^a$ & $-0.004$ & -- & $-0.055$ & $-0.003$ & -- & $-0.075$ \\
 Best min/max draw on validation$^a$ & $-0.006$ & 4\% & $-0.052$ & $-0.018$ & 8\% & $-0.077$ \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \smallskip
 \parbox{\linewidth}{\scriptsize $^a$One choice per fold model among the five non-default methods (mean of its ten draws), or among the ten min/max draws; percentages are shares of models. Some draws gained up to 0.066 AUROC over FP32.}
@@ -364,7 +367,7 @@ Replaying the complete fold-0 test set (71 participants, 8378 windows) through t
 \label{tab:board}
 \centering\scriptsize
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{@{}lccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccc@{}}
 \toprule
 Model (test set) & ms & Arena kB & Model kB & Identical & AUROC dev./desk. \\
 \midrule
@@ -377,7 +380,7 @@ QAT int8, causal (whole fold) & 10.68 & 22.6 & 50.9 & 8371/8378 & 0.884/0.884 \\
 PTQ int8, causal (whole fold) & 10.69 & 22.6 & 49.5 & 8372/8378 & 0.908/0.908 \\
 PTQ $16\times8$ (50 win.) & 562.5 & 27.8 & 58.1 & 46/50 & -- \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{2pt}\parbox{\linewidth}{\footnotesize Whole fold: 71 participants, 8378 windows (run z0; causal rows: run k0 with causally filtered input); 50-window tests: run a and, for $16\times8$, run z0. The four non-identical $16\times8$ outputs differ by one step of the int16 output scale, as expected from fixed-point rounding in the reference (non-ESP-NN) kernels. Non-identical outputs differ by one least significant step. Model: flatbuffer size; 1~kB = 1000 bytes. Arena sizes differ between the 50-window benchmark and the whole-fold replay firmware, which are separate builds; we did not trace the difference. Latency: mean of 1000, 8378 or 100 ($16\times8$) invocations.}
 \end{table}

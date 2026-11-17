@@ -1,0 +1,110 @@
+OK | Varghese2024 | bib 2024 | Machine Learning in the Parkinson’s disease smartwatch (PADS) dataset, volume=10, ISSN=237
+     -> 2024 | Varghese | Machine Learning in the Parkinson’s disease smartwatch (PADS) dataset | npj Parkinson's Disease | vol 10 p 9
+OK | PADSdata | bib 2024 | [dataset] PADS -- Parkinson's Disease Smartwatch dataset, version 1.0.0,
+     -> 2024 | Varghese | PADS - Parkinsons Disease Smartwatch dataset |  | vol  p 
+OK | Monipar2023 | bib 2023 | Monipar: movement data collection tool to monitor motor symptoms in Parkinson’s disease us
+     -> 2023 | Sigcha | Monipar: movement data collection tool to monitor motor symptoms in Parkinson’s disease us | Frontiers in Neurology | vol 14 p 1326640
+OK | MoniparData | bib 2023 | Monipar Database: smartwatch movement data to monitor motor competency in subjects with Pa
+     -> 2023 | Sigcha | Monipar Database: smartwatch movement data to monitor motor competency in subjects with Pa |  | vol  p 
+OK | Papadopoulos2023 | bib 2023 | Leveraging Unlabelled Data in Multiple-Instance Learning Problems for Improved Detection o
+     -> 2023 | Papadopoulos | Leveraging Unlabelled Data in Multiple-Instance Learning Problems for Improved Detection o | IEEE Journal of Biomedical and Health Informa | vol 27 p 3569-3578
+OK | Ibrar2026 | bib 2026 | Cross-Modal Federated TinyML for MCU-based Internet of Medical Things, ISSN=2168-2208, DOI
+     -> 2026 | Ibrar | Cross-Modal Federated TinyML for MCU-based Internet of Medical Things | IEEE Journal of Biomedical and Health Informa | vol  p 1-14
+OK | Zheng2026 | bib 2026 | Few-Shot Learning for Cross-Domain Human Activity Recognition Using Wearable Sensors, ISSN
+     -> 2026 | Zheng | Few-Shot Learning for Cross-Domain Human Activity Recognition Using Wearable Sensors | IEEE Journal of Biomedical and Health Informa | vol  p 1-13
+OK | Zhu2025 | bib 2025 | Cross-Domain Human Activity Recognition via Domain Adaptation and Fused Attention, volume=
+     -> 2025 | Zhu | Cross-Domain Human Activity Recognition via Domain Adaptation and Fused Attention | IEEE Journal of Biomedical and Health Informa | vol 29 p 5394-5404
+OK | Nikandish2026 | bib 2026 | Multi-Feature Fusion and Compressed Bi-LSTM for Memory-Efficient Heartbeat Classification 
+     -> 2026 | Nikandish | Multi-Feature Fusion and Compressed Bi-LSTM for Memory-Efficient Heartbeat Classification  | IEEE Journal of Biomedical and Health Informa | vol 30 p 8897-8906
+OK | Zannat2026 | bib 2026 | Label-Efficient Bilateral Attention for Parkinson's Disease Screening from Wrist-Worn IMU 
+     -> 2026 | Zannat | Label-Efficient Bilateral Attention for Parkinson's Disease Screening from Wrist-Worn IMU  |  | vol  p 
+OK | Zhao2025MFAM | bib 2025 | Multi-scale Frequency-Aware Adversarial Network for Parkinson's Disease Assessment Using W
+     -> 2025 | Zhao | Multi-scale Frequency-Aware Adversarial Network for Parkinson's Disease Assessment Using W |  | vol  p 
+OK | Parikh2026 | bib 2026 | A smart glove for Parkinson’s severity detection via low-frequency motion features and on-
+     -> 2026 | Parikh | A smart glove for Parkinson’s severity detection via low-frequency motion features and on- | Journal of Low Frequency Noise, Vibration and | vol 45 p 1030-1062
+OK | LRS2021 | bib 2021 | Accelerometer data collected with a minimum set of wearable sensors from subjects with Par
+     -> 2021 | Daneault | Accelerometer data collected with a minimum set of wearable sensors from subjects with Par | Scientific Data | vol 8 p 48
+OK | GBD2018PD | bib 2018 | Global, regional, and national burden of Parkinson’s disease, 1990–2016: a systematic anal
+     -> 2018 | Dorsey | Global, regional, and national burden of Parkinson's disease, 1990–2016: a systematic anal | The Lancet Neurology | vol 17 p 939-953
+OK | Dorsey2018 | bib 2018 | The Emerging Evidence of the Parkinson Pandemic, volume=8, ISSN=1877-718X, DOI=10.3233/jpd
+     -> 2018 | Dorsey | The Emerging Evidence of the Parkinson Pandemic | Journal of Parkinson’s Disease | vol 8 p S3-S8
+OK | Goetz2008 | bib 2008 | Movement Disorder Society-sponsored revision of the Unified Parkinson’s Disease Rating Sca
+     -> 2008 | Goetz | Movement Disorder Society‐sponsored revision of the Unified Parkinson's Disease Rating Sca | Movement Disorders | vol 23 p 2129-2170
+OK | Postuma2015 | bib 2015 | MDS clinical diagnostic criteria for Parkinson’s disease, volume=30, ISSN=1531-8257, DOI=1
+     -> 2015 | Postuma | MDS clinical diagnostic criteria for Parkinson's disease | Movement Disorders | vol 30 p 1591-1601
+OK | Rovini2017 | bib 2017 | How Wearable Sensors Can Support Parkinson’s Disease Diagnosis and Treatment: A Systematic
+     -> 2017 | Rovini | How Wearable Sensors Can Support Parkinson's Disease Diagnosis and Treatment: A Systematic | Frontiers in Neuroscience | vol 11 p 555
+OK | Sigcha2023rev | bib 2023 | Deep learning and wearable sensors for the diagnosis and monitoring of Parkinson’s disease
+     -> 2023 | Sigcha | Deep learning and wearable sensors for the diagnosis and monitoring of Parkinson’s disease | Expert Systems with Applications | vol 229 p 120541
+OK | Sigcha2021 | bib 2021 | Automatic Resting Tremor Assessment in Parkinson’s Disease Using Smartwatches and Multitas
+     -> 2021 | Sigcha | Automatic Resting Tremor Assessment in Parkinson’s Disease Using Smartwatches and Multitas | Sensors | vol 21 p 291
+OK | Bot2016 | bib 2016 | The mPower study, Parkinson disease mobile data collected using ResearchKit, volume=3, ISS
+     -> 2016 | Bot | The mPower study, Parkinson disease mobile data collected using ResearchKit | Scientific Data | vol 3 p 160011
+OK | Lipsmeier2018 | bib 2018 | Evaluation of smartphone-based testing to generate exploratory outcome measures in a phase
+     -> 2018 | Lipsmeier | Evaluation of smartphone‐based testing to generate exploratory outcome measures in a phase | Movement Disorders | vol 33 p 1287-1297
+OK | Powers2021 | bib 2021 | Smartwatch inertial sensors continuously monitor real-world motor fluctuations in Parkinso
+     -> 2021 | Powers | Smartwatch inertial sensors continuously monitor real-world motor fluctuations in Parkinso | Science Translational Medicine | vol 13 p eabd7865
+OK | SanSegundo2020 | bib 2020 | Parkinson’s Disease Tremor Detection in the Wild Using Wearable Accelerometers, volume=20,
+     -> 2020 | San-Segundo | Parkinson’s Disease Tremor Detection in the Wild Using Wearable Accelerometers | Sensors | vol 20 p 5817
+OK | Saeb2017 | bib 2017 | The need to approximate the use-case in clinical machine learning, volume=6, ISSN=2047-217
+     -> 2017 | Saeb | The need to approximate the use-case in clinical machine learning | GigaScience | vol 6 p gix019
+OK | Kapoor2023 | bib 2023 | Leakage and the reproducibility crisis in machine-learning-based science, volume=4, ISSN=2
+     -> 2023 | Kapoor | Leakage and the reproducibility crisis in machine-learning-based science | Patterns | vol 4 p 100804
+OK | Zech2018 | bib 2018 | Variable generalization performance of a deep learning model to detect pneumonia in chest 
+     -> 2018 | Zech | Variable generalization performance of a deep learning model to detect pneumonia in chest  | PLOS Medicine | vol 15 p e1002683
+OK | Kelly2019 | bib 2019 | Key challenges for delivering clinical impact with artificial intelligence, volume=17, ISS
+     -> 2019 | Kelly | Key challenges for delivering clinical impact with artificial intelligence | BMC Medicine | vol 17 p 195
+OK | Stisen2015 | bib 2015 | Smart Devices are Different: Assessing and Mitigating Mobile Sensing Heterogeneities for A
+     -> 2015 | Stisen | Smart Devices are Different | Proceedings of the 13th ACM Conference on Emb | vol  p 127-140
+OK | Um2017 | bib 2017 | Data augmentation of wearable sensor data for Parkinson’s disease monitoring using convolu
+     -> 2017 | Um | Data augmentation of wearable sensor data for parkinson’s disease monitoring using convolu | Proceedings of the 19th ACM International Con | vol  p 216-220
+OK | Tobin2017 | bib 2017 | Domain randomization for transferring deep neural networks from simulation to the real wor
+     -> 2017 | Tobin | Domain randomization for transferring deep neural networks from simulation to the real wor | 2017 IEEE/RSJ International Conference on Int | vol  p 23-30
+OK | Jacob2018 | bib 2018 | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inferen
+     -> 2018 | Jacob | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inferen | 2018 IEEE/CVF Conference on Computer Vision a | vol  p 2704-2713
+OK | Krishnamoorthi2018 | bib 2018 | Quantizing deep convolutional networks for efficient inference: A whitepaper,
+     -> 2018 | Krishnamoorthi | Quantizing deep convolutional networks for efficient inference: A whitepaper |  | vol  p 
+OK | Nagel2021 | bib 2021 | A White Paper on Neural Network Quantization,
+     -> 2021 | Nagel | A White Paper on Neural Network Quantization |  | vol  p 
+NODOI | David2021 | 2021 | TensorFlow Lite Micro: Embedded Machine Learning for TinyML Systems, booktitle=Proceedings
+NODOI | Lin2020 | 2020 | MCUNet: Tiny Deep Learning on IoT Devices, booktitle=Advances in Neural Information Proces
+NODOI | Banbury2021 | 2021 | MLPerf Tiny Benchmark, booktitle=Proceedings of the Neural Information Processing Systems 
+OK | Ray2022 | bib 2022 | A review on TinyML: State-of-the-art and prospects, volume=34, ISSN=1319-1578, DOI=10.1016
+     -> 2022 | Ray | A review on TinyML: State-of-the-art and prospects | Journal of King Saud University - Computer an | vol 34 p 1595-1623
+OK | Howard2017 | bib 2017 | MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,
+     -> 2017 | Howard | MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications |  | vol  p 
+OK | Bai2018 | bib 2018 | An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Model
+     -> 2018 | Bai | An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Model |  | vol  p 
+NODOI | Holm1979 | 1979 | A simple sequentially rejective multiple test procedure, journal=Scandinavian Journal of S
+NODOI | Guo2017 | 2017 | On calibration of modern neural networks, booktitle=Proc. 34th Int. Conf. Mach. Learn. (IC
+NODOI | Ilse2018 | 2018 | Attention-based deep multiple instance learning, booktitle=Proc. 35th Int. Conf. Mach. Lea
+OK | Nadeau2003 | bib 2003 | Inference for the generalization error, journal=Machine Learning, volume=52, number=3, pag
+     -> 2003 | Nadeau | Inference for the Generalization Error | Machine Learning | vol 52 p 239-281
+OK | emlearn | bib 2019 | emlearn: Machine Learning inference engine for Microcontrollers and Embedded Devices, howp
+     -> 2019 | Nordby | emlearn: Machine Learning inference engine for Microcontrollers and Embedded Devices |  | vol  p 
+OK | ElAllam2026 | bib 2026 | Quantization-aware Mondrian conformal prediction for embedded ECG classification, volume=1
+     -> 2026 | El Allam | Quantization-aware Mondrian conformal prediction for embedded ECG classification | Biomedical Signal Processing and Control | vol 127 p 111217
+OK | CoyleAsbil2026 | bib 2026 | Assessing equivalence in raw accelerometer outputs across different brands using shaker ta
+     -> 2026 | Coyle-Asbil | Assessing equivalence in raw accelerometer outputs across different brands using shaker ta | Biomedical Signal Processing and Control | vol 119 p 109627
+OK | Magni2026 | bib 2026 | Machine learning differentiation of Parkinson's disease and normal pressure hydrocephalus 
+     -> 2026 | Magni | Machine learning differentiation of Parkinson’s disease and normal pressure hydrocephalus  | Biomedical Signal Processing and Control | vol 126 p 110845
+OK | Ortone2026 | bib 2026 | Efficient sEMG decoding with hybrid, multi-timescale neural networks, volume=128, DOI=10.1
+     -> 2026 | Ortone | Efficient sEMG decoding with hybrid, multi-timescale neural networks | Biomedical Signal Processing and Control | vol 128 p 111215
+OK | Forman2010 | bib 2010 | Apples-to-apples in cross-validation studies: pitfalls in classifier performance measureme
+     -> 2010 | Forman | Apples-to-apples in cross-validation studies | ACM SIGKDD Explorations Newsletter | vol 12 p 49-57
+OK | Airola2011 | bib 2011 | An experimental comparison of cross-validation techniques for estimating the area under th
+     -> 2011 | Airola | An experimental comparison of cross-validation techniques for estimating the area under th | Computational Statistics &amp; Data Analysis | vol 55 p 1828-1844
+OK | Bouckaert2004 | bib 2004 | Evaluating the replicability of significance tests for comparing learning algorithms, DOI=
+     -> 2004 | Bouckaert | Evaluating the Replicability of Significance Tests for Comparing Learning Algorithms | Lecture Notes in Computer Science | vol  p 3-12
+OK | NagelDFQ2019 | bib 2019 | Data-free quantization through weight equalization and bias correction, DOI=10.1109/ICCV.2
+     -> 2019 | Nagel | Data-Free Quantization Through Weight Equalization and Bias Correction | 2019 IEEE/CVF International Conference on Com | vol  p 1325-1334
+OK | Varoquaux2018 | bib 2018 | Cross-validation failure: small sample sizes lead to large error bars, volume=180, DOI=10.
+     -> 2018 | Varoquaux | Cross-validation failure: Small sample sizes lead to large error bars | NeuroImage | vol 180 p 68-77
+OK | Fawcett2006 | bib 2006 | An introduction to ROC analysis, volume=27, number=8, DOI=10.1016/j.patrec.2005.10.010, jo
+     -> 2006 | Fawcett | An introduction to ROC analysis | Pattern Recognition Letters | vol 27 p 861-874
+NODOI | Nagel2020AdaRound | 2020 | Up or down? Adaptive rounding for post-training quantization, booktitle=Proceedings of the
+NODOI | Bouthillier2021 | 2021 | Accounting for variance in machine learning benchmarks, booktitle=Proceedings of Machine L
+OK | Wu2020 | bib 2020 | Integer quantization for deep learning inference: principles and empirical evaluation, how
+     -> 2020 | Wu | Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation |  | vol  p 
+NODOI | Banner2019ACIQ | 2019 | Post training 4-bit quantization of convolutional networks for rapid-deployment, booktitle
+NODOI | Zhao2019OCS | 2019 | Improving neural network quantization without retraining using outlier channel splitting, 

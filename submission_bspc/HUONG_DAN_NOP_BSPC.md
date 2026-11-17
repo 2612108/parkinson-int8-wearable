@@ -22,7 +22,7 @@ Tạp chí: Biomedical Signal Processing and Control (Elsevier), loại bài Res
 6. **Người phản biện đề xuất** (nếu hệ thống hỏi): chỉ đề xuất người không cùng cơ quan và không có xung đột lợi ích.
 
 ## Code và dữ liệu
-Repo GitHub riêng tư `2612108/parkinson-int8-wearable` chứa code, kết quả từng fold, firmware và đề cương có ngày. Bài ghi: công khai khi bài được đăng. Khi bài được nhận và đăng, chuyển repo sang Public và (nên) tạo bản Zenodo có DOI.
+Repo GitHub công khai (từ 17/11/2026): https://github.com/2612108/parkinson-int8-wearable — code, kết quả từng fold, firmware, đề cương có ngày. Bài và cover letter đã ghi link này. Khi bài được nhận, nên tạo bản Zenodo có DOI.
 
 ## Trạng thái phản biện mô phỏng
 Bảy vòng phản biện mù độc lập đều cho Major revision; điểm vòng 7 là 3/3/2/3. Những yêu cầu chưa làm có thể gặp lại ở phản biện thật:

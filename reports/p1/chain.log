@@ -1,0 +1,10 @@
+[2026-11-15 14:57:59] C: tải PADS + Monipar qua S3/Zenodo
+[2026-11-15 15:06:29] C xong rc=1 patients=469 timeseries=10318; 1.5G	data/raw/pads 4.0K	data/raw/monipar 
+[2026-11-15 15:06:29] D: audit
+[2026-11-15 15:06:35] D xong rc=0
+[2026-11-15 15:06:35] F: tạo Kaggle Dataset riêng tư (trước P3 để GPU P4 chạy song song)
+[2026-11-15 15:12:18] F xong rc=0: Upload successful: pads.zip (736MB) Your private Dataset is being created. Please check progress at https://www.kaggle.com/datasets/nguynthqunhlu/parkinson-pads-monipar-raw 
+[2026-11-15 15:12:18] E: P3 baseline (3 seed)
+Terminated
+[2026-11-15 15:18:09] E xong rc=143
+[2026-11-15 15:18:09] HẾT CHUỖI

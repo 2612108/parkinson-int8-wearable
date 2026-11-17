@@ -1,0 +1,70 @@
+=== [1] ls -la /dev/ttyACM* /dev/ttyUSB* ===
+ls: cannot access '/dev/ttyACM*': No such file or directory
+ls: cannot access '/dev/ttyUSB*': No such file or directory
+
+=== [2] lsusb ===
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 275d:0ba6  USB OPTICAL MOUSE 
+Bus 001 Device 003: ID 1c4f:0002 SiGma Micro Keyboard TRACER Gamma Ivory
+Bus 001 Device 004: ID 8087:0aa7 Intel Corp. Wireless-AC 3168 Bluetooth
+Bus 001 Device 029: ID 14cd:1212 Super Top microSD card reader (SY-T18)
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
+=== [3] journalctl -k --since '-10 min' | tail -30 ===
+Nov 15 11:33:45 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:33:46 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:33:46 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:33:47 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:33:48 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:33:49 smartcontrol kernel: mmc0: error -123 whilst initialising SD card
+Nov 15 11:34:18 smartcontrol kernel: usb 1-2: new high-speed USB device number 29 using xhci_hcd
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: Product: Mass Storage Device
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: Manufacturer: Generic
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: SerialNumber: 121220160204
+Nov 15 11:34:19 smartcontrol kernel: usb-storage 1-2:1.0: USB Mass Storage device detected
+Nov 15 11:34:19 smartcontrol kernel: scsi host2: usb-storage 1-2:1.0
+Nov 15 11:34:20 smartcontrol kernel: scsi 2:0:0:0: Direct-Access     Mass     Storage Device   1.00 PQ: 0 ANSI: 0 CCS
+Nov 15 11:34:20 smartcontrol kernel: scsi 2:0:0:0: Attached scsi generic sg1 type 0
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] 15687680 512-byte logical blocks: (8.03 GB/7.48 GiB)
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] Write Protect is off
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] Mode Sense: 03 00 00 00
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] No Caching mode page found
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] Assuming drive cache: write through
+Nov 15 11:34:20 smartcontrol kernel:  sdb: sdb1
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] Attached SCSI removable disk
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] tag#0 Sense Key : Medium Error [current] 
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] tag#0 Add. Sense: Unrecovered read error
+Nov 15 11:34:20 smartcontrol kernel: sd 2:0:0:0: [sdb] tag#0 CDB: Read(10) 28 00 00 00 20 00 00 00 08 00
+Nov 15 11:34:20 smartcontrol kernel: blk_print_req_error: 3 callbacks suppressed
+Nov 15 11:34:20 smartcontrol kernel: critical medium error, dev sdb, sector 8192 op 0x0:(READ) flags 0x880700 phys_seg 1 prio class 2
+Nov 15 11:34:21 smartcontrol kernel: FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+
+=== [4] Bổ sung: Sự kiện USB trong 20 phút gần nhất (journalctl -k --since '-20 min' | grep usb) ===
+Nov 15 11:21:31 smartcontrol kernel: usb 1-2: new full-speed USB device number 11 using xhci_hcd
+Nov 15 11:21:31 smartcontrol kernel: usb 1-2: new full-speed USB device number 12 using xhci_hcd
+Nov 15 11:21:31 smartcontrol kernel: usb usb1-port2: attempt power cycle
+Nov 15 11:21:32 smartcontrol kernel: usb 1-2: new high-speed USB device number 13 using xhci_hcd
+Nov 15 11:21:32 smartcontrol kernel: usb 1-2: Device not responding to setup address.
+Nov 15 11:21:32 smartcontrol kernel: usb 1-2: device not accepting address 13, error -71
+Nov 15 11:21:32 smartcontrol kernel: usb 1-2: new full-speed USB device number 14 using xhci_hcd
+Nov 15 11:21:32 smartcontrol kernel: usb 1-2: Device not responding to setup address.
+Nov 15 11:21:33 smartcontrol kernel: usb 1-2: device not accepting address 14, error -71
+Nov 15 11:21:33 smartcontrol kernel: usb usb1-port2: unable to enumerate USB device
+Nov 15 11:21:54 smartcontrol kernel: usb 1-2: new high-speed USB device number 18 using xhci_hcd
+Nov 15 11:21:54 smartcontrol kernel: usb 1-2: device not accepting address 18, error -71
+Nov 15 11:21:54 smartcontrol kernel: usb 1-2: new full-speed USB device number 19 using xhci_hcd
+Nov 15 11:21:55 smartcontrol kernel: usb 1-2: new full-speed USB device number 21 using xhci_hcd
+Nov 15 11:21:56 smartcontrol kernel: usb 1-2: device not accepting address 21, error -71
+Nov 15 11:21:56 smartcontrol kernel: usb usb1-port2: unable to enumerate USB device
+Nov 15 11:24:03 smartcontrol kernel: usb 1-1: new high-speed USB device number 24 using xhci_hcd
+Nov 15 11:24:04 smartcontrol kernel: usb 1-1: device not accepting address 24, error -71
+Nov 15 11:24:06 smartcontrol kernel: usb 1-1: new full-speed USB device number 27 using xhci_hcd
+Nov 15 11:24:06 smartcontrol kernel: usb 1-1: Device not responding to setup address.
+Nov 15 11:24:06 smartcontrol kernel: usb 1-1: device not accepting address 27, error -71
+Nov 15 11:24:06 smartcontrol kernel: usb usb1-port1: unable to enumerate USB device
+Nov 15 11:34:18 smartcontrol kernel: usb 1-2: new high-speed USB device number 29 using xhci_hcd
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+Nov 15 11:34:19 smartcontrol kernel: usb 1-2: Product: Mass Storage Device

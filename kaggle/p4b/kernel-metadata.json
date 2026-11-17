@@ -1,0 +1,17 @@
+{
+  "id": "nguynthqunhlu/parkinson-p4b",
+  "title": "parkinson-p4b",
+  "code_file": "p4b.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "nguynthqunhlu/parkinson-pads-monipar-raw"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

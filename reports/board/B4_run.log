@@ -1,0 +1,334 @@
+[B4] Starting at 2026-11-16T21:28:33+07:00 on PORT=/dev/ttyACM0
+[B4] Step 1: Training RF in Python & generating C files via firmware/tools/gen_b4_data.py...
+/home/smartcontrol/Desktop/PARKINSON/firmware/.pydeps/_distutils_hack/__init__.py:15: UserWarning: Distutils was imported before Setuptools, but importing Setuptools also replaces the `distutils` module in `sys.modules`. This may lead to undesirable behaviors or errors. To avoid these issues, avoid using distutils directly, ensure that setuptools is installed in the traditional way (e.g. not an editable install), and/or make sure that setuptools is always imported before distutils.
+  warnings.warn(
+/home/smartcontrol/Desktop/PARKINSON/firmware/.pydeps/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+[B4] Building/loading PADS PD vs HC feature matrix via scripts/p3_baseline.py...
+[B4] Matrix shape=(355, 2112), n_pos=276, n_neg=79, build_time=546.1s
+[B4] Saved reports/board/B4_rf_python.json: {
+  "task": "PD_vs_HC",
+  "cv_split": "StratifiedKFold(n_splits=5, shuffle=True, random_state=0), fold=0",
+  "model": "RandomForestClassifier(n_estimators=100, max_depth=8, class_weight='balanced', random_state=0)",
+  "n_patients_total": 355,
+  "n_train_fold0": 284,
+  "n_test_fold0": 71,
+  "n_test_pd": 55,
+  "n_test_hc": 16,
+  "n_records_per_patient": 22,
+  "n_features_per_record": 96,
+  "n_features_total": 2112,
+  "total_tree_nodes": 3848,
+  "total_tree_leaves": 1974,
+  "max_tree_depth_actual": 8,
+  "auroc_test_fold0_sklearn": 0.922727,
+  "auroc_test_fold0_emlearn_soft": 0.922727,
+  "auroc_test_fold0_emlearn_hard": 0.923295,
+  "bal_acc_test_fold0_sklearn": 0.834659,
+  "acc_test_fold0_sklearn": 0.915493,
+  "sens_test_fold0_sklearn": 0.981818,
+  "spec_test_fold0_sklearn": 0.6875,
+  "label_match_20_soft": "20/20",
+  "label_match_20_hard": "20/20",
+  "max_abs_prob_diff_20_soft": 0.00018028153404459069,
+  "max_abs_prob_diff_20_hard": 0.008666290808016286,
+  "feature_build_time_s": 546.07
+}
+[B4] Generated pd_rf.h, pd_rf_hard.h, and b4_data.{h,cc} successfully.
+[B4] Step 2: Sourcing ESP-IDF environment & building firmware/b4_rf...
+[B4] Build succeeded.
+[B4] Step 3: Flashing firmware/b4_rf to /dev/ttyACM0...
+[B4] Flash succeeded.
+[B4] Step 4: Capturing serial output from /dev/ttyACM0...
+[  0.12s] [0;32mI (119) esp_image: segment 4: paddr=00086dc4 vaddr=40376cESP-ROM:esp32s3-20210327
+[  0.12s] Build:Mar 27 2021
+[  0.13s] rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+[  0.13s] Saved PC:0x42008e24
+[  0.13s] SPIWP:0xee
+[  0.13s] mode:DIO, clock div:1
+[  0.13s] load:0x3fce2810,len:0x1870
+[  0.13s] load:0x403c8700,len:0x4
+[  0.13s] load:0x403c8704,len:0xc40
+[  0.13s] load:0x403cb700,len:0x2ee8
+[  0.13s] entry 0x403c8908
+[  0.13s] [0;32mI (26) boot: ESP-IDF v5.3.2 2nd stage bootloader[0m
+[  0.13s] [0;32mI (27) boot: compile time Nov 16 2026 11:58:15[0m
+[  0.13s] [0;32mI (27) boot: Multicore bootloader[0m
+[  0.13s] [0;32mI (27) boot: chip revision: v0.2[0m
+[  0.14s] [0;32mI (27) boot: efuse block revision: v1.3[0m
+[  0.14s] [0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[  0.14s] [0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[  0.14s] [0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[  0.14s] [0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[  0.14s] [0;32mI (28) boot: Partition Table:[0m
+[  0.14s] [0;32mI (28) boot: ## Label            Usage          Type ST Offset   Length[0m
+[  0.14s] [0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[  0.15s] [0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[  0.15s] [0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[  0.15s] [0;32mI (30) boot: End of partition table[0m
+[  0.15s] [0;32mI (30) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=3a644h (239172) map[0m
+[  0.15s] [0;32mI (73) esp_image: segment 1: paddr=0004a66c vaddr=3fc92000 size=02da4h ( 11684) load[0m
+[  0.16s] [0;32mI (76) esp_image: segment 2: paddr=0004d418 vaddr=40374000 size=02c00h ( 11264) load[0m
+[  0.16s] [0;32mI (79) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=36d9ch (224668) map[0m
+[  0.16s] [0;32mI (119) esp_image: segment 4: paddr=00086dc4 vaddr=40376c00 size=0b304h ( 45828) load[0m
+[  0.16s] [0;32mI (135) boot: Loaded app from partition at offset 0x10000[0m
+[  0.16s] [0;32mI (135) boot: Disabling RNG early entropy source...[0m
+[  0.16s] [0;32mI (136) octal_psram: vendor id    : 0x0d (AP)[0m
+[  0.16s] [0;32mI (136) octal_psram: dev id       : 0x02 (generation 3)[0m
+[  0.17s] [0;32mI (137) octal_psram: density      : 0x03 (64 Mbit)[0m
+[  0.17s] [0;32mI (137) octal_psram: good-die     : 0x01 (Pass)[0m
+[  0.17s] [0;32mI (137) octal_psram: Latency      : 0x01 (Fixed)[0m
+[  0.17s] [0;32mI (137) octal_psram: VCC          : 0x01 (3V)[0m
+[  0.17s] [0;32mI (138) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[  0.17s] [0;32mI (138) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[  0.17s] [0;32mI (138) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[  0.18s] [0;32mI (139) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[  0.18s] [0;32mI (139) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[  0.18s] [0;32mI (140) MSPI Timing: PSRAM timing tuning index: 5[0m
+[  0.18s] [0;32mI (140) esp_psram: Found 8MB PSRAM device[0m
+[  0.18s] [0;32mI (140) esp_psram: Speed: 80MHz[0m
+[  0.18s] [0;32mI (140) cpu_start: Multicore app[0m
+[  0.56s] [0;32mI (554) esp_psram: SPI SRAM memory test OK[0m
+[  0.57s] [0;32mI (562) cpu_start: Pro cpu start user code[0m
+[  0.57s] [0;32mI (562) cpu_start: cpu freq: 240000000 Hz[0m
+[  0.57s] [0;32mI (563) app_init: Application information:[0m
+[  0.57s] [0;32mI (563) app_init: Project name:     b4_rf[0m
+[  0.57s] [0;32mI (563) app_init: App version:      1[0m
+[  0.57s] [0;32mI (563) app_init: Compile time:     Nov 16 2026 11:58:01[0m
+[  0.57s] [0;32mI (563) app_init: ELF file SHA256:  7504e8973...[0m
+[  0.58s] [0;32mI (564) app_init: ESP-IDF:          v5.3.2[0m
+[  0.58s] [0;32mI (564) efuse_init: Min chip rev:     v0.0[0m
+[  0.58s] [0;32mI (564) efuse_init: Max chip rev:     v0.99 [0m
+[  0.58s] [0;32mI (564) efuse_init: Chip rev:         v0.2[0m
+[  0.58s] [0;32mI (564) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[  0.58s] [0;32mI (564) heap_init: At 3FCA0F80 len 00048790 (289 KiB): RAM[0m
+[  0.58s] [0;32mI (565) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[  0.59s] [0;32mI (565) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[  0.59s] [0;32mI (565) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[  0.59s] [0;32mI (566) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[  0.59s] [0;32mI (566) spi_flash: detected chip: boya[0m
+[  0.59s] [0;32mI (566) spi_flash: flash io: dio[0m
+[  0.59s] [0;32mI (567) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[  0.59s] [0;32mI (567) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[  0.60s] [0;32mI (568) main_task: Started on CPU0[0m
+[  0.60s] [0;32mI (578) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[  0.60s] [0;32mI (578) main_task: Calling app_main()[0m
+[  2.08s] #B4 BEGIN
+[  2.08s] #chip cores=2 rev=2 cpu_mhz=240 internal_total=392603 internal_free=312691 psram_total=8388608 psram_free=8385916
+[  2.09s] #memory n_features=2112 n_trees=100 max_depth=8 rf_leaves_rodata_bytes=48 rf_ram_stack_bytes=64 feat_dsp_static_ram_bytes=47252
+[  2.09s] #B4 RF COMPARISON BEGIN n_test=20 n_features=2112
+[  2.10s] #rf_cmp idx=0 sid=005 y_true=1 y_sklearn=1 prob_sklearn=0.979693 y_board_soft=1 prob_board_soft=0.979608 dp_soft=0.000085 match_soft=1 y_board_hard=1 prob_board_hard=0.980000 dp_hard=0.000307 match_hard=1
+[  2.10s] #rf_cmp idx=1 sid=009 y_true=1 y_sklearn=1 prob_sklearn=0.959693 y_board_soft=1 prob_board_soft=0.959608 dp_soft=0.000085 match_soft=1 y_board_hard=1 prob_board_hard=0.960000 dp_hard=0.000307 match_hard=1
+[  2.11s] #rf_cmp idx=2 sid=029 y_true=1 y_sklearn=1 prob_sklearn=0.949693 y_board_soft=1 prob_board_soft=0.949608 dp_soft=0.000085 match_soft=1 y_board_hard=1 prob_board_hard=0.950000 dp_hard=0.000307 match_hard=1
+[  2.12s] #rf_cmp idx=3 sid=038 y_true=1 y_sklearn=1 prob_sklearn=0.919693 y_board_soft=1 prob_board_soft=0.919608 dp_soft=0.000085 match_soft=1 y_board_hard=1 prob_board_hard=0.920000 dp_hard=0.000307 match_hard=1
+[  2.13s] #rf_cmp idx=4 sid=053 y_true=1 y_sklearn=1 prob_sklearn=0.840008 y_board_soft=1 prob_board_soft=0.839961 dp_soft=0.000048 match_soft=1 y_board_hard=1 prob_board_hard=0.840000 dp_hard=0.000009 match_hard=1
+[  2.14s] #rf_cmp idx=5 sid=060 y_true=1 y_sklearn=1 prob_sklearn=0.883750 y_board_soft=1 prob_board_soft=0.883726 dp_soft=0.000024 match_soft=1 y_board_hard=1 prob_board_hard=0.880000 dp_hard=0.003750 match_hard=1
+[  2.15s] #rf_cmp idx=6 sid=081 y_true=0 y_sklearn=0 prob_sklearn=0.426494 y_board_soft=0 prob_board_soft=0.426314 dp_soft=0.000180 match_soft=1 y_board_hard=0 prob_board_hard=0.420000 dp_hard=0.006494 match_hard=1
+[  2.16s] #rf_cmp idx=7 sid=085 y_true=1 y_sklearn=1 prob_sklearn=0.708109 y_board_soft=1 prob_board_soft=0.708078 dp_soft=0.000031 match_soft=1 y_board_hard=1 prob_board_hard=0.710000 dp_hard=0.001891 match_hard=1
+[  2.17s] #rf_cmp idx=8 sid=102 y_true=1 y_sklearn=1 prob_sklearn=0.772830 y_board_soft=1 prob_board_soft=0.772706 dp_soft=0.000125 match_soft=1 y_board_hard=1 prob_board_hard=0.770000 dp_hard=0.002831 match_hard=1
+[  2.18s] #rf_cmp idx=9 sid=108 y_true=0 y_sklearn=0 prob_sklearn=0.268666 y_board_soft=0 prob_board_soft=0.258667 dp_soft=0.010000 match_soft=1 y_board_hard=0 prob_board_hard=0.250000 dp_hard=0.018666 match_hard=1
+[  2.19s] #rf_cmp idx=10 sid=122 y_true=1 y_sklearn=1 prob_sklearn=0.672096 y_board_soft=1 prob_board_soft=0.672000 dp_soft=0.000096 match_soft=1 y_board_hard=1 prob_board_hard=0.670000 dp_hard=0.002096 match_hard=1
+[  2.20s] #rf_cmp idx=11 sid=125 y_true=1 y_sklearn=1 prob_sklearn=0.930169 y_board_soft=1 prob_board_soft=0.930078 dp_soft=0.000091 match_soft=1 y_board_hard=1 prob_board_hard=0.930000 dp_hard=0.000169 match_hard=1
+[  2.21s] #rf_cmp idx=12 sid=129 y_true=1 y_sklearn=1 prob_sklearn=0.939876 y_board_soft=1 prob_board_soft=0.939804 dp_soft=0.000072 match_soft=1 y_board_hard=1 prob_board_hard=0.940000 dp_hard=0.000124 match_hard=1
+[  2.22s] #rf_cmp idx=13 sid=132 y_true=0 y_sklearn=1 prob_sklearn=0.600586 y_board_soft=1 prob_board_soft=0.600549 dp_soft=0.000037 match_soft=1 y_board_hard=1 prob_board_hard=0.600000 dp_hard=0.000586 match_hard=1
+[  2.23s] #rf_cmp idx=14 sid=145 y_true=1 y_sklearn=1 prob_sklearn=0.779995 y_board_soft=1 prob_board_soft=0.779922 dp_soft=0.000074 match_soft=1 y_board_hard=1 prob_board_hard=0.780000 dp_hard=0.000005 match_hard=1
+[  2.24s] #rf_cmp idx=15 sid=154 y_true=1 y_sklearn=1 prob_sklearn=0.772818 y_board_soft=1 prob_board_soft=0.772667 dp_soft=0.000151 match_soft=1 y_board_hard=1 prob_board_hard=0.770000 dp_hard=0.002818 match_hard=1
+[  2.25s] #rf_cmp idx=16 sid=159 y_true=1 y_sklearn=1 prob_sklearn=0.840672 y_board_soft=1 prob_board_soft=0.840588 dp_soft=0.000084 match_soft=1 y_board_hard=1 prob_board_hard=0.840000 dp_hard=0.000673 match_hard=1
+[  2.26s] #rf_cmp idx=17 sid=184 y_true=0 y_sklearn=1 prob_sklearn=0.573669 y_board_soft=1 prob_board_soft=0.573647 dp_soft=0.000022 match_soft=1 y_board_hard=1 prob_board_hard=0.570000 dp_hard=0.003669 match_hard=1
+[  2.27s] #rf_cmp idx=18 sid=185 y_true=1 y_sklearn=1 prob_sklearn=0.594719 y_board_soft=1 prob_board_soft=0.594627 dp_soft=0.000092 match_soft=1 y_board_hard=1 prob_board_hard=0.590000 dp_hard=0.004719 match_hard=1
+[  2.28s] #rf_cmp idx=19 sid=187 y_true=1 y_sklearn=1 prob_sklearn=0.620435 y_board_soft=1 prob_board_soft=0.620314 dp_soft=0.000122 match_soft=1 y_board_hard=1 prob_board_hard=0.620000 dp_hard=0.000435 match_hard=1
+[  2.28s] #rf_summary label_match_soft=20/20 label_match_hard=20/20 eml_ref_exact=19/20 max_abs_dp_soft=0.010000 mean_abs_dp_soft=0.000579 max_abs_dp_hard=0.018666
+[  2.28s] #B4 RF COMPARISON END
+[  6.47s] #step_latency step=rf_infer_proba_soft_100trees mean_us=2467.38 p50_us=2447 p95_us=2677 min_us=2281 max_us=2692 mean_ms=2.4674 p95_ms=2.6770 n=1000
+[  6.48s] #step_latency step=rf_infer_label_hard_100trees mean_us=1640.77 p50_us=1625 p95_us=1872 min_us=1461 max_us=1882 mean_ms=1.6408 p95_ms=1.8720 n=1000
+[  6.49s] #B4 FEATURE EXTRACTION BEGIN file="data/raw/pads/movement/timeseries/005_HoldWeight_LeftWrist.txt [0..10s, 1000 samples x 6ch @ 100Hz]"
+[  6.49s] #feat_cmp idx=0 name=ax_std board=1.40535235e-02 py_causal=1.40535226e-02 abs_err=9.3132e-10 rel_err=6.6270e-08 py_zp=1.45214079e-02
+[  6.50s] #feat_cmp idx=1 name=ax_iqr board=1.77754480e-02 py_causal=1.77753791e-02 abs_err=6.8918e-08 rel_err=3.8772e-06 py_zp=1.82461478e-02
+[  6.50s] #feat_cmp idx=2 name=ax_skew board=3.90357912e-01 py_causal=3.90360355e-01 abs_err=2.4438e-06 rel_err=6.2603e-06 py_zp=1.83621496e-01
+[  6.51s] #feat_cmp idx=3 name=ax_kurt board=7.80560017e-01 py_causal=7.80555725e-01 abs_err=4.2915e-06 rel_err=5.4981e-06 py_zp=1.10106230e+00
+[  6.51s] #feat_cmp idx=4 name=ax_rms_diff board=1.08776847e-02 py_causal=1.08776856e-02 abs_err=9.3132e-10 rel_err=8.5618e-08 py_zp=1.07970797e-02
+[  6.52s] #feat_cmp idx=5 name=ax_log_pow board=-8.91394138e+00 py_causal=-8.91394138e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=-8.91501331e+00
+[  6.52s] #feat_cmp idx=6 name=ax_peak_f board=3.32031250e+00 py_causal=3.32031250e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=3.32031250e+00
+[  6.53s] #feat_cmp idx=7 name=ax_spec_ent board=3.61144924e+00 py_causal=3.61144853e+00 abs_err=7.1526e-07 rel_err=1.9805e-07 py_zp=3.60649657e+00
+[  6.53s] #feat_cmp idx=8 name=ax_bp_0.5_3 board=1.36022106e-01 py_causal=1.36021987e-01 abs_err=1.1921e-07 rel_err=8.7640e-07 py_zp=1.36633828e-01
+[  6.54s] #feat_cmp idx=9 name=ax_bp_3_7 board=4.76115227e-01 py_causal=4.76115167e-01 abs_err=5.9605e-08 rel_err=1.2519e-07 py_zp=4.77376431e-01
+[  6.54s] #feat_cmp idx=10 name=ax_bp_7_12 board=3.13565820e-01 py_causal=3.13565761e-01 abs_err=5.9605e-08 rel_err=1.9009e-07 py_zp=3.13938022e-01
+[  6.54s] #feat_cmp idx=11 name=ax_bp_12_20 board=1.88794602e-02 py_causal=1.88794490e-02 abs_err=1.1176e-08 rel_err=5.9196e-07 py_zp=1.82536561e-02
+[  6.55s] #feat_cmp idx=12 name=ay_std board=1.31120142e-02 py_causal=1.31120160e-02 abs_err=1.8626e-09 rel_err=1.4206e-07 py_zp=1.32300463e-02
+[  6.55s] #feat_cmp idx=13 name=ay_iqr board=1.66687630e-02 py_causal=1.66687258e-02 abs_err=3.7253e-08 rel_err=2.2349e-06 py_zp=1.73723903e-02
+[  6.55s] #feat_cmp idx=14 name=ay_skew board=-2.98810929e-01 py_causal=-2.98808604e-01 abs_err=2.3246e-06 rel_err=7.7795e-06 py_zp=-1.76113337e-01
+[  6.56s] #feat_cmp idx=15 name=ay_kurt board=4.34541702e-01 py_causal=4.34539080e-01 abs_err=2.6226e-06 rel_err=6.0354e-06 py_zp=3.24683189e-02
+[  6.56s] #feat_cmp idx=16 name=ay_rms_diff board=1.06062945e-02 py_causal=1.06062917e-02 abs_err=2.7940e-09 rel_err=2.6343e-07 py_zp=1.05236992e-02
+[  6.56s] #feat_cmp idx=17 name=ay_log_pow board=-8.70516968e+00 py_causal=-8.70517159e+00 abs_err=1.9073e-06 rel_err=2.1911e-07 py_zp=-8.69517517e+00
+[  6.57s] #feat_cmp idx=18 name=ay_peak_f board=7.81250000e+00 py_causal=7.81250000e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=7.81250000e+00
+[  6.57s] #feat_cmp idx=19 name=ay_spec_ent board=3.94614911e+00 py_causal=3.94615030e+00 abs_err=1.1921e-06 rel_err=3.0209e-07 py_zp=3.93258166e+00
+[  6.57s] #feat_cmp idx=20 name=ay_bp_0.5_3 board=3.17617685e-01 py_causal=3.17617297e-01 abs_err=3.8743e-07 rel_err=1.2198e-06 py_zp=3.27702433e-01
+[  6.57s] #feat_cmp idx=21 name=ay_bp_3_7 board=1.63332000e-01 py_causal=1.63332179e-01 abs_err=1.7881e-07 rel_err=1.0948e-06 py_zp=1.61653563e-01
+[  6.58s] #feat_cmp idx=22 name=ay_bp_7_12 board=3.89272958e-01 py_causal=3.89273375e-01 abs_err=4.1723e-07 rel_err=1.0718e-06 py_zp=3.85945231e-01
+[  6.58s] #feat_cmp idx=23 name=ay_bp_12_20 board=7.43503943e-02 py_causal=7.43504614e-02 abs_err=6.7055e-08 rel_err=9.0188e-07 py_zp=7.21438304e-02
+[  6.58s] #feat_cmp idx=24 name=az_std board=1.91191994e-02 py_causal=1.91191994e-02 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=1.91328153e-02
+[  6.59s] #feat_cmp idx=25 name=az_iqr board=2.76193656e-02 py_causal=2.76193786e-02 abs_err=1.3039e-08 rel_err=4.7208e-07 py_zp=2.76371967e-02
+[  6.59s] #feat_cmp idx=26 name=az_skew board=-1.85145270e-02 py_causal=-1.85143575e-02 abs_err=1.6950e-07 rel_err=9.1551e-06 py_zp=-6.93149306e-03
+[  6.59s] #feat_cmp idx=27 name=az_kurt board=-5.75494051e-01 py_causal=-5.75494051e-01 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=-4.23304796e-01
+[  6.59s] #feat_cmp idx=28 name=az_rms_diff board=1.69974659e-02 py_causal=1.69974621e-02 abs_err=3.7253e-09 rel_err=2.1917e-07 py_zp=1.69683639e-02
+[  6.60s] #feat_cmp idx=29 name=az_log_pow board=-7.78719091e+00 py_causal=-7.78719187e+00 abs_err=9.5367e-07 rel_err=1.2247e-07 py_zp=-7.78942299e+00
+[  6.60s] #feat_cmp idx=30 name=az_peak_f board=7.81250000e+00 py_causal=7.81250000e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=7.81250000e+00
+[  6.60s] #feat_cmp idx=31 name=az_spec_ent board=2.56329870e+00 py_causal=2.56329799e+00 abs_err=7.1526e-07 rel_err=2.7904e-07 py_zp=2.56119752e+00
+[  6.61s] #feat_cmp idx=32 name=az_bp_0.5_3 board=4.86159958e-02 py_causal=4.86158766e-02 abs_err=1.1921e-07 rel_err=2.4521e-06 py_zp=4.94041443e-02
+[  6.61s] #feat_cmp idx=33 name=az_bp_3_7 board=1.21202119e-01 py_causal=1.21202193e-01 abs_err=7.4506e-08 rel_err=6.1472e-07 py_zp=1.21639952e-01
+[  6.61s] #feat_cmp idx=34 name=az_bp_7_12 board=7.93148160e-01 py_causal=7.93148398e-01 abs_err=2.3842e-07 rel_err=3.0060e-07 py_zp=7.93322206e-01
+[  6.61s] #feat_cmp idx=35 name=az_bp_12_20 board=2.02037953e-02 py_causal=2.02037990e-02 abs_err=3.7253e-09 rel_err=1.8439e-07 py_zp=1.97767634e-02
+[  6.62s] #feat_cmp idx=36 name=wx_std board=7.01986924e-02 py_causal=7.01986998e-02 abs_err=7.4506e-09 rel_err=1.0614e-07 py_zp=7.32670873e-02
+[  6.62s] #feat_cmp idx=37 name=wx_iqr board=8.02687854e-02 py_causal=8.02685022e-02 abs_err=2.8312e-07 rel_err=3.5272e-06 py_zp=8.14756826e-02
+[  6.62s] #feat_cmp idx=38 name=wx_skew board=-1.78276956e-01 py_causal=-1.78280786e-01 abs_err=3.8296e-06 rel_err=2.1481e-05 py_zp=-4.18361872e-02
+[  6.63s] #feat_cmp idx=39 name=wx_kurt board=2.40802813e+00 py_causal=2.40803337e+00 abs_err=5.2452e-06 rel_err=2.1782e-06 py_zp=2.27101278e+00
+[  6.63s] #feat_cmp idx=40 name=wx_rms_diff board=4.33055907e-02 py_causal=4.33055870e-02 abs_err=3.7253e-09 rel_err=8.6023e-08 py_zp=4.32096869e-02
+[  6.63s] #feat_cmp idx=41 name=wx_log_pow board=-5.52764940e+00 py_causal=-5.52764988e+00 abs_err=4.7684e-07 rel_err=8.6264e-08 py_zp=-5.52568865e+00
+[  6.63s] #feat_cmp idx=42 name=wx_peak_f board=2.92968750e+00 py_causal=2.92968750e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=2.92968750e+00
+[  6.64s] #feat_cmp idx=43 name=wx_spec_ent board=3.56333923e+00 py_causal=3.56333899e+00 abs_err=2.3842e-07 rel_err=6.6909e-08 py_zp=3.56440949e+00
+[  6.64s] #feat_cmp idx=44 name=wx_bp_0.5_3 board=2.39030987e-01 py_causal=2.39030913e-01 abs_err=7.4506e-08 rel_err=3.1170e-07 py_zp=2.41183266e-01
+[  6.64s] #feat_cmp idx=45 name=wx_bp_3_7 board=4.75120991e-01 py_causal=4.75121051e-01 abs_err=5.9605e-08 rel_err=1.2545e-07 py_zp=4.74673957e-01
+[  6.64s] #feat_cmp idx=46 name=wx_bp_7_12 board=1.78572744e-01 py_causal=1.78572729e-01 abs_err=1.4901e-08 rel_err=8.3446e-08 py_zp=1.78619996e-01
+[  6.65s] #feat_cmp idx=47 name=wx_bp_12_20 board=1.45666674e-02 py_causal=1.45666599e-02 abs_err=7.4506e-09 rel_err=5.1148e-07 py_zp=1.41252037e-02
+[  6.65s] #feat_cmp idx=48 name=wy_std board=4.07528952e-02 py_causal=4.07528877e-02 abs_err=7.4506e-09 rel_err=1.8282e-07 py_zp=4.11847383e-02
+[  6.65s] #feat_cmp idx=49 name=wy_iqr board=5.21223880e-02 py_causal=5.21223433e-02 abs_err=4.4703e-08 rel_err=8.5766e-07 py_zp=4.86868769e-02
+[  6.66s] #feat_cmp idx=50 name=wy_skew board=-2.73353532e-02 py_causal=-2.73380838e-02 abs_err=2.7306e-06 rel_err=9.9884e-05 py_zp=4.62377399e-01
+[  6.66s] #feat_cmp idx=51 name=wy_kurt board=1.22503757e+00 py_causal=1.22504520e+00 abs_err=7.6294e-06 rel_err=6.2278e-06 py_zp=2.94706440e+00
+[  6.66s] #feat_cmp idx=52 name=wy_rms_diff board=2.83409152e-02 py_causal=2.83409152e-02 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=2.81688720e-02
+[  6.66s] #feat_cmp idx=53 name=wy_log_pow board=-6.67880821e+00 py_causal=-6.67880964e+00 abs_err=1.4305e-06 rel_err=2.1419e-07 py_zp=-6.67987013e+00
+[  6.67s] #feat_cmp idx=54 name=wy_peak_f board=7.81250000e+00 py_causal=7.81250000e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=7.81250000e+00
+[  6.67s] #feat_cmp idx=55 name=wy_spec_ent board=3.33963537e+00 py_causal=3.33963585e+00 abs_err=4.7684e-07 rel_err=1.4278e-07 py_zp=3.33624339e+00
+[  6.67s] #feat_cmp idx=56 name=wy_bp_0.5_3 board=2.10589260e-01 py_causal=2.10588813e-01 abs_err=4.4703e-07 rel_err=2.1228e-06 py_zp=2.17660025e-01
+[  6.68s] #feat_cmp idx=57 name=wy_bp_3_7 board=2.37457812e-01 py_causal=2.37458020e-01 abs_err=2.0862e-07 rel_err=8.7854e-07 py_zp=2.37935394e-01
+[  6.68s] #feat_cmp idx=58 name=wy_bp_7_12 board=4.89053935e-01 py_causal=4.89054561e-01 abs_err=6.2585e-07 rel_err=1.2797e-06 py_zp=4.88656759e-01
+[  6.68s] #feat_cmp idx=59 name=wy_bp_12_20 board=7.66225485e-03 py_causal=7.66226510e-03 abs_err=1.0245e-08 rel_err=1.3370e-06 py_zp=7.51343602e-03
+[  6.68s] #feat_cmp idx=60 name=wz_std board=4.28344160e-02 py_causal=4.28344160e-02 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=4.37414609e-02
+[  6.69s] #feat_cmp idx=61 name=wz_iqr board=5.21607026e-02 py_causal=5.21608777e-02 abs_err=1.7509e-07 rel_err=3.3567e-06 py_zp=5.41342869e-02
+[  6.69s] #feat_cmp idx=62 name=wz_skew board=-6.69483934e-03 py_causal=-6.69710524e-03 abs_err=2.2659e-06 rel_err=3.3834e-04 py_zp=-3.03328305e-01
+[  6.69s] #feat_cmp idx=63 name=wz_kurt board=-6.01017475e-02 py_causal=-6.00998402e-02 abs_err=1.9073e-06 rel_err=3.1736e-05 py_zp=3.21845531e-01
+[  6.70s] #feat_cmp idx=64 name=wz_rms_diff board=2.58739367e-02 py_causal=2.58739330e-02 abs_err=3.7253e-09 rel_err=1.4398e-07 py_zp=2.58120354e-02
+[  6.70s] #feat_cmp idx=65 name=wz_log_pow board=-6.37800455e+00 py_causal=-6.37800503e+00 abs_err=4.7684e-07 rel_err=7.4763e-08 py_zp=-6.36341095e+00
+[  6.70s] #feat_cmp idx=66 name=wz_peak_f board=9.76562500e-01 py_causal=9.76562500e-01 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=9.76562500e-01
+[  6.70s] #feat_cmp idx=67 name=wz_spec_ent board=3.48163795e+00 py_causal=3.48163867e+00 abs_err=7.1526e-07 rel_err=2.0544e-07 py_zp=3.47145009e+00
+[  6.71s] #feat_cmp idx=68 name=wz_bp_0.5_3 board=4.35507894e-01 py_causal=4.35507834e-01 abs_err=5.9605e-08 rel_err=1.3686e-07 py_zp=4.46071953e-01
+[  6.71s] #feat_cmp idx=69 name=wz_bp_3_7 board=3.43729794e-01 py_causal=3.43729764e-01 abs_err=2.9802e-08 rel_err=8.6703e-08 py_zp=3.39771956e-01
+[  6.71s] #feat_cmp idx=70 name=wz_bp_7_12 board=1.40730381e-01 py_causal=1.40730396e-01 abs_err=1.4901e-08 rel_err=1.0588e-07 py_zp=1.39039516e-01
+[  6.72s] #feat_cmp idx=71 name=wz_bp_12_20 board=1.39082200e-03 py_causal=1.39082246e-03 abs_err=4.6566e-10 rel_err=3.3481e-07 py_zp=1.33683486e-03
+[  6.72s] #feat_cmp idx=72 name=acc_mag_std board=1.11557189e-02 py_causal=1.11557161e-02 abs_err=2.7940e-09 rel_err=2.5045e-07 py_zp=1.11476006e-02
+[  6.72s] #feat_cmp idx=73 name=acc_mag_iqr board=1.44635383e-02 py_causal=1.44634992e-02 abs_err=3.9116e-08 rel_err=2.7044e-06 py_zp=1.43080167e-02
+[  6.72s] #feat_cmp idx=74 name=acc_mag_skew board=6.16552353e-01 py_causal=6.16549373e-01 abs_err=2.9802e-06 rel_err=4.8337e-06 py_zp=6.83196545e-01
+[  6.73s] #feat_cmp idx=75 name=acc_mag_kurt board=3.77775908e-01 py_causal=3.77781153e-01 abs_err=5.2452e-06 rel_err=1.3884e-05 py_zp=7.43241310e-01
+[  6.73s] #feat_cmp idx=76 name=acc_mag_rms_diff board=1.22443140e-02 py_causal=1.22443149e-02 abs_err=9.3132e-10 rel_err=7.6062e-08 py_zp=1.20002581e-02
+[  6.73s] #feat_cmp idx=77 name=acc_mag_log_pow board=-9.14408779e+00 py_causal=-9.14408970e+00 abs_err=1.9073e-06 rel_err=2.0859e-07 py_zp=-9.20437336e+00
+[  6.74s] #feat_cmp idx=78 name=acc_mag_peak_f board=1.56250000e+01 py_causal=1.56250000e+01 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=1.56250000e+01
+[  6.74s] #feat_cmp idx=79 name=acc_mag_spec_ent board=4.11316013e+00 py_causal=4.11316013e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=4.13596344e+00
+[  6.74s] #feat_cmp idx=80 name=acc_mag_bp_0.5_3 board=1.14323057e-01 py_causal=1.14323810e-01 abs_err=7.5251e-07 rel_err=6.5823e-06 py_zp=1.60960868e-01
+[  6.74s] #feat_cmp idx=81 name=acc_mag_bp_3_7 board=1.65049717e-01 py_causal=1.65050358e-01 abs_err=6.4075e-07 rel_err=3.8821e-06 py_zp=1.44643217e-01
+[  6.75s] #feat_cmp idx=82 name=acc_mag_bp_7_12 board=1.72320917e-01 py_causal=1.72318861e-01 abs_err=2.0564e-06 rel_err=1.1933e-05 py_zp=1.71218291e-01
+[  6.75s] #feat_cmp idx=83 name=acc_mag_bp_12_20 board=3.70283663e-01 py_causal=3.70284766e-01 abs_err=1.1027e-06 rel_err=2.9779e-06 py_zp=3.51142943e-01
+[  6.75s] #feat_cmp idx=84 name=gyro_mag_std board=4.67915945e-02 py_causal=4.67916168e-02 abs_err=2.2352e-08 rel_err=4.7769e-07 py_zp=4.97165248e-02
+[  6.76s] #feat_cmp idx=85 name=gyro_mag_iqr board=5.32715321e-02 py_causal=5.32715693e-02 abs_err=3.7253e-08 rel_err=6.9930e-07 py_zp=5.14435917e-02
+[  6.76s] #feat_cmp idx=86 name=gyro_mag_skew board=1.76147330e+00 py_causal=1.76147616e+00 abs_err=2.8610e-06 rel_err=1.6242e-06 py_zp=1.65773582e+00
+[  6.76s] #feat_cmp idx=87 name=gyro_mag_kurt board=4.77741480e+00 py_causal=4.77742100e+00 abs_err=6.1989e-06 rel_err=1.2975e-06 py_zp=3.85851145e+00
+[  6.76s] #feat_cmp idx=88 name=gyro_mag_rms_diff board=3.32189612e-02 py_causal=3.32189724e-02 abs_err=1.1176e-08 rel_err=3.3643e-07 py_zp=3.46967876e-02
+[  6.77s] #feat_cmp idx=89 name=gyro_mag_log_pow board=-6.54803896e+00 py_causal=-6.54803896e+00 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=-6.47718191e+00
+[  6.77s] #feat_cmp idx=90 name=gyro_mag_peak_f board=9.76562500e-01 py_causal=9.76562500e-01 abs_err=0.0000e+00 rel_err=0.0000e+00 py_zp=9.76562500e-01
+[  6.77s] #feat_cmp idx=91 name=gyro_mag_spec_ent board=3.93917799e+00 py_causal=3.93917704e+00 abs_err=9.5367e-07 rel_err=2.4210e-07 py_zp=3.95811534e+00
+[  6.78s] #feat_cmp idx=92 name=gyro_mag_bp_0.5_3 board=2.83850223e-01 py_causal=2.83851355e-01 abs_err=1.1325e-06 rel_err=3.9897e-06 py_zp=3.25009316e-01
+[  6.78s] #feat_cmp idx=93 name=gyro_mag_bp_3_7 board=2.31626272e-01 py_causal=2.31626898e-01 abs_err=6.2585e-07 rel_err=2.7020e-06 py_zp=1.91375673e-01
+[  6.78s] #feat_cmp idx=94 name=gyro_mag_bp_7_12 board=1.78834334e-01 py_causal=1.78833917e-01 abs_err=4.1723e-07 rel_err=2.3331e-06 py_zp=1.91649720e-01
+[  6.78s] #feat_cmp idx=95 name=gyro_mag_bp_12_20 board=6.66426644e-02 py_causal=6.66426197e-02 abs_err=4.4703e-08 rel_err=6.7079e-07 py_zp=7.21729472e-02
+[  6.79s] #feat_summary n_feats=96 max_rel_err=3.383414e-04 mean_rel_err=6.570349e-06 max_abs_err=7.629395e-06 worst_idx=62 worst_name=wz_skew
+[  6.79s] #B4 FEATURE EXTRACTION END
+[  7.92s] #step_latency step=rec10s_1_downsample_100to50 mean_us=2850.00 p50_us=2850 p95_us=2850 min_us=2850 max_us=2850 mean_ms=2.8500 p95_ms=2.8500 n=100
+[  7.92s] #step_latency step=rec10s_2_bandpass_biquad4 mean_us=735.00 p50_us=735 p95_us=735 min_us=735 max_us=735 mean_ms=0.7350 p95_ms=0.7350 n=100
+[  7.93s] #step_latency step=rec10s_3_make_8channels mean_us=399.88 p50_us=400 p95_us=400 min_us=399 max_us=401 mean_ms=0.3999 p95_ms=0.4000 n=100
+[  7.93s] #step_latency step=rec10s_4_extract_96feats_welch256 mean_us=6556.01 p50_us=6556 p95_us=6556 min_us=6556 max_us=6557 mean_ms=6.5560 p95_ms=6.5560 n=100
+[  7.93s] #step_latency step=rec10s_total_feature_pipeline mean_us=10540.89 p50_us=10541 p95_us=10541 min_us=10540 max_us=10542 mean_ms=10.5409 p95_ms=10.5410 n=100
+[  7.93s] #B4 END
+[B4] Saved serial log (206 lines) to /home/smartcontrol/Desktop/PARKINSON/reports/board/B4_serial.log
+
+# B4 RANDOM FOREST & ON-BOARD FEATURE EXTRACTION SUMMARY (ESP32-S3)
+Generated: 2026-11-16T21:29:55.972713+07:00
+Board: ESP32-S3 (Sparkle IoT XH-S3E N16R8, 240 MHz, 16 MB Flash, 8 MB Octal PSRAM)
+Port: /dev/ttyACM0 (USB-Serial-JTAG)
+
+====================================================================================================
+1. MÔ HÌNH RANDOM FOREST (PYTHON SCIKIT-LEARN -> EMLEARN C FLOAT) & AUROC TEST FOLD 0
+====================================================================================================
+- Bài toán & Chia dữ liệu     : PD vs HC (355 bệnh nhân), StratifiedKFold(n_splits=5, shuffle=True, random_state=0), fold=0
+- Tập Train / Test Fold 0     : n_train = 284, n_test = 71 (PD=55, HC=16)
+- Số đặc trưng (Features)     : 2112 đặc trưng/bệnh nhân (22 bản ghi [11 bài x 2 cổ tay] x 96 đặc trưng/bản ghi [12 đặc trưng/kênh x 8 kênh])
+- Cấu hình Random Forest      : n_estimators=100, max_depth=8, class_weight='balanced', random_state=0
+- Quy mô rừng cây             : 3848 nút (nodes), 1974 lá (leaves), độ sâu thực tế tối đa = 8
+- AUROC Test Fold 0 (sklearn) : 0.922727 (Balanced Acc = 0.834659, Acc = 0.915493, Sens = 0.981818, Spec = 0.6875)
+- AUROC Test Fold 0 (emlearn) : 0.922727 (soft leaf_bits=8) / 0.923295 (hard majority vote)
+  (Chi tiết lưu tại: reports/board/B4_rf_python.json)
+
+====================================================================================================
+2. TÀI NGUYÊN BỘ NHỚ TRÊN BO (FLASH & RAM)
+====================================================================================================
+- Tổng Flash Image (idf.py size) : 532,614 B (520.1 KB) (binary: 532,720 B (0x820f0))
+- Flash Code / Flash Rodata      : Code = 224,668 B (219.4 KB) | Rodata = 239,172 B (233.6 KB) (gồm cả 20 vector test nhúng sẵn = 168.96 KB)
+- Bảng lá RF (pd_rf_leaves)      : 48 B trong Flash Rodata; RAM động khi suy luận RF = 0 B (stack ~64 B)
+- DSP & Welch FFT Static Buffers : 47252 B (46.14 KB SRAM nội cho bản ghi 10s)
+- Tổng Static DRAM (idf.py size) : 102,007 B (99.6 KB)
+- Internal SRAM Free             : 312691 B / 392603 B
+
+====================================================================================================
+3. ĐỘ TRỄ SUY LUẬN RANDOM FOREST & ĐỐI CHIẾU 20 VECTOR TEST VỚI SCIKIT-LEARN
+====================================================================================================
+- Khớp nhãn dự đoán với sklearn trên 20 vector test : 20/20 (soft voting leaf_bits=8) | 20/20 (hard voting leaf_bits=0)
+- Khớp bit-exact với mô hình emlearn tham chiếu PC  : 19/20
+- Sai số xác suất |P_bo - P_sklearn| (soft voting)  : Max = 0.010000, Mean = 0.000579 (do lượng tử hóa lá 8-bit 1/255)
+- Sai số xác suất |P_bo - P_sklearn| (hard voting)  : Max = 0.018666
+- Độ trễ suy luận RF (n=1000 lần, 100 cây, 2112 đặc trưng):
+  + Suy luận xác suất mềm (pd_rf_predict_proba)     : Mean = 2467.38 us (2.4674 ms) | p50 = 2447 us | p95 = 2677.00 us (2.6770 ms)
+  + Suy luận nhãn đa số (pd_rf_hard_predict)        : Mean = 1640.77 us (1.6408 ms) | p50 = 1625 us | p95 = 1872.00 us (1.8720 ms)
+
+Idx | SID  | y_true | y_sk | P_sklearn | y_bo_soft | P_bo_soft | |dP_soft| | y_bo_hard | P_bo_hard
+------------------------------------------------------------------------------------------------
+0   | 005  |      1 |    1 |  0.979693 |         1 |  0.979608 |  0.000085 |         1 |  0.980000
+1   | 009  |      1 |    1 |  0.959693 |         1 |  0.959608 |  0.000085 |         1 |  0.960000
+2   | 029  |      1 |    1 |  0.949693 |         1 |  0.949608 |  0.000085 |         1 |  0.950000
+3   | 038  |      1 |    1 |  0.919693 |         1 |  0.919608 |  0.000085 |         1 |  0.920000
+4   | 053  |      1 |    1 |  0.840008 |         1 |  0.839961 |  0.000048 |         1 |  0.840000
+5   | 060  |      1 |    1 |  0.883750 |         1 |  0.883726 |  0.000024 |         1 |  0.880000
+6   | 081  |      0 |    0 |  0.426494 |         0 |  0.426314 |  0.000180 |         0 |  0.420000
+7   | 085  |      1 |    1 |  0.708109 |         1 |  0.708078 |  0.000031 |         1 |  0.710000
+8   | 102  |      1 |    1 |  0.772830 |         1 |  0.772706 |  0.000125 |         1 |  0.770000
+9   | 108  |      0 |    0 |  0.268666 |         0 |  0.258667 |  0.010000 |         0 |  0.250000
+10  | 122  |      1 |    1 |  0.672096 |         1 |  0.672000 |  0.000096 |         1 |  0.670000
+11  | 125  |      1 |    1 |  0.930169 |         1 |  0.930078 |  0.000091 |         1 |  0.930000
+12  | 129  |      1 |    1 |  0.939876 |         1 |  0.939804 |  0.000072 |         1 |  0.940000
+13  | 132  |      0 |    1 |  0.600586 |         1 |  0.600549 |  0.000037 |         1 |  0.600000
+14  | 145  |      1 |    1 |  0.779995 |         1 |  0.779922 |  0.000074 |         1 |  0.780000
+15  | 154  |      1 |    1 |  0.772818 |         1 |  0.772667 |  0.000151 |         1 |  0.770000
+16  | 159  |      1 |    1 |  0.840672 |         1 |  0.840588 |  0.000084 |         1 |  0.840000
+17  | 184  |      0 |    1 |  0.573669 |         1 |  0.573647 |  0.000022 |         1 |  0.570000
+18  | 185  |      1 |    1 |  0.594719 |         1 |  0.594627 |  0.000092 |         1 |  0.590000
+19  | 187  |      1 |    1 |  0.620435 |         1 |  0.620314 |  0.000122 |         1 |  0.620000
+
+====================================================================================================
+4. ĐỘ TRỄ & ĐỘ CHÍNH XÁC TRÍCH XUẤT 96 ĐẶC TRƯNG TRÊN BO CHO 1 BẢN GHI 10 GIÂY (1000 MẪU x 6 KÊNH @ 100 Hz)
+   Bản ghi: data/raw/pads/movement/timeseries/005_HoldWeight_LeftWrist.txt [0..10s]
+====================================================================================================
+- Số đặc trưng mỗi bản ghi     : 96 (12 đặc trưng/kênh x 8 kênh: std, iqr, skew, kurt, rms_diff, log_pow, peak_f, spec_ent, 4 band powers)
+- Sai số tương đối tối đa so với Python (scipy/numpy): 3.383414e-04 (0.033834%) tại đặc trưng #62 (wz_skew)
+- Sai số tương đối trung bình (trên 96 đặc trưng)    : 6.570349e-06
+- Sai số tuyệt đối tối đa (trên 96 đặc trưng)        : 7.629395e-06
+
+Bước xử lý (1 bản ghi 10s x 6 kênh @ 100 Hz)                             |  Mean (us) |  p50 (us) |  p95 (us) |  Mean (ms) |   p95 (ms) | Tỷ trọng
+----------------------------------------------------------------------------------------------------------------------------------------------
+1. Hạ mẫu 100->50 Hz (FIR polyphase 41 taps, 1000->500 mẫu x 6 kênh)     |    2850.00 |      2850 |      2850 |     2.8500 |     2.8500 |   27.04%
+2. Lọc thông dải 0.5-20 Hz (Butterworth bậc 4 nhân quả, 500 mẫu x 6 kênh) |     735.00 |       735 |       735 |     0.7350 |     0.7350 |    6.97%
+3. Tạo 8 kênh (ax, ay, az, wx, wy, wz, |a|, |w|, 500 mẫu x 8 kênh)       |     399.88 |       400 |       400 |     0.3999 |     0.4000 |    3.79%
+4. Trích xuất 96 đặc trưng (12 đặc trưng x 8 kênh, gồm Welch PSD FFT-256) |    6556.01 |      6556 |      6556 |     6.5560 |     6.5560 |   62.20%
+TỔNG TRÍCH XUẤT ĐẶC TRƯNG 1 BẢN GHI 10s (Bước 1 -> 4)                    |   10540.89 |     10541 |     10541 |    10.5409 |    10.5410 |  100.00%
+----------------------------------------------------------------------------------------------------------------------------------------------
+-> Thời gian tính đặc trưng cho 1 bản ghi 10s x 6 kênh @ 100 Hz: Mean = 10.541 ms (p95 = 10.541 ms).
+-> Nếu tính đủ 22 bản ghi (11 bài x 2 cổ tay = 2112 đặc trưng) + suy luận RF 100 cây: 22 x 10.541 ms + 2.467 ms = 234.37 ms.
+
+Errors: none
+
+[B4] Completed successfully at 2026-11-16T21:29:55+07:00

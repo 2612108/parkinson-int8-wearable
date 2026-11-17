@@ -1,0 +1,48 @@
+== audit_pads.md ==
+# Audit PADS
+
+## Kho file
+- Tổng file: 12700, dung lượng 1519.4 MB
+- Theo phần mở rộng: `.txt`: 10320, `.json`: 1407, `.bin`: 938, `.py`: 18, `.html`: 10, `.jpg`: 6, `.csv`: 1
+- Thư mục (top 15 theo số file):
+  - `movement/timeseries`: 10319
+  - `patients`: 470
+  - `questionnaire`: 470
+  - `movement`: 470
+  - `preprocessed/questionnaire`: 470
+  - `preprocessed/movement`: 470
+  - `scripts`: 20
+  - `scripts/utils`: 6
+  - `.`: 3
+  - `preprocessed`: 2
+
+## Bệnh nhân (469 file JSON)
+- Cột: resource_type, id, study_id, condition, disease_comment, age_at_diagnosis, age, height, weight, gender, handedness, appearance_in_kinship, appearance_in_first_grade_kinship, effect_of_alcohol_on_tremor
+- `condition`: Parkinson's=276, Healthy=79, Other Movement Disorders=60, Essential Tremor=28, Atypical Parkinsonism=15, Multiple Sclerosis=11
+- `gender`: male=281, female=188
+- `handedness`: right=437, left=32
+- `age`: mean 64.2 ± 10.7, thiếu 0
+- `age_at_diagnosis`: mean 55.3 ± 17.1, thiếu 0
+- `height`: mean 174.2 ± 10.9, thiếu 0
+- `weight`: mean 81.9 ± 17.9, thiếu 0
+- Đã ghi `reports/pads_patients.csv`
+
+## `preprocessed/file_list.csv`
+- shape (469, 15); cột: resource_type, id, study_id, condition, disease_comment, age_at_diagnosis, age, height, weight, gender, handedness, appearance_in_kinship, appearance_in_first_grade_kinship, effect_of_alcohol_on_tremor, label
+```
+  resource_type  id study_id                 condition                                                                 disease_comme
+...
+== audit_monipar.md ==
+# Audit Monipar
+
+## Zenodo
+- Tiêu đề: Monipar Database: smartwatch movement data to monitor motor competency in subjects with Parkinson's disease
+- Ngày: 2023-07-02
+- License: {'id': 'cc-by-4.0'}
+- Phiên bản: 1.0
+- File: Monipar database organization week:subject.png (0.0 MB), MONIPAR_HEALTHYCONTROL.mat (11.2 MB), MONIPAR_PD_REMOTE.mat (15.0 MB), Fast_watch_Signals.m (0.0 MB), MONIPAR_PD_REMOTE_TREMOR_LABEL.mat (0.0 MB), MONIPAR_PD_SUPERVISED_TREMOR_LABEL.mat (0.0 MB), MONIPAR_PD_SUPERVISED.mat (9.2 MB), Monipar_README.txt (0.0 MB), MONIPAR SUBJECTS DATA.xlsx (0.0 MB)
+
+Mô tả:
+```
+ Movement data was collected through smartwatches to monitor motor competence in subjects with Parkinson's Disease (PD). The data set collected for the Monipar study consists of triaxial acceleration data from 21 subjects with PD and 7 healthy control subjects when performing a set of physical exercises while wearing an off-the-shelf smartwatch. Each participant performed the complete set of eight exercises once a week, commonly on the same day and at a similar time. Three Matlab files are provided that contain the raw data of the experimental subgroups: (1) Supervised, (2) Remote, and (3) Healthy control. Additionally, two Matlab files are provided containing the Tremor Labels for selected subjects in the experimental subgroups: (1) Supervised and (2) Remote. While the implementation of the experimental protocol for collecting movement data followed a consistent approach for all participants, three 
+...

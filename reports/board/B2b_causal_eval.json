@@ -1,0 +1,38 @@
+{
+ "n_test": 71,
+ "n_pd": 55,
+ "qat": {
+  "zp": {
+   "auroc": 0.8898,
+   "agree_with_zp": 1.0,
+   "mean_abs_dp": 0.0
+  },
+  "causal": {
+   "auroc": 0.8159,
+   "agree_with_zp": 0.8169,
+   "mean_abs_dp": 0.0306
+  },
+  "causal_win": {
+   "auroc": 0.833,
+   "agree_with_zp": 0.8028,
+   "mean_abs_dp": 0.0294
+  }
+ },
+ "ptq": {
+  "zp": {
+   "auroc": 0.8034,
+   "agree_with_zp": 1.0,
+   "mean_abs_dp": 0.0
+  },
+  "causal": {
+   "auroc": 0.7739,
+   "agree_with_zp": 0.9014,
+   "mean_abs_dp": 0.0281
+  },
+  "causal_win": {
+   "auroc": 0.7727,
+   "agree_with_zp": 0.8732,
+   "mean_abs_dp": 0.0296
+  }
+ }
+}

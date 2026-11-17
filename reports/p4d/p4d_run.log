@@ -1,0 +1,63 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754355.914237      62 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754371.774664      62 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+E0000 00:00:1794754507.961065      62 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+{
+ "n_patients": 469,
+ "labels": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_windows": 55342,
+ "t_build_s": 132.3,
+ "tf": "2.21.0",
+ "gpus": [],
+ "python": "3.13.18",
+ "args": {
+  "pads": "/kaggle/input",
+  "out": "reports/p4d",
+  "models": [
+   "ds_cnn",
+   "cnn1d",
+   "cnn_lstm"
+  ],
+  "inputs": [
+   "raw"
+  ],
+  "aggs": [
+   "meanprob"
+  ],
+  "seeds": [
+   0
+  ],
+  "epochs": 30,
+  "quick": false,
+  "tasks": [
+   "PD_vs_DD"
+  ],
+  "patience": 5
+ }
+}
+PD_vs_DD/ds_cnn/raw/meanprob fold 0 {'T': 0.19123468714470504, 'params': 11056, 'epochs_run': 20, 'fold': 0, 'sec': 108.3, 'maxrss_gb': 3.33}
+PD_vs_DD/ds_cnn/raw/meanprob fold 1 {'T': 0.25254649414872876, 'params': 11056, 'epochs_run': 19, 'fold': 1, 'sec': 98.0, 'maxrss_gb': 3.49}
+PD_vs_DD/ds_cnn/raw/meanprob fold 2 {'T': 0.4822964789371641, 'params': 11056, 'epochs_run': 30, 'fold': 2, 'sec': 146.0, 'maxrss_gb': 3.54}
+PD_vs_DD/ds_cnn/raw/meanprob fold 3 {'T': 0.3754646617018181, 'params': 11056, 'epochs_run': 28, 'fold': 3, 'sec': 136.7, 'maxrss_gb': 3.58}
+PD_vs_DD/ds_cnn/raw/meanprob fold 4 {'T': 0.09927917485210454, 'params': 11056, 'epochs_run': 11, 'fold': 4, 'sec': 59.7, 'maxrss_gb': 3.61}
+PD_vs_DD/ds_cnn/raw/meanprob 0 {'bal_acc': 0.622, 'auroc': np.float64(0.685), 'sens': 0.699, 'spec': 0.544, 'ece': 0.046, 'brier': np.float64(0.196)}
+PD_vs_DD/cnn1d/raw/meanprob fold 0 {'T': 0.22200240884020606, 'params': 32160, 'epochs_run': 16, 'fold': 0, 'sec': 138.0, 'maxrss_gb': 3.64}
+PD_vs_DD/cnn1d/raw/meanprob fold 1 {'T': 1.3052106257033285, 'params': 32160, 'epochs_run': 18, 'fold': 1, 'sec': 153.6, 'maxrss_gb': 3.71}
+/kaggle/working/scripts/p4_dl.py:158: RuntimeWarning: overflow encountered in exp
+  p = 1 / (1 + np.exp(-lg))
+PD_vs_DD/cnn1d/raw/meanprob fold 2 {'T': 0.524713704840392, 'params': 32160, 'epochs_run': 30, 'fold': 2, 'sec': 249.7, 'maxrss_gb': 3.79}
+PD_vs_DD/cnn1d/raw/meanprob fold 3 {'T': 0.3436391960065437, 'params': 32160, 'epochs_run': 30, 'fold': 3, 'sec': 252.3, 'maxrss_gb': 3.82}
+PD_vs_DD/cnn1d/raw/meanprob fold 4 {'T': 0.0564742071297875, 'params': 32160, 'epochs_run': 6, 'fold': 4, 'sec': 60.3, 'maxrss_gb': 3.87}
+PD_vs_DD/cnn1d/raw/meanprob 0 {'bal_acc': 0.631, 'auroc': np.float64(0.661), 'sens': 0.612, 'spec': 0.649, 'ece': 0.063, 'brier': np.float64(0.208)}
+PD_vs_DD/cnn_lstm/raw/meanprob fold 0 {'T': 0.34949305750073134, 'params': 44640, 'epochs_run': 16, 'fold': 0, 'sec': 220.0, 'maxrss_gb': 3.91}
+PD_vs_DD/cnn_lstm/raw/meanprob fold 1 {'T': 0.5970227804163235, 'params': 44640, 'epochs_run': 12, 'fold': 1, 'sec': 175.8, 'maxrss_gb': 3.95}
+PD_vs_DD/cnn_lstm/raw/meanprob fold 2 {'T': 0.5481281789416823, 'params': 44640, 'epochs_run': 12, 'fold': 2, 'sec': 175.9, 'maxrss_gb': 3.95}
+PD_vs_DD/cnn_lstm/raw/meanprob fold 3 {'T': 0.44676439379869076, 'params': 44640, 'epochs_run': 19, 'fold': 3, 'sec': 252.2, 'maxrss_gb': 4.01}
+PD_vs_DD/cnn_lstm/raw/meanprob fold 4 {'T': 0.05000662713858094, 'params': 44640, 'epochs_run': 6, 'fold': 4, 'sec': 91.4, 'maxrss_gb': 4.06}
+PD_vs_DD/cnn_lstm/raw/meanprob 0 {'bal_acc': 0.624, 'auroc': np.float64(0.652), 'sens': 0.696, 'spec': 0.553, 'ece': 0.071, 'brier': np.float64(0.205)}
+xong 2476.9

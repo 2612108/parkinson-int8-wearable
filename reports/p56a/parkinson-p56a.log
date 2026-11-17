@@ -1,0 +1,153 @@
+[{"stream_name":"stderr","time":10.048475495,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":10.048519105,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":11.518442257,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.518486137,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.518491415,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.518495166,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.26388339,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.263928123,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.263933875,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.263938601,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.717949488,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":47.704442012,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":47.704480742,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":47.704485353,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":48.049628396,"data":"\u001b[0mSun Nov 15 12:25:42 2026       \r\n"}
+,{"stream_name":"stdout","time":48.049660264,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stdout","time":48.049667752,"data":"| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\r\n"}
+,{"stream_name":"stdout","time":48.04967352,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":48.04967821,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\r\n"}
+,{"stream_name":"stdout","time":48.04968305,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\r\n"}
+,{"stream_name":"stdout","time":48.049687938,"data":"|                                         |                        |               MIG M. |\r\n"}
+,{"stream_name":"stdout","time":48.04969228,"data":"|=========================================+========================+======================|\r\n"}
+,{"stream_name":"stdout","time":48.100424161,"data":"|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\r\n"}
+,{"stream_name":"stdout","time":48.10044587,"data":"| N/A   47C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\r\n"}
+,{"stream_name":"stdout","time":48.10045337,"data":"|                                         |                        |                  N/A |\r\n"}
+,{"stream_name":"stdout","time":48.100472486,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":48.100477486,"data":"|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\r\n"}
+,{"stream_name":"stdout","time":48.100482688,"data":"| N/A   52C    P8             12W /   70W |       0MiB /  15360MiB |      0%      Default |\r\n"}
+,{"stream_name":"stdout","time":48.10048781,"data":"|                                         |                        |                  N/A |\r\n"}
+,{"stream_name":"stdout","time":48.100492948,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":48.10049818,"data":"\r\n"}
+,{"stream_name":"stdout","time":48.100503298,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stdout","time":48.100508515,"data":"| Processes:                                                                              |\r\n"}
+,{"stream_name":"stdout","time":48.100513739,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\r\n"}
+,{"stream_name":"stdout","time":48.100518858,"data":"|        ID   ID                                                               Usage      |\r\n"}
+,{"stream_name":"stdout","time":48.100523961,"data":"|=========================================================================================|\r\n"}
+,{"stream_name":"stdout","time":48.100529076,"data":"|  No running processes found                                                             |\r\n"}
+,{"stream_name":"stdout","time":48.100534331,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stdout","time":48.506120525,"data":"Writing src/__init__.py\n"}
+,{"stream_name":"stdout","time":48.517869842,"data":"Writing src/evalkit.py\n"}
+,{"stream_name":"stdout","time":48.528911675,"data":"Writing src/features.py\n"}
+,{"stream_name":"stdout","time":48.540649868,"data":"Writing src/monipar_io.py\n"}
+,{"stream_name":"stdout","time":48.551186289,"data":"Writing src/pads_io.py\n"}
+,{"stream_name":"stdout","time":48.571907558,"data":"Writing scripts/p56_quant_shift.py\n"}
+,{"stream_name":"stdout","time":49.463433674,"data":"/kaggle/input:\r\n"}
+,{"stream_name":"stdout","time":49.46346091,"data":"datasets\r\n"}
+,{"stream_name":"stdout","time":212.438950378,"data":"  \"adc4g12b\",\r\n"}
+,{"stream_name":"stdout","time":212.43898439,"data":"  \"adc2g10b\",\r\n"}
+,{"stream_name":"stdout","time":212.438988295,"data":"  \"adc2g8b\",\r\n"}
+,{"stream_name":"stdout","time":212.438991226,"data":"  \"noise_lo\",\r\n"}
+,{"stream_name":"stdout","time":212.438994079,"data":"  \"noise_hi\",\r\n"}
+,{"stream_name":"stdout","time":212.438996972,"data":"  \"rot15\",\r\n"}
+,{"stream_name":"stdout","time":212.438999787,"data":"  \"rot45\",\r\n"}
+,{"stream_name":"stdout","time":212.439002541,"data":"  \"rot180\",\r\n"}
+,{"stream_name":"stdout","time":212.439005315,"data":"  \"mirror\",\r\n"}
+,{"stream_name":"stdout","time":212.439008513,"data":"  \"nogyro\"\r\n"}
+,{"stream_name":"stdout","time":212.439011285,"data":" ]\r\n"}
+,{"stream_name":"stdout","time":212.43901401,"data":"}\r\n"}
+,{"stream_name":"stdout","time":212.439016744,"data":"Traceback (most recent call last):\r\n"}
+,{"stream_name":"stdout","time":212.439019659,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 401, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":212.439029606,"data":"    main()\r\n"}
+,{"stream_name":"stdout","time":212.43903216,"data":"    ~~~~^^\r\n"}
+,{"stream_name":"stdout","time":212.43903437,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 324, in main\r\n"}
+,{"stream_name":"stdout","time":212.439036745,"data":"    models, (mu, sd), meta = train_variants(tf, tfmot, Xtr6, ytr, Xva6, yva, mode, a, rng)\r\n"}
+,{"stream_name":"stdout","time":212.439039052,"data":"                             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":212.439041428,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 251, in train_variants\r\n"}
+,{"stream_name":"stdout","time":212.439043776,"data":"    meta[base + \"_epochs\"] = fit(tf, m, Xtr6, ytr, Xva, yva, mode, mu, sd, sr, a.epochs, 1e-3, rng)\r\n"}
+,{"stream_name":"stdout","time":212.439046167,"data":"                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":212.439048505,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 188, in fit\r\n"}
+,{"stream_name":"stdout","time":212.439050907,"data":"    model.train_on_batch((to_input(W6, mode) - mu) / sd, ytr[b].astype(np.float32), sample_weight=w[b])\r\n"}
+,{"stream_name":"stdout","time":212.439053218,"data":"    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":212.439055512,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 2782, in train_on_batch\r\n"}
+,{"stream_name":"stdout","time":212.439057945,"data":"    logs = self.train_function(iterator)\r\n"}
+,{"stream_name":"stdout","time":212.43906024,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tensorflow/python/util/traceback_utils.py\", line 167, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439062663,"data":"    raise e.with_traceback(filtered_tb) from None\r\n"}
+,{"stream_name":"stdout","time":212.439064907,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tensorflow/python/eager/execute.py\", line 59, in quick_execute\r\n"}
+,{"stream_name":"stdout","time":212.439067719,"data":"    except TypeError as e:\r\n"}
+,{"stream_name":"stdout","time":212.43907022,"data":"    ...\u003c5 lines\u003e...\r\n"}
+,{"stream_name":"stdout","time":212.439072597,"data":"      raise e\r\n"}
+,{"stream_name":"stdout","time":212.43907481,"data":"tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\r\n"}
+,{"stream_name":"stdout","time":212.43907713,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439079337,"data":"Detected at node model/depthwise_conv2d_1/depthwise defined at (most recent call last):\r\n"}
+,{"stream_name":"stdout","time":212.439081669,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 401, in \u003cmodule\u003e\r\n"}
+,{"stream_name":"stdout","time":212.439084125,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43908627,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 324, in main\r\n"}
+,{"stream_name":"stdout","time":212.439088569,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43909067,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 251, in train_variants\r\n"}
+,{"stream_name":"stdout","time":212.439093095,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439096245,"data":"  File \"/kaggle/working/scripts/p56_quant_shift.py\", line 188, in fit\r\n"}
+,{"stream_name":"stdout","time":212.43909857,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43910296,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 2782, in train_on_batch\r\n"}
+,{"stream_name":"stdout","time":212.439105496,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439107612,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 1398, in train_function\r\n"}
+,{"stream_name":"stdout","time":212.43911,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.4391121,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 1381, in step_function\r\n"}
+,{"stream_name":"stdout","time":212.439114467,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439116552,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 1370, in run_step\r\n"}
+,{"stream_name":"stdout","time":212.439118905,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.4391212,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 1147, in train_step\r\n"}
+,{"stream_name":"stdout","time":212.439123584,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439125704,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py\", line 65, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439128107,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43913023,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py\", line 588, in __call__\r\n"}
+,{"stream_name":"stdout","time":212.4391326,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439134702,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py\", line 65, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439137055,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439139159,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/base_layer.py\", line 1155, in __call__\r\n"}
+,{"stream_name":"stdout","time":212.439141545,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439143659,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py\", line 96, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439146049,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439148155,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/functional.py\", line 534, in call\r\n"}
+,{"stream_name":"stdout","time":212.439150519,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439152635,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/functional.py\", line 692, in _run_internal_graph\r\n"}
+,{"stream_name":"stdout","time":212.439155027,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43915715,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py\", line 65, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439159522,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439161637,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/base_layer.py\", line 1155, in __call__\r\n"}
+,{"stream_name":"stdout","time":212.439163994,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.43916612,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py\", line 96, in error_handler\r\n"}
+,{"stream_name":"stdout","time":212.439168508,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439170613,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/layers/convolutional/depthwise_conv2d.py\", line 162, in call\r\n"}
+,{"stream_name":"stdout","time":212.439173019,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439177405,"data":"  File \"/usr/local/lib/python3.13/dist-packages/tf_keras/src/backend.py\", line 6466, in depthwise_conv2d\r\n"}
+,{"stream_name":"stdout","time":212.439179868,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.439182194,"data":"Current implementation only supports equal length strides in the row and column dimensions.\r\n"}
+,{"stream_name":"stdout","time":212.439184575,"data":"\t [[{{node model/depthwise_conv2d_1/depthwise}}]] [Op:__inference_train_function_5679]\r\n"}
+,{"stream_name":"stdout","time":212.703683251,"data":"reports:\r\n"}
+,{"stream_name":"stdout","time":212.703719754,"data":"total 20\r\n"}
+,{"stream_name":"stdout","time":212.703724812,"data":"drwxr-xr-x 3 root root 4096 Nov 15 12:25 .\r\n"}
+,{"stream_name":"stdout","time":212.703728537,"data":"drwxr-xr-x 5 root root 4096 Nov 15 12:25 ..\r\n"}
+,{"stream_name":"stdout","time":212.703732221,"data":"drwxr-xr-x 3 root root 4096 Nov 15 12:28 p56a\r\n"}
+,{"stream_name":"stdout","time":212.703735677,"data":"-rw-r--r-- 1 root root 4669 Nov 15 12:28 p56a_run.log\r\n"}
+,{"stream_name":"stdout","time":212.703739322,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.70374273,"data":"reports/p56a:\r\n"}
+,{"stream_name":"stdout","time":212.703750046,"data":"total 16\r\n"}
+,{"stream_name":"stdout","time":212.703752622,"data":"drwxr-xr-x 3 root root 4096 Nov 15 12:28 .\r\n"}
+,{"stream_name":"stdout","time":212.703755108,"data":"drwxr-xr-x 3 root root 4096 Nov 15 12:25 ..\r\n"}
+,{"stream_name":"stdout","time":212.703757556,"data":"drwxr-xr-x 2 root root 4096 Nov 15 12:25 models\r\n"}
+,{"stream_name":"stdout","time":212.703760036,"data":"-rw-r--r-- 1 root root  682 Nov 15 12:28 run_info.json\r\n"}
+,{"stream_name":"stdout","time":212.703763072,"data":"\r\n"}
+,{"stream_name":"stdout","time":212.703765446,"data":"reports/p56a/models:\r\n"}
+,{"stream_name":"stdout","time":212.703767795,"data":"total 8\r\n"}
+,{"stream_name":"stdout","time":212.70377013,"data":"drwxr-xr-x 2 root root 4096 Nov 15 12:25 .\r\n"}
+,{"stream_name":"stdout","time":212.703772574,"data":"drwxr-xr-x 3 root root 4096 Nov 15 12:28 ..\r\n"}
+,{"stream_name":"stderr","time":215.377240746,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":215.377297374,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":215.568130619,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":215.568154254,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":216.377184938,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":216.4581072,"data":"[NbConvertApp] Writing 55693 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":219.00313388,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":219.660845766,"data":"[NbConvertApp] Writing 499336 bytes to __results__.html\n"}
+]

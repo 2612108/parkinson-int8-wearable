@@ -1,0 +1,45 @@
+{
+ "n_patients": 469,
+ "label_counts": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_records": 22,
+ "records": [
+  "CrossArms|LeftWrist",
+  "CrossArms|RightWrist",
+  "DrinkGlas|LeftWrist",
+  "DrinkGlas|RightWrist",
+  "Entrainment|LeftWrist",
+  "Entrainment|RightWrist",
+  "HoldWeight|LeftWrist",
+  "HoldWeight|RightWrist",
+  "LiftHold|LeftWrist",
+  "LiftHold|RightWrist",
+  "PointFinger|LeftWrist",
+  "PointFinger|RightWrist",
+  "Relaxed|LeftWrist",
+  "Relaxed|RightWrist",
+  "RelaxedTask|LeftWrist",
+  "RelaxedTask|RightWrist",
+  "StretchHold|LeftWrist",
+  "StretchHold|RightWrist",
+  "TouchIndex|LeftWrist",
+  "TouchIndex|RightWrist",
+  "TouchNose|LeftWrist",
+  "TouchNose|RightWrist"
+ ],
+ "n_features": 2112,
+ "nan_frac": 0.0,
+ "n_windows": 55342,
+ "t_features_s": 1286.7,
+ "python": "3.12.3",
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "quick": false,
+ "t_total_s": 14001.5
+}

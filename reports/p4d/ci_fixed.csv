@@ -1,0 +1,4 @@
+file,n,bal_acc,bal_acc_lo,bal_acc_hi,auroc,auroc_lo,auroc_hi,sens,sens_lo,sens_hi,spec,spec_lo,spec_hi,ece,ece_lo,ece_hi
+oof_PD_vs_DD_cnn1d_raw_meanprob_seed0.csv,390,0.6307,0.5793,0.6829,0.6612,0.5996,0.7227,0.6123,0.5507,0.6739,0.6491,0.5614,0.7368,0.0625,0.0464,0.1158
+oof_PD_vs_DD_cnn_lstm_raw_meanprob_seed0.csv,390,0.6241,0.5732,0.6768,0.6515,0.5917,0.7142,0.6957,0.6413,0.75,0.5526,0.4649,0.6491,0.0711,0.0538,0.1252
+oof_PD_vs_DD_ds_cnn_raw_meanprob_seed0.csv,390,0.6216,0.5684,0.673,0.6852,0.6273,0.7413,0.6993,0.6449,0.7536,0.5439,0.4474,0.6404,0.046,0.042,0.101

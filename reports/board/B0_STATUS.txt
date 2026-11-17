@@ -1,0 +1,54 @@
+# B0 STATUS REPORT — ESP32-S3 Sparkle IoT XH-S3E (N16R8)
+Timestamp: 2026-11-15T11:20:00+07:00
+
+- ESP-IDF version: Chưa cài đặt (mục tiêu: v5.3.2 tại ~/esp/esp-idf; đã tạo ~/esp nhưng bị chặn do máy chưa cài gói `git`, `cmake`, `ninja-build`, `python3-venv`).
+- esp-tflite-micro version: Chưa cài đặt (phụ thuộc vào `idf.py` của ESP-IDF).
+- Serial port: KHÔNG PHÁT HIỆN (`/dev/ttyACM*` và `/dev/ttyUSB*` đều không tồn tại; `lsusb` không có thiết bị ESP32-S3 / USB-UART). User `smartcontrol` đã có sẵn quyền nhóm `dialout`.
+- PSRAM / Flash phát hiện được: Chưa đọc được từ bo (do chưa có cổng serial và `esptool.py`). Đã cấu hình sẵn 16 MB Flash + 8 MB Octal PSRAM + CPU 240 MHz trong `firmware/b0_smoke/sdkconfig.defaults`.
+- ESP-NN (`CONFIG_NN_OPTIMIZED=y`): Chưa kiểm tra được (cần ESP-IDF + component `espressif/esp-tflite-micro`).
+- Thời gian `Invoke()` trung bình của example `hello_world` TFLM (1000 lần): N/A (chưa thể build/flash khi chưa có toolchain và kết nối serial).
+
+## Các việc đã chuẩn bị sẵn
+1. Đã tạo thư mục `~/esp/` để sẵn sàng clone ESP-IDF v5.3.2.
+2. Đã khởi tạo sẵn khung project `~/Desktop/PARKINSON/firmware/b0_smoke/` (`CMakeLists.txt`, `sdkconfig.defaults` với `CONFIG_SPIRAM=y`, `CONFIG_SPIRAM_MODE_OCT=y`, `CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y`, `CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y`, và `main/hello_world_main.c` in tần số CPU, Flash, PSRAM trong 10 giây).
+3. Đã ghi hướng dẫn lệnh `sudo apt-get` và kiểm tra cáp USB-C vào `~/Desktop/PARKINSON/reports/board/CAN_ANH_TUYEN.txt`.
+
+## Các lỗi gặp phải
+1. **Thiếu gói hệ thống cần quyền `sudo`**: Các gói `git`, `flex`, `bison`, `gperf`, `python3-venv`, `cmake`, `ninja-build`, `ccache`, `libffi-dev`, `libssl-dev`, `dfu-util` chưa được cài đặt (`sudo -n` yêu cầu mật khẩu).
+2. **Không nhận diện được bo ESP32-S3 qua USB**: Không có `/dev/ttyACM*` hay `/dev/ttyUSB*`. Kernel log lúc 10:26:06 báo `usb 1-1: device descriptor read/64, error -71` / `Device not responding to setup address` (nghi ngờ cáp USB-C lỗi/chỉ sạc hoặc cần nhấn giữ BOOT + nhấn RST để vào Download Mode).
+
+
+---
+
+## Lần 2 — 11:38 (2026-11-15T11:38:00+07:00)
+
+- **Kiểm tra nhận bo (`reports/board/B0_usb.txt`)**:
+  - `/dev/ttyACM*` và `/dev/ttyUSB*`: Vẫn **không tồn tại** (`No such file or directory`).
+  - `lsusb`: Chỉ xuất hiện thêm `Bus 001 Device 029: ID 14cd:1212 Super Top microSD card reader (SY-T18)` (thiết bị lưu trữ USB Mass Storage `/dev/sdb` 8.03 GB cắm lúc 11:34:18, đang báo lỗi đọc sector `critical medium error, dev sdb`). Không có VID:PID của ESP32-S3 (`303a:*`) hay chip USB-UART (`1a86:*` CH34x, `10c4:*` CP210x).
+  - `journalctl -k`: Ghi nhận nhiều lần thiết bị full-speed (12 Mbps) cố gắng kết nối trên cả cổng `usb 1-2` (lúc 11:21:31–11:21:56) và `usb 1-1` (lúc 11:24:03–11:24:06) nhưng đều thất bại với lỗi:
+    `Device not responding to setup address` → `device not accepting address ..., error -71` → `unable to enumerate USB device`.
+- **Kiểm tra gói hệ thống**:
+  - `python3` (`/usr/bin/python3`) và `python3-venv`: **OK**.
+  - Các gói cần quyền `sudo`: `git`, `cmake`, `ninja`, `flex`, `bison`, `gperf`, `ccache`, `dfu-util` vẫn **MISSING** (chưa được cài qua `sudo apt-get`). Do thiếu `git`, `cmake`, `ninja`, chưa thể clone và cài đặt ESP-IDF v5.3.2.
+- **Cài đặt `esptool`**:
+  - Vì `/usr/bin/python3` và `.venv` không có sẵn module `pip`, đã dùng `~/.local/bin/uv` cài thành công **esptool v5.6.0** (`pyserial 3.5`) vào cả `~/.local/bin/esptool.py` và `~/Desktop/PARKINSON/.venv/bin/esptool.py`.
+  - Chưa chạy được `esptool.py --chip esp32s3 -p <PORT> flash_id` vì chưa có cổng `/dev/ttyACM*` hoặc `/dev/ttyUSB*` (quét `serial.tools.list_ports` chỉ có `/dev/ttyS0`..`/dev/ttyS31`).
+- **Chẩn đoán lỗi `error -71` trên ESP32-S3 & Đề xuất cho anh Tuyến**:
+  1. **Ép bo vào ROM Download Mode**: Nếu firmware sẵn trên bo đang cấu hình lại chân USB (GPIO19/20) hoặc bị boot-loop, nhân Linux sẽ báo `Device not responding to setup address, error -71`. Cách xử lý: **Nhấn và giữ nút `BOOT`**, nhấn rồi thả nút **`RST` (hoặc `EN`)**, sau đó mới thả nút **`BOOT`** (hoặc giữ chặt nút `BOOT` trước khi cắm cáp USB-C vào máy).
+  2. **Kiểm tra cổng USB trên bo / Cáp USB-C**: Nếu bo XH-S3E có 2 cổng USB-C (`USB` và `UART`/`COM`), thử đổi sang cổng còn lại; hoặc đổi sang sợi cáp USB-C data khác cắm trực tiếp vào cổng USB trên mainboard (không qua hub/đầu đọc thẻ).
+
+
+---
+
+## Lần 3 — 12:02 (2026-11-15T12:02:40+07:00)
+
+- **Kiểm tra nhận bo (`reports/board/B0_usb_lan3.txt`)**:
+  - `/dev/ttyACM*` và `/dev/ttyUSB*`: Vẫn **không tồn tại** (`No such file or directory`).
+  - `lsusb`: Chỉ có 5 thiết bị mặc định của máy (2 root hub, chuột USB `275d:0ba6`, bàn phím `1c4f:0002`, Bluetooth Intel `8087:0aa7`). Đầu đọc thẻ `14cd:1212` đã rút lúc 11:52:54, nhưng **không có bất kỳ thiết bị USB mới nào xuất hiện**.
+  - `journalctl -k --since "-5 min" | tail -30`: Hoàn toàn **không có sự kiện USB vật lý nào** (không có dòng `usb` connect/reset hay `error -71` nào từ sau 11:52:54; chỉ có log audit của `snap.firmware-updater`). Điều này cho thấy lần cắm lúc 12:02 chưa tạo tín hiệu D+/D- tới USB host controller của Linux (cổng USB đó có thể bị ngắt/không ăn tiếp xúc, cáp chỉ có dây nguồn không có D+/D-, hoặc cắm vào cổng trên bo chưa cấp tín hiệu data).
+- **Bước 2 (`esptool` — `chip_id` / `flash_id`)**:
+  - Chưa thực hiện được và chưa tạo `reports/board/B0_chip.txt` do không có cổng `/dev/ttyACM*` hoặc `/dev/ttyUSB*`.
+- **Bước 3 (Kiểm tra gói hệ thống & ESP-IDF)**:
+  - Kiểm tra `git`, `cmake`, `ninja`, `flex`, `bison`, `gperf`: Cả 6 gói vẫn **MISSING** (chưa được cài qua `sudo apt-get`).
+  - Theo đúng yêu cầu: **Dừng tại Bước 2**, chưa thể clone ESP-IDF v5.3.2 hay chạy B1-dry.
+

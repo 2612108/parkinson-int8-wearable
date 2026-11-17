@@ -1,0 +1,148 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794756798.238931      79 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794756801.305477      79 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+E0000 00:00:1794757021.646697      79 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+{
+ "task": "PD_vs_HC",
+ "n": 355,
+ "n_pos": 276,
+ "n_windows": 41890,
+ "t_load_s": 216.9,
+ "tf": "2.21.0",
+ "tfmot": "0.8.1",
+ "gpus": [],
+ "args": {
+  "data": "/kaggle/input",
+  "out": "reports/p56b",
+  "task": "PD_vs_HC",
+  "inputs": [
+   "inv"
+  ],
+  "folds": 5,
+  "seed": 0,
+  "epochs": 30,
+  "qat_epochs": 5,
+  "monipar": false,
+  "monipar_inputs": [
+   "acc",
+   "invacc"
+  ],
+  "skip_cv": false,
+  "quick": false
+ },
+ "shifts": [
+  "clean",
+  "fs50",
+  "fs25",
+  "jitter10",
+  "jitter30",
+  "adc4g12b",
+  "adc2g10b",
+  "adc2g8b",
+  "noise_lo",
+  "noise_hi",
+  "rot15",
+  "rot45",
+  "rot180",
+  "mirror",
+  "nogyro"
+ ]
+}
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+inv {"fp32_epochs": 11, "qat_epochs": 5, "fp32_sr_epochs": 19, "qat_sr_epochs": 5, "params": 22289, "tflite_bytes": {"ptq": 49040, "qat": 50440, "ptq_sr": 49040, "qat_sr": 50440}, "fold": 0, "sec": 961.8, "maxrss_gb": 3.39}
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+inv {"fp32_epochs": 17, "qat_epochs": 4, "fp32_sr_epochs": 20, "qat_sr_epochs": 4, "params": 22289, "tflite_bytes": {"ptq": 49040, "qat": 50440, "ptq_sr": 49040, "qat_sr": 50440}, "fold": 1, "sec": 1031.2, "maxrss_gb": 3.51}
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+inv {"fp32_epochs": 15, "qat_epochs": 5, "fp32_sr_epochs": 19, "qat_sr_epochs": 5, "params": 22289, "tflite_bytes": {"ptq": 49040, "qat": 50440, "ptq_sr": 49040, "qat_sr": 50440}, "fold": 2, "sec": 1056.3, "maxrss_gb": 3.76}
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+inv {"fp32_epochs": 19, "qat_epochs": 5, "fp32_sr_epochs": 13, "qat_sr_epochs": 5, "params": 22289, "tflite_bytes": {"ptq": 49040, "qat": 50440, "ptq_sr": 49040, "qat_sr": 50440}, "fold": 3, "sec": 965.4, "maxrss_gb": 4.19}
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+inv {"fp32_epochs": 20, "qat_epochs": 5, "fp32_sr_epochs": 23, "qat_sr_epochs": 5, "params": 22289, "tflite_bytes": {"ptq": 49040, "qat": 50440, "ptq_sr": 49040, "qat_sr": 50440}, "fold": 4, "sec": 1173.9, "maxrss_gb": 4.28}
+xong 5405.7

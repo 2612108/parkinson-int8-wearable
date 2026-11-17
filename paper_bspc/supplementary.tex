@@ -1,0 +1,32 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{booktabs}\usepackage{amsmath}
+\renewcommand{\thetable}{S\arabic{table}}
+\begin{document}
+\begin{center}{\Large Supplementary material}\\[4pt]
+Eight-bit quantization of a tiny wrist-inertial network for Parkinson's disease detection: calibration sensitivity, evaluation pitfalls and microcontroller validation\end{center}
+
+\section*{S1. Runs affected by a script error}
+In five runs, the batch normalization after each depthwise convolution had been disabled by a script error (21,841 instead of 22,737 parameters). These runs were superseded by the runs of the specified network in the main text and are listed here for completeness (Table~S1). In these runs, PTQ lost more than 0.05 AUROC in 9 of 25 fold-run units and QAT in none.
+
+\begin{table}[h]
+\caption{Within-fold clean AUROC of FP32 and mean difference from FP32 (worst fold) for the runs without BN after the depthwise convolutions, PD versus HC.}
+\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lllccccc@{}}
+\toprule
+Run & Filter & Seed & FP32 & PTQ int8 & PTQ, 2000 & PTQ $16\times8$ & QAT int8 \\
+\midrule
+s1 & Zero-phase & 1 & 0.862 & $-0.060$ ($-0.095$) & -- & -- & $+0.005$ ($-0.008$) \\
+s2 & Zero-phase & 2 & 0.881 & $-0.050$ ($-0.124$) & -- & -- & $-0.001$ ($-0.050$) \\
+c0 & Causal & 0 & 0.871 & $-0.030$ ($-0.119$) & $-0.021$ & $-0.001$ & $+0.021$ ($-0.006$) \\
+c1 & Causal & 1 & 0.866 & $-0.007$ ($-0.020$) & $-0.015$ & $-0.003$ & $+0.024$ ($+0.002$) \\
+c2 & Causal & 2 & 0.861 & $-0.037$ ($-0.068$) & $-0.016$ & $0.000$ & $+0.010$ ($-0.005$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{S2. Exploratory external-cohort analysis}
+Added after the first results and run only with the script error of Section~S1, this analysis trained an accelerometer-only network (20,497 parameters) on all PADS participants and tested it on the Monipar cohort (21 PD, 7 HC). Participant-level AUROC was 0.86 (95\% CI 0.70 to 0.98) for FP32, 0.95 for PTQ and 0.86 for QAT. With seven controls, these intervals are too wide to inform any comparison, and the analysis was not repeated with the specified network.
+
+\section*{S3. Per-window end-to-end firmware}
+An earlier firmware ran decimation, causal filtering, channel construction, normalization, quantization and inference for one window at a time with the fold-0 QAT model of run c0 (Section~S1). It took 14.6~ms per window (2.4~ms preprocessing, 12.2~ms inference) with 42.6~kB of RAM. Its inference time differs from the 10.7~ms of the whole-fold replay firmware, whose build and model differ; the difference was not decomposed. The streaming firmware of the main text, run with the specified causal model k0, supersedes this test.
+\end{document}

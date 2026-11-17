@@ -1,0 +1,24 @@
+committed: Ignore firmware build directories
+9cd31a5 Ignore firmware build directories
+4164
+      1 .gitignore
+      1 ANTIGRAVITY_B1.md
+      1 ANTIGRAVITY_BOARD.md
+      1 ANTIGRAVITY_P1.md
+      1 CLAUDE.md
+      1 KE_HOACH_NGHIEN_CUU_Q1_v2.md
+      1 NHAT_KY_PHIEN.md
+      1 PROTOCOL_P56.md
+      1 README.md
+   3451 firmware
+     99 kaggle
+     16 paper
+     19 paper_bspc
+    538 reports
+      1 requirements.txt
+     15 scripts
+      5 src
+     11 tools
+0
+true
+main

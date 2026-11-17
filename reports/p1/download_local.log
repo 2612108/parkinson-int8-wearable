@@ -1,0 +1,7 @@
+== PADS ==
+Connecting to physionet.org (physionet.org)|18.25.8.254|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://physionet-open.s3.amazonaws.com/parkinsons-disease-smartwatch/1.0.0/movement/timeseries/020_CrossArms_RightWrist.txt [following]
+--2026-11-15 14:55:37--  https://physionet-open.s3.amazonaws.com/parkinsons-disease-smartwatch/1.0.0/movement/timeseries/020_CrossArms_RightWrist.txt
+Connecting to physionet-open.s3.amazonaws.com (physionet-open.s3.amazonaws.com)|52.217.160.146|:443... connected.
+Terminated

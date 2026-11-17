@@ -1,0 +1,61 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754359.111810      62 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754371.807050      62 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+E0000 00:00:1794754509.780287      62 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+{
+ "n_patients": 469,
+ "labels": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_windows": 55342,
+ "t_build_s": 135.0,
+ "tf": "2.21.0",
+ "gpus": [],
+ "python": "3.13.18",
+ "args": {
+  "pads": "/kaggle/input",
+  "out": "reports/p4c",
+  "models": [
+   "ds_cnn",
+   "cnn1d",
+   "cnn_lstm"
+  ],
+  "inputs": [
+   "raw"
+  ],
+  "aggs": [
+   "meanprob"
+  ],
+  "seeds": [
+   0
+  ],
+  "epochs": 30,
+  "quick": false,
+  "tasks": [
+   "PD_vs_HC"
+  ],
+  "patience": 5
+ }
+}
+PD_vs_HC/ds_cnn/raw/meanprob fold 0 {'T': 0.5934102007556953, 'params': 11056, 'epochs_run': 30, 'fold': 0, 'sec': 88.2, 'maxrss_gb': 3.18}
+PD_vs_HC/ds_cnn/raw/meanprob fold 1 {'T': 0.24518611279228653, 'params': 11056, 'epochs_run': 8, 'fold': 1, 'sec': 26.0, 'maxrss_gb': 3.32}
+PD_vs_HC/ds_cnn/raw/meanprob fold 2 {'T': 0.2571361302692801, 'params': 11056, 'epochs_run': 17, 'fold': 2, 'sec': 47.9, 'maxrss_gb': 3.36}
+PD_vs_HC/ds_cnn/raw/meanprob fold 3 {'T': 0.4648942096546627, 'params': 11056, 'epochs_run': 8, 'fold': 3, 'sec': 26.1, 'maxrss_gb': 3.38}
+PD_vs_HC/ds_cnn/raw/meanprob fold 4 {'T': 0.21011905674704712, 'params': 11056, 'epochs_run': 30, 'fold': 4, 'sec': 81.5, 'maxrss_gb': 3.49}
+PD_vs_HC/ds_cnn/raw/meanprob 0 {'bal_acc': 0.739, 'auroc': np.float64(0.825), 'sens': 0.707, 'spec': 0.772, 'ece': 0.075, 'brier': np.float64(0.185)}
+PD_vs_HC/cnn1d/raw/meanprob fold 0 {'T': 0.304031012719291, 'params': 32160, 'epochs_run': 28, 'fold': 0, 'sec': 129.2, 'maxrss_gb': 3.51}
+PD_vs_HC/cnn1d/raw/meanprob fold 1 {'T': 0.312794844728107, 'params': 32160, 'epochs_run': 20, 'fold': 1, 'sec': 96.1, 'maxrss_gb': 3.62}
+PD_vs_HC/cnn1d/raw/meanprob fold 2 {'T': 1.2660499696815362, 'params': 32160, 'epochs_run': 13, 'fold': 2, 'sec': 64.5, 'maxrss_gb': 3.67}
+PD_vs_HC/cnn1d/raw/meanprob fold 3 {'T': 0.23715192505474167, 'params': 32160, 'epochs_run': 25, 'fold': 3, 'sec': 117.3, 'maxrss_gb': 3.71}
+PD_vs_HC/cnn1d/raw/meanprob fold 4 {'T': 0.19631931756391002, 'params': 32160, 'epochs_run': 30, 'fold': 4, 'sec': 140.0, 'maxrss_gb': 3.81}
+PD_vs_HC/cnn1d/raw/meanprob 0 {'bal_acc': 0.762, 'auroc': np.float64(0.833), 'sens': 0.688, 'spec': 0.835, 'ece': 0.061, 'brier': np.float64(0.163)}
+PD_vs_HC/cnn_lstm/raw/meanprob fold 0 {'T': 0.24029315001466997, 'params': 44640, 'epochs_run': 18, 'fold': 0, 'sec': 144.5, 'maxrss_gb': 3.9}
+PD_vs_HC/cnn_lstm/raw/meanprob fold 1 {'T': 0.2436900144010915, 'params': 44640, 'epochs_run': 13, 'fold': 1, 'sec': 110.1, 'maxrss_gb': 3.93}
+PD_vs_HC/cnn_lstm/raw/meanprob fold 2 {'T': 0.2698683905526084, 'params': 44640, 'epochs_run': 17, 'fold': 2, 'sec': 139.3, 'maxrss_gb': 3.95}
+PD_vs_HC/cnn_lstm/raw/meanprob fold 3 {'T': 0.3297382124902484, 'params': 44640, 'epochs_run': 12, 'fold': 3, 'sec': 101.4, 'maxrss_gb': 3.95}
+PD_vs_HC/cnn_lstm/raw/meanprob fold 4 {'T': 0.37126471175116044, 'params': 44640, 'epochs_run': 29, 'fold': 4, 'sec': 235.0, 'maxrss_gb': 4.02}
+PD_vs_HC/cnn_lstm/raw/meanprob 0 {'bal_acc': 0.755, 'auroc': np.float64(0.839), 'sens': 0.674, 'spec': 0.835, 'ece': 0.03, 'brier': np.float64(0.145)}
+xong 1698.7

@@ -1,0 +1,117 @@
+{
+ "task": "PD_vs_HC",
+ "n": 355,
+ "n_pos": 276,
+ "n_windows": 41890,
+ "t_load_s": 134.4,
+ "tf": "2.21.0",
+ "tfmot": "0.8.1",
+ "gpus": [
+  "/physical_device:GPU:0",
+  "/physical_device:GPU:1"
+ ],
+ "args": {
+  "data": "/kaggle/input",
+  "out": "reports/p56a",
+  "task": "PD_vs_HC",
+  "inputs": [
+   "raw"
+  ],
+  "folds": 5,
+  "seed": 0,
+  "epochs": 40,
+  "qat_epochs": 6,
+  "monipar": true,
+  "monipar_inputs": [
+   "acc",
+   "invacc"
+  ],
+  "skip_cv": false,
+  "quick": false
+ },
+ "shifts": [
+  "clean",
+  "fs50",
+  "fs25",
+  "jitter10",
+  "jitter30",
+  "adc4g12b",
+  "adc2g10b",
+  "adc2g8b",
+  "noise_lo",
+  "noise_hi",
+  "rot15",
+  "rot45",
+  "rot180",
+  "mirror",
+  "nogyro"
+ ]
+}
+Traceback (most recent call last):
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 401, in <module>
+    main()
+    ~~~~^^
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 324, in main
+    models, (mu, sd), meta = train_variants(tf, tfmot, Xtr6, ytr, Xva6, yva, mode, a, rng)
+                             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 251, in train_variants
+    meta[base + "_epochs"] = fit(tf, m, Xtr6, ytr, Xva, yva, mode, mu, sd, sr, a.epochs, 1e-3, rng)
+                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 188, in fit
+    model.train_on_batch((to_input(W6, mode) - mu) / sd, ytr[b].astype(np.float32), sample_weight=w[b])
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 2782, in train_on_batch
+    logs = self.train_function(iterator)
+  File "/usr/local/lib/python3.13/dist-packages/tensorflow/python/util/traceback_utils.py", line 167, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.13/dist-packages/tensorflow/python/eager/execute.py", line 59, in quick_execute
+    except TypeError as e:
+    ...<5 lines>...
+      raise e
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node model/depthwise_conv2d_1/depthwise defined at (most recent call last):
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 401, in <module>
+
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 324, in main
+
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 251, in train_variants
+
+  File "/kaggle/working/scripts/p56_quant_shift.py", line 188, in fit
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 2782, in train_on_batch
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/layers/convolutional/depthwise_conv2d.py", line 162, in call
+
+  File "/usr/local/lib/python3.13/dist-packages/tf_keras/src/backend.py", line 6466, in depthwise_conv2d
+
+Current implementation only supports equal length strides in the row and column dimensions.
+	 [[{{node model/depthwise_conv2d_1/depthwise}}]] [Op:__inference_train_function_5679]

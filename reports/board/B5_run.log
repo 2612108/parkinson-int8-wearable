@@ -1,0 +1,72 @@
+[B5] start 2026-11-16T13:36:29+07:00 port=/dev/ttyACM0
+[B5] build nn
+{
+  "kv": {
+    "cores": "2",
+    "rev": "2",
+    "cpu_mhz": "240",
+    "psram_bytes": "8388608",
+    "internal_free": "375803",
+    "esp_nn": "optimized",
+    "model_bytes": "57064",
+    "arena_bytes": "262144",
+    "arena_used": "27768",
+    "arena_mem": "internal",
+    "in_bytes": "6400",
+    "out_bytes": "4",
+    "in_scale": "0",
+    "in_zp": "0",
+    "out_scale": "0",
+    "out_zp": "0",
+    "in_type": "1",
+    "out_type": "1",
+    "matched": "45/50"
+  },
+  "n_rows": 50,
+  "n_match_rows": 45,
+  "errors": [],
+  "completed": false
+}
+[B5] build ansi
+{
+  "kv": {
+    "cores": "2",
+    "rev": "2",
+    "cpu_mhz": "240",
+    "psram_bytes": "8388608",
+    "internal_free": "375875",
+    "esp_nn": "ansi",
+    "model_bytes": "57064",
+    "arena_bytes": "262144",
+    "arena_used": "27768",
+    "arena_mem": "internal",
+    "in_bytes": "6400",
+    "out_bytes": "4",
+    "in_scale": "0",
+    "in_zp": "0",
+    "out_scale": "0",
+    "out_zp": "0",
+    "in_type": "1",
+    "out_type": "1",
+    "matched": "45/50"
+  },
+  "n_rows": 50,
+  "n_match_rows": 45,
+  "errors": [],
+  "completed": false
+}
+# B5 SUMMARY — 16x8 model (p56q quick run, causal, seed 0, fold 0)
+2026-11-16T14:02:50+07:00
+## nn
+#esp_nn=optimized
+#model_bytes=57064 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=45/50
+Total image size: 701614 bytes (.bin may be padded larger)
+## ansi
+#esp_nn=ansi
+#model_bytes=57064 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=45/50
+Total image size: 668062 bytes (.bin may be padded larger)
+[B5] done 2026-11-16T14:02:50+07:00

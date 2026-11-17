@@ -1,0 +1,196 @@
+[B2] Starting at 2026-11-16T08:08:57+07:00 on PORT=/dev/ttyACM0 (mode=full)
+[B2] Sourcing ESP-IDF environment...
+[B2] Building firmware/b2_e2e...
+[B2] Build succeeded.
+[B2] Flashing to /dev/ttyACM0...
+[B2] Flash succeeded.
+[B2] Capturing serial log from /dev/ttyACM0 (takes ~110s including 3x30s energy phases)...
+[  0.12s] [0;32mI (117) esp_image: segment 4: paddr=0008201c vaddr=4037faESP-ROM:esp32s3-20210327
+[  0.13s] Build:Mar 27 2021
+[  0.13s] rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+[  0.13s] Saved PC:0x42007a20
+[  0.13s] SPIWP:0xee
+[  0.13s] mode:DIO, clock div:1
+[  0.13s] load:0x3fce2810,len:0x1870
+[  0.13s] load:0x403c8700,len:0x4
+[  0.13s] load:0x403c8704,len:0xc40
+[  0.13s] load:0x403cb700,len:0x2ee8
+[  0.13s] entry 0x403c8908
+[  0.13s] [0;32mI (26) boot: ESP-IDF v5.3.2 2nd stage bootloader[0m
+[  0.13s] [0;32mI (27) boot: compile time Nov 16 2026 08:09:51[0m
+[  0.13s] [0;32mI (27) boot: Multicore bootloader[0m
+[  0.14s] [0;32mI (27) boot: chip revision: v0.2[0m
+[  0.14s] [0;32mI (27) boot: efuse block revision: v1.3[0m
+[  0.14s] [0;32mI (27) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[  0.14s] [0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[  0.14s] [0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[  0.14s] [0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[  0.14s] [0;32mI (28) boot: Partition Table:[0m
+[  0.14s] [0;32mI (29) boot: ## Label            Usage          Type ST Offset   Length[0m
+[  0.15s] [0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[  0.15s] [0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[  0.15s] [0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[  0.15s] [0;32mI (30) boot: End of partition table[0m
+[  0.15s] [0;32mI (30) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=31778h (202616) map[0m
+[  0.15s] [0;32mI (67) esp_image: segment 1: paddr=000417a0 vaddr=3fc93800 size=02e54h ( 11860) load[0m
+[  0.16s] [0;32mI (69) esp_image: segment 2: paddr=000445fc vaddr=40374000 size=0ba1ch ( 47644) load[0m
+[  0.16s] [0;32mI (80) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=31ff4h (204788) map[0m
+[  0.16s] [0;32mI (117) esp_image: segment 4: paddr=0008201c vaddr=4037fa1c size=03dc0h ( 15808) load[0m
+[  0.16s] [0;32mI (121) esp_image: segment 5: paddr=00085de4 vaddr=600fe000 size=00108h (   264) load[0m
+[  0.16s] [0;32mI (127) boot: Loaded app from partition at offset 0x10000[0m
+[  0.17s] [0;32mI (128) boot: Disabling RNG early entropy source...[0m
+[  0.17s] [0;32mI (129) octal_psram: vendor id    : 0x0d (AP)[0m
+[  0.17s] [0;32mI (129) octal_psram: dev id       : 0x02 (generation 3)[0m
+[  0.17s] [0;32mI (129) octal_psram: density      : 0x03 (64 Mbit)[0m
+[  0.17s] [0;32mI (129) octal_psram: good-die     : 0x01 (Pass)[0m
+[  0.17s] [0;32mI (130) octal_psram: Latency      : 0x01 (Fixed)[0m
+[  0.17s] [0;32mI (130) octal_psram: VCC          : 0x01 (3V)[0m
+[  0.17s] [0;32mI (130) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[  0.18s] [0;32mI (130) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[  0.18s] [0;32mI (131) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[  0.18s] [0;32mI (131) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[  0.18s] [0;32mI (131) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[  0.18s] [0;32mI (132) MSPI Timing: PSRAM timing tuning index: 5[0m
+[  0.18s] [0;32mI (132) esp_psram: Found 8MB PSRAM device[0m
+[  0.18s] [0;32mI (133) esp_psram: Speed: 80MHz[0m
+[  0.18s] [0;32mI (133) cpu_start: Multicore app[0m
+[  0.55s] [0;32mI (546) esp_psram: SPI SRAM memory test OK[0m
+[  0.56s] [0;32mI (555) cpu_start: Pro cpu start user code[0m
+[  0.56s] [0;32mI (555) cpu_start: cpu freq: 240000000 Hz[0m
+[  0.56s] [0;32mI (555) app_init: Application information:[0m
+[  0.56s] [0;32mI (555) app_init: Project name:     b2_e2e[0m
+[  0.57s] [0;32mI (555) app_init: App version:      1[0m
+[  0.57s] [0;32mI (556) app_init: Compile time:     Nov 16 2026 08:09:37[0m
+[  0.57s] [0;32mI (556) app_init: ELF file SHA256:  112e7dea2...[0m
+[  0.57s] [0;32mI (556) app_init: ESP-IDF:          v5.3.2[0m
+[  0.57s] [0;32mI (556) efuse_init: Min chip rev:     v0.0[0m
+[  0.57s] [0;32mI (556) efuse_init: Max chip rev:     v0.99 [0m
+[  0.58s] [0;32mI (556) efuse_init: Chip rev:         v0.2[0m
+[  0.58s] [0;32mI (557) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[  0.58s] [0;32mI (557) heap_init: At 3FC9C998 len 0004CD78 (307 KiB): RAM[0m
+[  0.58s] [0;32mI (557) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[  0.58s] [0;32mI (557) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[  0.59s] [0;32mI (558) heap_init: At 600FE108 len 00001EE0 (7 KiB): RTCRAM[0m
+[  0.59s] [0;32mI (558) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[  0.59s] [0;32mI (559) spi_flash: detected chip: boya[0m
+[  0.59s] [0;32mI (559) spi_flash: flash io: dio[0m
+[  0.59s] [0;32mI (559) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[  0.60s] [0;32mI (560) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[  0.60s] [0;32mI (560) main_task: Started on CPU0[0m
+[  0.60s] [0;32mI (570) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[  0.60s] [0;32mI (570) main_task: Calling app_main()[0m
+[  2.07s] #B2 BEGIN
+[  2.07s] #chip cores=2 rev=2 cpu_mhz=240 internal_total=410491 internal_free_before=330579 psram_total=8388608 psram_free_before=8385916
+[  2.07s] #esp_nn=optimized
+[  2.08s] #memory model_bytes=50888 arena_alloc=163840 arena_used=21244 arena_mem=internal dsp_static_buf_bytes=22400 total_e2e_ram_bytes=43644 internal_free_after=166559 in_bytes=1600 out_bytes=1
+[  2.09s] #quant in_scale=0.42093837 in_zp=-25 out_scale=0.051099107 out_zp=-8
+[  2.20s] #bitexact_model_only matched=10/10
+[  2.20s] #B2 FILTER COMPARISON BEGIN
+[  2.20s] #primary_pads_file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt start_sample=0 window_s=4.0 fs_in=100 fs_out=50
+[  2.24s] #win_cmp idx=0 label=PD file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt start=0 qin_cksum=-1420 ref_cksum=-40395 q_board=10 prob_board=0.714998 q_py_causal=10 prob_py_causal=0.714998 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=16 prob_py_zp_win=0.773184 diff_board_vs_zp_win=-0.058186 q_py_zp_full=16 prob_py_zp_full=0.773184 diff_board_vs_zp_full=-0.058186 desc="001_Relaxed_LeftWrist [0..4s, load_txt]"
+[  2.26s] #win_cmp idx=1 label=PD file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt start=0 qin_cksum=-1420 ref_cksum=-40395 q_board=10 prob_board=0.714998 q_py_causal=10 prob_py_causal=0.714998 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=16 prob_py_zp_win=0.773184 diff_board_vs_zp_win=-0.058186 q_py_zp_full=16 prob_py_zp_full=0.773184 diff_board_vs_zp_full=-0.058186 desc="001_Relaxed_LeftWrist [0..4s, raw cols]"
+[  2.27s] #win_cmp idx=2 label=PD file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt start=200 qin_cksum=-1488 ref_cksum=-40400 q_board=7 prob_board=0.682760 q_py_causal=7 prob_py_causal=0.682760 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=7 prob_py_zp_win=0.682760 diff_board_vs_zp_win=+0.000000 q_py_zp_full=7 prob_py_zp_full=0.682760 diff_board_vs_zp_full=+0.000000 desc="001_Relaxed_LeftWrist [2..6s, load_txt]"
+[  2.29s] #win_cmp idx=3 label=PD file=data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt start=0 qin_cksum=6939 ref_cksum=-40366 q_board=126 prob_board=0.998939 q_py_causal=126 prob_py_causal=0.998939 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=127 prob_py_zp_win=0.998992 diff_board_vs_zp_win=-0.000053 q_py_zp_full=102 prob_py_zp_full=0.996392 diff_board_vs_zp_full=+0.002547 desc="005_Relaxed_LeftWrist [0..4s, fold0_test PD]"
+[  2.30s] #win_cmp idx=4 label=PD file=data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt start=200 qin_cksum=1210 ref_cksum=-40391 q_board=35 prob_board=0.900003 q_py_causal=35 prob_py_causal=0.900003 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=47 prob_py_zp_win=0.943238 diff_board_vs_zp_win=-0.043235 q_py_zp_full=28 prob_py_zp_full=0.862898 diff_board_vs_zp_full=+0.037106 desc="005_Relaxed_LeftWrist [2..6s, fold0_test PD]"
+[  2.31s] #win_cmp idx=5 label=PD file=data/raw/pads/movement/timeseries/029_Relaxed_LeftWrist.txt start=0 qin_cksum=-1535 ref_cksum=-40396 q_board=-7 prob_board=0.512772 q_py_causal=-7 prob_py_causal=0.512772 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=8 prob_py_zp_win=0.693724 diff_board_vs_zp_win=-0.180952 q_py_zp_full=8 prob_py_zp_full=0.693724 diff_board_vs_zp_full=-0.180952 desc="029_Relaxed_LeftWrist [0..4s, fold0_test PD]"
+[  2.32s] #win_cmp idx=6 label=HC file=data/raw/pads/movement/timeseries/081_Relaxed_LeftWrist.txt start=0 qin_cksum=-1210 ref_cksum=-40400 q_board=31 prob_board=0.880046 q_py_causal=31 prob_py_causal=0.880046 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=28 prob_py_zp_win=0.862898 diff_board_vs_zp_win=+0.017148 q_py_zp_full=28 prob_py_zp_full=0.862898 diff_board_vs_zp_full=+0.017148 desc="081_Relaxed_LeftWrist [0..4s, fold0_test HC]"
+[  2.34s] #win_cmp idx=7 label=HC file=data/raw/pads/movement/timeseries/108_Relaxed_LeftWrist.txt start=0 qin_cksum=-830 ref_cksum=-40398 q_board=20 prob_board=0.807022 q_py_causal=20 prob_py_causal=0.807022 causal_match=1 abs_diff_causal=0.000000 q_py_zp_win=-6 prob_py_zp_win=0.525527 diff_board_vs_zp_win=+0.281495 q_py_zp_full=-6 prob_py_zp_full=0.525527 diff_board_vs_zp_full=+0.281495 desc="108_Relaxed_LeftWrist [0..4s, fold0_test HC]"
+[  2.34s] #causal_board_vs_py_matched=8/8
+[  2.34s] #B2 FILTER COMPARISON END
+[  2.35s] #B2 LATENCY BENCHMARK BEGIN n=1000 warmup=10 file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt
+[ 17.18s] #step_latency step=1_downsample_100to50_fir41 mean_us=1243.55 p50_us=1245 p95_us=1251 min_us=1239 max_us=1252 mean_ms=1.2436 p95_ms=1.2510 n=1000
+[ 17.19s] #step_latency step=2_bandpass_0p5_20_biquad4 mean_us=304.69 p50_us=304 p95_us=310 min_us=304 max_us=311 mean_ms=0.3047 p95_ms=0.3100 n=1000
+[ 17.20s] #step_latency step=3_make_8channels_normvec mean_us=151.57 p50_us=152 p95_us=152 min_us=151 max_us=155 mean_ms=0.1516 p95_ms=0.1520 n=1000
+[ 17.20s] #step_latency step=4a_normalize_zscore mean_us=444.58 p50_us=444 p95_us=445 min_us=444 max_us=451 mean_ms=0.4446 p95_ms=0.4450 n=1000
+[ 17.21s] #step_latency step=4b_quantize_int8 mean_us=301.26 p50_us=301 p95_us=302 min_us=301 max_us=307 mean_ms=0.3013 p95_ms=0.3020 n=1000
+[ 17.22s] #step_latency step=4_norm_plus_quant mean_us=745.84 p50_us=746 p95_us=751 min_us=745 max_us=752 mean_ms=0.7458 p95_ms=0.7510 n=1000
+[ 17.23s] #step_latency step=preprocess_total mean_us=2445.65 p50_us=2447 p95_us=2453 min_us=2440 max_us=2456 mean_ms=2.4457 p95_ms=2.4530 n=1000
+[ 17.23s] #step_latency step=5_model_invoke_espnn mean_us=12195.56 p50_us=12196 p95_us=12204 min_us=12187 max_us=12244 mean_ms=12.1956 p95_ms=12.2040 n=1000
+[ 17.24s] #step_latency step=e2e_total mean_us=14641.21 p50_us=14641 p95_us=14653 min_us=14628 max_us=14700 mean_ms=14.6412 p95_ms=14.6530 n=1000
+[ 17.24s] #B2 LATENCY BENCHMARK END
+[ 17.24s] #B2 ENERGY MODE BEGIN phase_s=30
+[ 17.24s] PHASE IDLE START t=16622018
+[ 47.19s] PHASE IDLE END t=46627408 duration_ms=30005.4 n_infer=0
+[ 47.19s] PHASE INFER START t=46627540
+[ 77.19s] PHASE INFER END t=76630199 duration_ms=30002.7 n_infer=2043
+[ 77.20s] PHASE SLEEP START t=76630807 mode=INFER_DUTY period_s=4
+[ 77.20s] PHASE INFER_DUTY START t=76630807 period_s=4
+[107.76s] PHASE SLEEP END t=106630949 duration_ms=30000.1 n_infer=8 active_ms=118.97 light_sleep_ms=29834.5
+[107.77s] PHASE INFER_DUTY END t=106630949 duration_ms=30000.1 n_infer=8 active_ms=118.97 light_sleep_ms=29834.5
+[107.77s] #energy_phases idle_s=30.01 idle_n=0 infer_s=30.00 infer_n=2043 sleep_s=30.00 sleep_n=8 active_duty_pct=0.3966
+[107.77s] #B2 END
+[B2] Saved raw serial log (114 lines) to /home/smartcontrol/Desktop/PARKINSON/reports/board/B2_E2E.log
+
+# B2 END-TO-END BENCHMARK & ENERGY MODE SUMMARY (ESP32-S3)
+Generated: 2026-11-16T08:18:57.295800+07:00
+Board: ESP32-S3 (Sparkle IoT XH-S3E N16R8, 240 MHz, 16 MB Flash, 8 MB Octal PSRAM)
+Port: /dev/ttyACM0 (USB-Serial-JTAG)
+Model: reports/p56a/models/PD_vs_HC_raw_qat_fold0.tflite (DS-TCN INT8, QAT fold 0)
+Norm params: reports/p56a/models/norm_PD_vs_HC_raw_fold0.npz (8 channels: ax, ay, az, wx, wy, wz, |a|, |w|)
+ESP-NN backend: optimized
+Model-only bit-exact check (n=10 test inputs): 10/10
+
+====================================================================================================
+1. TÀI NGUYÊN BỘ NHỚ (FLASH & RAM)
+====================================================================================================
+- Flash App Size (idf.py size): 482,978 B (471.7 KB) (binary: 483,088 B (0x75f10))
+- Model FlatBuffer Size       : 50888 B (49.70 KB)
+- TFLM Tensor Arena Used      : 21244 B / 163840 B (vùng nhớ: internal)
+- DSP Static Buffers (SRAM)   : 22400 B (s_x50: 4800B, s_xf: 4800B, s_x8: 6400B, s_xn: 6400B)
+- Tổng RAM đường ống E2E      : 43644 B (42.62 KB)
+- Internal SRAM Free (sau cấp): 166559 B / 410491 B
+- PSRAM Free                  : 8385916 B / 8388608 B
+
+====================================================================================================
+2. ĐỘ TRỄ ĐẦU-CUỐI (END-TO-END LATENCY) — 1 CỬA SỐ 4 GIÂY (400 MẪU @ 100 Hz -> 200 MẪU x 8 KÊNH @ 50 Hz)
+   Đo trên n=1000 lần lặp (warmup=10), cửa sổ: data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt
+====================================================================================================
+Bước xử lý                                                         |  Mean (us) |  p50 (us) |  p95 (us) |  Mean (ms) |   p95 (ms) | Tỷ trọng
+----------------------------------------------------------------------------------------------------------------------------------------
+1. Hạ mẫu 100->50 Hz (FIR polyphase 41 taps)                       |    1243.55 |      1245 |      1251 |     1.2436 |     1.2510 |    8.49%
+2. Lọc thông dải 0.5-20 Hz (IIR Butterworth bậc 4 nhân quả, 4 biquad) |     304.69 |       304 |       310 |     0.3047 |     0.3100 |    2.08%
+3. Tạo 8 kênh (ax,ay,az,wx,wy,wz,|a|,|w|)                          |     151.57 |       152 |       152 |     0.1516 |     0.1520 |    1.04%
+4a. Chuẩn hóa z-score (mu/sd 8 kênh)                               |     444.58 |       444 |       445 |     0.4446 |     0.4450 |    3.04%
+4b. Lượng tử hóa float32 -> int8                                   |     301.26 |       301 |       302 |     0.3013 |     0.3020 |    2.06%
+4. Tổng Chuẩn hóa + Lượng tử hóa (4a + 4b)                         |     745.84 |       746 |       751 |     0.7458 |     0.7510 |    5.09%
+TỔNG TIỀN XỬ LÝ DSP (Bước 1 -> 4)                                  |    2445.65 |      2447 |      2453 |     2.4457 |     2.4530 |   16.70%
+5. Suy luận mô hình DS-TCN INT8 (ESP-NN + sigmoid)                 |   12195.56 |     12196 |     12204 |    12.1956 |    12.2040 |   83.30%
+TỔNG ĐẦU-CUỐI (End-to-End: Bước 1 -> 5)                            |   14641.21 |     14641 |     14653 |    14.6412 |    14.6530 |  100.00%
+----------------------------------------------------------------------------------------------------------------------------------------
+-> Thời gian xử lý toàn bộ 1 cửa sổ 4 s: Mean = 14.641 ms (p95 = 14.653 ms), trong đó:
+   + Tiền xử lý DSP + Chuẩn hóa + Lượng tử hóa: 2.446 ms (16.7%)
+   + Suy luận TFLite Micro (ESP-NN)           : 12.196 ms (83.3%)
+-> Hệ số thời gian thực (Real-time factor cho chu kỳ 4000 ms): 0.3660% (nhanh hơn thời gian thực 273.2 lần).
+
+====================================================================================================
+3. ĐỐI CHIẾU XÁC SUẤT ĐẦU RA TRÊN BO (IIR NHÂN QUẢ) VỚI PYTHON TRÊN CÙNG CỬA SỔ PADS 4 GIÂY
+   Bit-exact giữa đường ống nhân quả trên bo và đường ống nhân quả Python: 8/8
+====================================================================================================
+Idx | Nhãn | Cửa sổ bản ghi PADS (4s @ 100Hz)              | q_bo |  P_bo(PD) | q_py_caus | P_py_caus | q_py_zpW |  P_py_zpW | ΔP(bo-zpW) | P_py_zpFull
+-------------------------------------------------------------------------------------------------------------------------------------------------
+0   | PD   | 001_Relaxed_LeftWrist [0..4s, load_txt]       |   10 |  0.714998 |        10 |  0.714998 |       16 |  0.773184 |  -0.058186 |    0.773184
+1   | PD   | 001_Relaxed_LeftWrist [0..4s, raw cols]       |   10 |  0.714998 |        10 |  0.714998 |       16 |  0.773184 |  -0.058186 |    0.773184
+2   | PD   | 001_Relaxed_LeftWrist [2..6s, load_txt]       |    7 |  0.682760 |         7 |  0.682760 |        7 |  0.682760 |  +0.000000 |    0.682760
+3   | PD   | 005_Relaxed_LeftWrist [0..4s, fold0_test PD]  |  126 |  0.998939 |       126 |  0.998939 |      127 |  0.998992 |  -0.000053 |    0.996392
+4   | PD   | 005_Relaxed_LeftWrist [2..6s, fold0_test PD]  |   35 |  0.900003 |        35 |  0.900003 |       47 |  0.943238 |  -0.043235 |    0.862898
+5   | PD   | 029_Relaxed_LeftWrist [0..4s, fold0_test PD]  |   -7 |  0.512772 |        -7 |  0.512772 |        8 |  0.693724 |  -0.180952 |    0.693724
+6   | HC   | 081_Relaxed_LeftWrist [0..4s, fold0_test HC]  |   31 |  0.880046 |        31 |  0.880046 |       28 |  0.862898 |  +0.017148 |    0.862898
+7   | HC   | 108_Relaxed_LeftWrist [0..4s, fold0_test HC]  |   20 |  0.807022 |        20 |  0.807022 |       -6 |  0.525527 |  +0.281495 |    0.525527
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Ghi chú:
+- P_bo(PD) vs P_py_caus: Bo ESP32-S3 (float32 IEEE-754 + ESP-NN INT8) khớp tuyệt đối 100% (8/8 cửa sổ, sai số 0.000000)
+  với đường ống nhân quả (FIR polyphase 41 taps + IIR Butterworth bậc 4 sosfilt 1 chiều) trên Python.
+- P_py_zpW (sosfiltfilt zero-phase trên cửa sổ 4s) và P_py_zpFull (sosfiltfilt trên toàn bản ghi 10s rồi cắt cửa sổ):
+  Có độ lệch nhỏ về xác suất so với lọc nhân quả do dịch pha của lọc IIR nhân quả 1 chiều và hiệu ứng biên đầu cửa sổ,
+  nhưng quyết định phân loại (ngưỡng 0.5) giữ nguyên trên tất cả các cửa sổ thử nghiệm.
+
+====================================================================================================
+4. CHẾ ĐỘ ĐO NĂNG LƯỢNG 3 PHA (MỖI PHA 30 GIÂY)
+====================================================================================================
+- Pha 1 (IDLE - nghỉ nền 240 MHz)            : thời lượng = 30.01 s, số lần suy luận = 0
+- Pha 2 (INFER - suy luận đầu-cuối liên tục) : thời lượng = 30.00 s, số lần suy luận = 2043 (~68.1 cửa sổ/s)
+- Pha 3 (INFER_DUTY / SLEEP - chu kỳ 1 lần/4s): thời lượng = 30.00 s, số lần suy luận = 8, active = 118.97 ms, light-sleep = 29834.5 ms (duty active = 0.3966%)
+
+Errors: none
+
+[B2] Completed successfully at 2026-11-16T08:18:57+07:00

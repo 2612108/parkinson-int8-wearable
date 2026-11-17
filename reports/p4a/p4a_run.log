@@ -1,0 +1,63 @@
+{
+ "n_patients": 469,
+ "labels": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_windows": 55342,
+ "t_build_s": 207.4,
+ "tf": "2.21.0",
+ "gpus": [
+  "/physical_device:GPU:0",
+  "/physical_device:GPU:1"
+ ],
+ "python": "3.13.16",
+ "args": {
+  "pads": "/kaggle/input",
+  "out": "reports/p4a",
+  "models": [
+   "ds_tcn"
+  ],
+  "inputs": [
+   "raw",
+   "inv"
+  ],
+  "aggs": [
+   "meanprob",
+   "mil"
+  ],
+  "seeds": [
+   0
+  ],
+  "epochs": 40,
+  "quick": false,
+  "tasks": [
+   "PD_vs_HC"
+  ],
+  "patience": 6
+ }
+}
+PD_vs_HC/ds_tcn/raw/meanprob fold 0 {'T': 0.2157605665156534, 'params': 22672, 'epochs_run': 19, 'fold': 0, 'sec': 78.3, 'maxrss_gb': 4.32}
+PD_vs_HC/ds_tcn/raw/meanprob fold 1 {'T': 0.4907607042081579, 'params': 22672, 'epochs_run': 19, 'fold': 1, 'sec': 53.0, 'maxrss_gb': 4.68}
+PD_vs_HC/ds_tcn/raw/meanprob fold 2 {'T': 0.2308341264093762, 'params': 22672, 'epochs_run': 30, 'fold': 2, 'sec': 66.9, 'maxrss_gb': 4.74}
+PD_vs_HC/ds_tcn/raw/meanprob fold 3 {'T': 0.20810211272700593, 'params': 22672, 'epochs_run': 16, 'fold': 3, 'sec': 48.5, 'maxrss_gb': 5.01}
+PD_vs_HC/ds_tcn/raw/meanprob fold 4 {'T': 0.48156189306236363, 'params': 22672, 'epochs_run': 18, 'fold': 4, 'sec': 51.6, 'maxrss_gb': 5.18}
+PD_vs_HC/ds_tcn/raw/meanprob 0 {'bal_acc': 0.775, 'auroc': np.float64(0.856), 'sens': 0.714, 'spec': 0.835, 'ece': 0.062, 'brier': np.float64(0.166)}
+PD_vs_HC/ds_tcn/raw/mil fold 0 {'T': 3.3448535503876817, 'params': 22672, 'epochs_run': 28, 'fold': 0, 'sec': 476.4, 'maxrss_gb': 10.16}
+PD_vs_HC/ds_tcn/raw/mil fold 1 {'T': 2.431990491440497, 'params': 22672, 'epochs_run': 17, 'fold': 1, 'sec': 408.3, 'maxrss_gb': 14.41}
+PD_vs_HC/ds_tcn/raw/mil fold 2 {'T': 1.5255722617883565, 'params': 22672, 'epochs_run': 14, 'fold': 2, 'sec': 407.2, 'maxrss_gb': 18.33}
+PD_vs_HC/ds_tcn/raw/mil fold 3 {'T': 1.8148577644661086, 'params': 22672, 'epochs_run': 11, 'fold': 3, 'sec': 405.9, 'maxrss_gb': 22.88}
+PD_vs_HC/ds_tcn/raw/mil fold 4 {'T': 2.0715941946738, 'params': 22672, 'epochs_run': 21, 'fold': 4, 'sec': 435.1, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/raw/mil 0 {'bal_acc': 0.725, 'auroc': np.float64(0.846), 'sens': 0.652, 'spec': 0.797, 'ece': 0.122, 'brier': np.float64(0.149)}
+PD_vs_HC/ds_tcn/inv/meanprob fold 0 {'T': 0.45169876703839196, 'params': 22224, 'epochs_run': 19, 'fold': 0, 'sec': 64.8, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/inv/meanprob fold 1 {'T': 0.27727526212314424, 'params': 22224, 'epochs_run': 20, 'fold': 1, 'sec': 64.4, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/inv/meanprob fold 2 {'T': 0.3431126333998108, 'params': 22224, 'epochs_run': 18, 'fold': 2, 'sec': 60.4, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/inv/meanprob fold 3 {'T': 0.43741261563253764, 'params': 22224, 'epochs_run': 22, 'fold': 3, 'sec': 65.0, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/inv/meanprob fold 4 {'T': 0.9921711674042053, 'params': 22224, 'epochs_run': 16, 'fold': 4, 'sec': 57.7, 'maxrss_gb': 26.84}
+PD_vs_HC/ds_tcn/inv/meanprob 0 {'bal_acc': 0.767, 'auroc': np.float64(0.807), 'sens': 0.812, 'spec': 0.722, 'ece': 0.056, 'brier': np.float64(0.14)}
+PD_vs_HC/ds_tcn/inv/mil fold 0 {'T': 3.4006450294983948, 'params': 22224, 'epochs_run': 25, 'fold': 0, 'sec': 429.0, 'maxrss_gb': 30.82}
+/usr/local/lib/python3.13/dist-packages/joblib/externals/loky/backend/resource_tracker.py:444: UserWarning: resource_tracker: There appear to be 6 leaked semlock objects to clean up at shutdown: {'/loky-70-nnjhepow': 1, '/loky-70-8lna9adn': 1, '/loky-70-1x6u7h5t': 1, '/loky-70-jbdybtku': 1, '/loky-70-xttcv7n2': 1, '/loky-70-cozvtm83': 1}
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/joblib/externals/loky/backend/resource_tracker.py:444: UserWarning: resource_tracker: There appear to be 1 leaked folder objects to clean up at shutdown: {'/dev/shm/joblib_memmapping_folder_70_1e227e7b07614aca9bafa0c8bd7a9316_766d5442d6d3404f919aa0ac2d5bd987': 1}
+  warnings.warn(

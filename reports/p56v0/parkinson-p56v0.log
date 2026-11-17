@@ -1,0 +1,100 @@
+[{"stream_name":"stderr","time":8.78762107,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.78767423,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.787679559,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.787682576,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.559745089,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.559786439,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.559790825,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.559793797,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.950139851,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":12.635865078,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":12.635910694,"data":"I0000 00:00:1794859323.160435      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":28.429392103,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":28.429422699,"data":"I0000 00:00:1794859338.966504      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":39.018387838,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":39.018430127,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":39.018436321,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":39.48725451,"data":"\u001b[0mWriting src/monipar_io.py\n"}
+,{"stream_name":"stdout","time":39.502423214,"data":"Writing src/evalkit.py\n"}
+,{"stream_name":"stdout","time":39.516799196,"data":"Writing src/pads_io.py\n"}
+,{"stream_name":"stdout","time":39.531577098,"data":"Writing src/features.py\n"}
+,{"stream_name":"stdout","time":39.565254463,"data":"Writing scripts/p56x_quant_extra.py\n"}
+,{"stream_name":"stdout","time":39.597821938,"data":"feaf1495a25bc9e7b181078365116d0c  scripts/p56x_quant_extra.py\r\n"}
+,{"stream_name":"stdout","time":212.847089172,"data":"WARNING:tensorflow:5 out of the last 16 calls to \u003cfunction Model.make_train_function.\u003clocals\u003e.train_function at 0x7d91ec26c680\u003e triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.\r\n"}
+,{"stream_name":"stdout","time":212.847134071,"data":"WARNING:tensorflow:5 out of the last 12 calls to \u003cfunction Model.make_predict_function.\u003clocals\u003e.predict_function at 0x7d91bc143060\u003e triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.\r\n"}
+,{"stream_name":"stdout","time":212.847152283,"data":"WARNING:tensorflow:5 out of the last 12 calls to \u003cfunction Model.make_predict_function.\u003clocals\u003e.predict_function at 0x7d91bc143060\u003e triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.\r\n"}
+,{"stream_name":"stdout","time":212.847157127,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":212.847160374,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":212.847162892,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":212.847165552,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":212.847168354,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":212.847171056,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":212.847173583,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":212.847176012,"data":"    \r\n"}
+,{"stream_name":"stdout","time":212.847178416,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":212.847180907,"data":"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\r\n"}
+,{"stream_name":"stdout","time":212.847183557,"data":"rep 0 130 {\"fp32_epochs\": 2, \"fp32_ft_epochs\": 1, \"cle_check_maxdiff\": [7.450580596923828e-08, 1.7881393432617188e-07], \"qat_epochs\": 1, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 494\r\n"}
+,{"stream_name":"stdout","time":212.847187689,"data":"xong 161.8\r\n"}
+,{"stream_name":"stdout","time":5310.674734346,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674871123,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674881224,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674886409,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674891016,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674911469,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.67491619,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674920029,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.67492458,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674928812,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674932139,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674936142,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674939863,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.67494356,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674947573,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674952017,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674956006,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674959947,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674963752,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674967336,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674971425,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674977772,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674981407,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.67498522,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.674989523,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.674992969,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.674997214,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.675001401,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.675005103,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.675014696,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":5310.675018915,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":5310.675022562,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":5310.675026763,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":5310.675031092,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":5310.675034998,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":5310.675039181,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":5310.675042632,"data":"    \r\n"}
+,{"stream_name":"stdout","time":5310.67504615,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":5310.67505076,"data":"rep 4 1058 {\"fp32_epochs\": 30, \"fp32_ft_epochs\": 5, \"cle_check_maxdiff\": [1.1444091796875e-05, 1.33514404296875e-05], \"qat_epochs\": 4, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 49488,\r\n"}
+,{"stream_name":"stdout","time":5310.675056026,"data":"xong 5086.0\r\n"}
+,{"stream_name":"stdout","time":5310.787941618,"data":"-rw-r--r-- 1 root root 100033 Nov 16 21:30 reports/p56v0_run.log\r\n"}
+,{"stream_name":"stdout","time":5310.787976607,"data":"\r\n"}
+,{"stream_name":"stdout","time":5310.787981511,"data":"reports/p56m:\r\n"}
+,{"stream_name":"stdout","time":5310.787985481,"data":"total 8\r\n"}
+,{"stream_name":"stdout","time":5310.787989239,"data":"drwxr-xr-x 2 root root 4096 Nov 16 20:02 .\r\n"}
+,{"stream_name":"stdout","time":5310.787993094,"data":"drwxr-xr-x 4 root root 4096 Nov 16 21:30 ..\r\n"}
+,{"stream_name":"stdout","time":5310.787997029,"data":"\r\n"}
+,{"stream_name":"stdout","time":5310.788000651,"data":"reports/p56v0:\r\n"}
+,{"stream_name":"stdout","time":5310.788004553,"data":"total 616\r\n"}
+,{"stream_name":"stdout","time":5310.788008229,"data":"drwxr-xr-x 3 root root   4096 Nov 16 20:24 .\r\n"}
+,{"stream_name":"stdout","time":5310.788011945,"data":"drwxr-xr-x 4 root root   4096 Nov 16 21:30 ..\r\n"}
+,{"stream_name":"stdout","time":5310.788015432,"data":"drwxr-xr-x 2 root root   4096 Nov 16 20:05 models\r\n"}
+,{"stream_name":"stdout","time":5310.788018799,"data":"-rw-r--r-- 1 root root 613047 Nov 16 21:30 rep_results.csv\r\n"}
+,{"stream_name":"stdout","time":5310.788022438,"data":"-rw-r--r-- 1 root root    851 Nov 16 21:30 run_info.json\r\n"}
+,{"stream_name":"stderr","time":5314.266676149,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5314.266715825,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5314.463950441,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5314.463987495,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5315.325387921,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":5315.421175608,"data":"[NbConvertApp] Writing 72289 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":5318.559499754,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5319.403092094,"data":"[NbConvertApp] Writing 606523 bytes to __results__.html\n"}
+]

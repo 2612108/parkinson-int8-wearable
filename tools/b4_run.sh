@@ -1,0 +1,1 @@
+/home/smartcontrol/Desktop/PARKINSON/firmware/tools/b4_run.sh

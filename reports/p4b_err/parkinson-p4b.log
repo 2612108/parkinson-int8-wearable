@@ -1,0 +1,61 @@
+[{"stream_name":"stderr","time":7.160882204,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.160920466,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.156964743,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.15699301,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.156998556,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.157002787,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.755885739,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.755916757,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.755921972,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.755932438,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.953258607,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":13.176443706,"data":"Sun Nov 15 08:39:25 2026       \r\n"}
+,{"stream_name":"stdout","time":13.176478098,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stdout","time":13.176484104,"data":"| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\r\n"}
+,{"stream_name":"stdout","time":13.176488444,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":13.17649257,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\r\n"}
+,{"stream_name":"stdout","time":13.176496689,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\r\n"}
+,{"stream_name":"stdout","time":13.176500828,"data":"|                                         |                        |               MIG M. |\r\n"}
+,{"stream_name":"stdout","time":13.176504912,"data":"|=========================================+========================+======================|\r\n"}
+,{"stream_name":"stdout","time":13.22695089,"data":"|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\r\n"}
+,{"stream_name":"stdout","time":13.226976939,"data":"| N/A   51C    P8             10W /   70W |       0MiB /  15360MiB |      0%      Default |\r\n"}
+,{"stream_name":"stdout","time":13.226982913,"data":"|                                         |                        |                  N/A |\r\n"}
+,{"stream_name":"stdout","time":13.226987485,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":13.22700352,"data":"|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\r\n"}
+,{"stream_name":"stdout","time":13.227007524,"data":"| N/A   47C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\r\n"}
+,{"stream_name":"stdout","time":13.227013213,"data":"|                                         |                        |                  N/A |\r\n"}
+,{"stream_name":"stdout","time":13.227046476,"data":"+-----------------------------------------+------------------------+----------------------+\r\n"}
+,{"stream_name":"stdout","time":13.227049472,"data":"\r\n"}
+,{"stream_name":"stdout","time":13.22705175,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stdout","time":13.227054193,"data":"| Processes:                                                                              |\r\n"}
+,{"stream_name":"stdout","time":13.227056586,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\r\n"}
+,{"stream_name":"stdout","time":13.227059078,"data":"|        ID   ID                                                               Usage      |\r\n"}
+,{"stream_name":"stdout","time":13.227061466,"data":"|=========================================================================================|\r\n"}
+,{"stream_name":"stdout","time":13.227063888,"data":"|  No running processes found                                                             |\r\n"}
+,{"stream_name":"stdout","time":13.227066304,"data":"+-----------------------------------------------------------------------------------------+\r\n"}
+,{"stream_name":"stderr","time":13.624485641,"data":"UsageError: %%writefile is a cell magic, but the cell body is empty.\n"}
+,{"stream_name":"stderr","time":13.624513139,"data":"\n"}
+,{"stream_name":"stderr","time":13.62451789,"data":"UsageError: %%writefile is a cell magic, but the cell body is empty.\n"}
+,{"stream_name":"stderr","time":13.949985259,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":13.950663551,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":13.950677998,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":13.950717833,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":13.950722373,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":13.95072649,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":13.950739133999999,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":13.950744497,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":13.950748523,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":13.950752593,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":13.950756653,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":13.950760315,"data":"Exception encountered at \"In [2]\":\n"}
+,{"stream_name":"stderr","time":13.950764755,"data":"\n"}
+,{"stream_name":"stderr","time":13.950768422,"data":"\n"}
+,{"stream_name":"stderr","time":16.228702049,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16.228730022,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16.40256885,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16.402593688,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":17.201286231,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":17.279923828,"data":"[NbConvertApp] Writing 32174 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":19.82161482,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":20.423217009,"data":"[NbConvertApp] Writing 414840 bytes to __results__.html\n"}
+]

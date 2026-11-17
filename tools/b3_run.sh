@@ -1,0 +1,1 @@
+/home/smartcontrol/Desktop/PARKINSON/firmware/tools/b3_run.sh

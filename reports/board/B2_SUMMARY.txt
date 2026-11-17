@@ -1,0 +1,71 @@
+# B2 END-TO-END BENCHMARK & ENERGY MODE SUMMARY (ESP32-S3)
+Generated: 2026-11-16T08:18:57.295800+07:00
+Board: ESP32-S3 (Sparkle IoT XH-S3E N16R8, 240 MHz, 16 MB Flash, 8 MB Octal PSRAM)
+Port: /dev/ttyACM0 (USB-Serial-JTAG)
+Model: reports/p56a/models/PD_vs_HC_raw_qat_fold0.tflite (DS-TCN INT8, QAT fold 0)
+Norm params: reports/p56a/models/norm_PD_vs_HC_raw_fold0.npz (8 channels: ax, ay, az, wx, wy, wz, |a|, |w|)
+ESP-NN backend: optimized
+Model-only bit-exact check (n=10 test inputs): 10/10
+
+====================================================================================================
+1. TÀI NGUYÊN BỘ NHỚ (FLASH & RAM)
+====================================================================================================
+- Flash App Size (idf.py size): 482,978 B (471.7 KB) (binary: 483,088 B (0x75f10))
+- Model FlatBuffer Size       : 50888 B (49.70 KB)
+- TFLM Tensor Arena Used      : 21244 B / 163840 B (vùng nhớ: internal)
+- DSP Static Buffers (SRAM)   : 22400 B (s_x50: 4800B, s_xf: 4800B, s_x8: 6400B, s_xn: 6400B)
+- Tổng RAM đường ống E2E      : 43644 B (42.62 KB)
+- Internal SRAM Free (sau cấp): 166559 B / 410491 B
+- PSRAM Free                  : 8385916 B / 8388608 B
+
+====================================================================================================
+2. ĐỘ TRỄ ĐẦU-CUỐI (END-TO-END LATENCY) — 1 CỬA SỐ 4 GIÂY (400 MẪU @ 100 Hz -> 200 MẪU x 8 KÊNH @ 50 Hz)
+   Đo trên n=1000 lần lặp (warmup=10), cửa sổ: data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt
+====================================================================================================
+Bước xử lý                                                         |  Mean (us) |  p50 (us) |  p95 (us) |  Mean (ms) |   p95 (ms) | Tỷ trọng
+----------------------------------------------------------------------------------------------------------------------------------------
+1. Hạ mẫu 100->50 Hz (FIR polyphase 41 taps)                       |    1243.55 |      1245 |      1251 |     1.2436 |     1.2510 |    8.49%
+2. Lọc thông dải 0.5-20 Hz (IIR Butterworth bậc 4 nhân quả, 4 biquad) |     304.69 |       304 |       310 |     0.3047 |     0.3100 |    2.08%
+3. Tạo 8 kênh (ax,ay,az,wx,wy,wz,|a|,|w|)                          |     151.57 |       152 |       152 |     0.1516 |     0.1520 |    1.04%
+4a. Chuẩn hóa z-score (mu/sd 8 kênh)                               |     444.58 |       444 |       445 |     0.4446 |     0.4450 |    3.04%
+4b. Lượng tử hóa float32 -> int8                                   |     301.26 |       301 |       302 |     0.3013 |     0.3020 |    2.06%
+4. Tổng Chuẩn hóa + Lượng tử hóa (4a + 4b)                         |     745.84 |       746 |       751 |     0.7458 |     0.7510 |    5.09%
+TỔNG TIỀN XỬ LÝ DSP (Bước 1 -> 4)                                  |    2445.65 |      2447 |      2453 |     2.4457 |     2.4530 |   16.70%
+5. Suy luận mô hình DS-TCN INT8 (ESP-NN + sigmoid)                 |   12195.56 |     12196 |     12204 |    12.1956 |    12.2040 |   83.30%
+TỔNG ĐẦU-CUỐI (End-to-End: Bước 1 -> 5)                            |   14641.21 |     14641 |     14653 |    14.6412 |    14.6530 |  100.00%
+----------------------------------------------------------------------------------------------------------------------------------------
+-> Thời gian xử lý toàn bộ 1 cửa sổ 4 s: Mean = 14.641 ms (p95 = 14.653 ms), trong đó:
+   + Tiền xử lý DSP + Chuẩn hóa + Lượng tử hóa: 2.446 ms (16.7%)
+   + Suy luận TFLite Micro (ESP-NN)           : 12.196 ms (83.3%)
+-> Hệ số thời gian thực (Real-time factor cho chu kỳ 4000 ms): 0.3660% (nhanh hơn thời gian thực 273.2 lần).
+
+====================================================================================================
+3. ĐỐI CHIẾU XÁC SUẤT ĐẦU RA TRÊN BO (IIR NHÂN QUẢ) VỚI PYTHON TRÊN CÙNG CỬA SỔ PADS 4 GIÂY
+   Bit-exact giữa đường ống nhân quả trên bo và đường ống nhân quả Python: 8/8
+====================================================================================================
+Idx | Nhãn | Cửa sổ bản ghi PADS (4s @ 100Hz)              | q_bo |  P_bo(PD) | q_py_caus | P_py_caus | q_py_zpW |  P_py_zpW | ΔP(bo-zpW) | P_py_zpFull
+-------------------------------------------------------------------------------------------------------------------------------------------------
+0   | PD   | 001_Relaxed_LeftWrist [0..4s, load_txt]       |   10 |  0.714998 |        10 |  0.714998 |       16 |  0.773184 |  -0.058186 |    0.773184
+1   | PD   | 001_Relaxed_LeftWrist [0..4s, raw cols]       |   10 |  0.714998 |        10 |  0.714998 |       16 |  0.773184 |  -0.058186 |    0.773184
+2   | PD   | 001_Relaxed_LeftWrist [2..6s, load_txt]       |    7 |  0.682760 |         7 |  0.682760 |        7 |  0.682760 |  +0.000000 |    0.682760
+3   | PD   | 005_Relaxed_LeftWrist [0..4s, fold0_test PD]  |  126 |  0.998939 |       126 |  0.998939 |      127 |  0.998992 |  -0.000053 |    0.996392
+4   | PD   | 005_Relaxed_LeftWrist [2..6s, fold0_test PD]  |   35 |  0.900003 |        35 |  0.900003 |       47 |  0.943238 |  -0.043235 |    0.862898
+5   | PD   | 029_Relaxed_LeftWrist [0..4s, fold0_test PD]  |   -7 |  0.512772 |        -7 |  0.512772 |        8 |  0.693724 |  -0.180952 |    0.693724
+6   | HC   | 081_Relaxed_LeftWrist [0..4s, fold0_test HC]  |   31 |  0.880046 |        31 |  0.880046 |       28 |  0.862898 |  +0.017148 |    0.862898
+7   | HC   | 108_Relaxed_LeftWrist [0..4s, fold0_test HC]  |   20 |  0.807022 |        20 |  0.807022 |       -6 |  0.525527 |  +0.281495 |    0.525527
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Ghi chú:
+- P_bo(PD) vs P_py_caus: Bo ESP32-S3 (float32 IEEE-754 + ESP-NN INT8) khớp tuyệt đối 100% (8/8 cửa sổ, sai số 0.000000)
+  với đường ống nhân quả (FIR polyphase 41 taps + IIR Butterworth bậc 4 sosfilt 1 chiều) trên Python.
+- P_py_zpW (sosfiltfilt zero-phase trên cửa sổ 4s) và P_py_zpFull (sosfiltfilt trên toàn bản ghi 10s rồi cắt cửa sổ):
+  Có độ lệch nhỏ về xác suất so với lọc nhân quả do dịch pha của lọc IIR nhân quả 1 chiều và hiệu ứng biên đầu cửa sổ,
+  nhưng quyết định phân loại (ngưỡng 0.5) giữ nguyên trên tất cả các cửa sổ thử nghiệm.
+
+====================================================================================================
+4. CHẾ ĐỘ ĐO NĂNG LƯỢNG 3 PHA (MỖI PHA 30 GIÂY)
+====================================================================================================
+- Pha 1 (IDLE - nghỉ nền 240 MHz)            : thời lượng = 30.01 s, số lần suy luận = 0
+- Pha 2 (INFER - suy luận đầu-cuối liên tục) : thời lượng = 30.00 s, số lần suy luận = 2043 (~68.1 cửa sổ/s)
+- Pha 3 (INFER_DUTY / SLEEP - chu kỳ 1 lần/4s): thời lượng = 30.00 s, số lần suy luận = 8, active = 118.97 ms, light-sleep = 29834.5 ms (duty active = 0.3966%)
+
+Errors: none

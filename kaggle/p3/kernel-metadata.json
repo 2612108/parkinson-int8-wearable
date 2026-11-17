@@ -1,0 +1,14 @@
+{
+  "id": "nguynthqunhlu/parkinson-p3-baseline",
+  "title": "parkinson-p3-baseline",
+  "code_file": "p3_baseline.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": ["nguynthqunhlu/parkinson-p1-audit"]
+}

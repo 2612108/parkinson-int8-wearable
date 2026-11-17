@@ -1,0 +1,270 @@
+[B1-real] Starting at 2026-11-16T00:58:25+07:00 on PORT=/dev/ttyACM0
+============================================================
+[B1-real] [1/2] Generating C files for model=ptq (reports/p56a/models/PD_vs_HC_raw_ptq_fold0.tflite)
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "MEAN"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "input_quant": [
+    0.2189212292432785,
+    3.0
+  ],
+  "output_quant": [
+    0.15841655433177948,
+    -79.0
+  ],
+  "model_bytes": 49488,
+  "n_test": 50
+}
+[B1-real] [2/2] Benchmarking model=ptq (nn then ansi)
+[B1-real] Running run_bench.sh for tag=real_ptq mode=nn...
+    "model_bytes": "49488",
+    "arena_bytes": "163840",
+    "arena_used": "21244",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.21892123",
+    "in_zp": "3",
+    "out_scale": "0.15841655",
+    "out_zp": "-79",
+    "input0_checksum": "4111",
+    "matched": "50/50",
+    "mean": "11557.0",
+    "p50": "11551",
+    "p95": "11704",
+    "min": "11395",
+    "max": "11751",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+[B1-real] Running run_bench.sh for tag=real_ptq mode=ansi...
+    "model_bytes": "49488",
+    "arena_bytes": "163840",
+    "arena_used": "20188",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.21892123",
+    "in_zp": "3",
+    "out_scale": "0.15841655",
+    "out_zp": "-79",
+    "input0_checksum": "4111",
+    "matched": "50/50",
+    "mean": "70292.9",
+    "p50": "70305",
+    "p95": "70345",
+    "min": "70227",
+    "max": "70358",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+============================================================
+[B1-real] [1/2] Generating C files for model=qat (reports/p56a/models/PD_vs_HC_raw_qat_fold0.tflite)
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "MEAN"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "input_quant": [
+    0.4209383726119995,
+    -25.0
+  ],
+  "output_quant": [
+    0.051099106669425964,
+    -8.0
+  ],
+  "model_bytes": 50888,
+  "n_test": 50
+}
+[B1-real] [2/2] Benchmarking model=qat (nn then ansi)
+[B1-real] Running run_bench.sh for tag=real_qat mode=nn...
+    "model_bytes": "50888",
+    "arena_bytes": "163840",
+    "arena_used": "21244",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.42093837",
+    "in_zp": "-25",
+    "out_scale": "0.051099107",
+    "out_zp": "-8",
+    "input0_checksum": "-40372",
+    "matched": "50/50",
+    "mean": "11537.3",
+    "p50": "11545",
+    "p95": "11664",
+    "min": "11345",
+    "max": "11735",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+[B1-real] Running run_bench.sh for tag=real_qat mode=ansi...
+    "model_bytes": "50888",
+    "arena_bytes": "163840",
+    "arena_used": "20188",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.42093837",
+    "in_zp": "-25",
+    "out_scale": "0.051099107",
+    "out_zp": "-8",
+    "input0_checksum": "-40372",
+    "matched": "50/50",
+    "mean": "70314.9",
+    "p50": "70324",
+    "p95": "70379",
+    "min": "70231",
+    "max": "70399",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+============================================================
+[B1-real] [1/2] Generating C files for model=qat_sr (reports/p56a/models/PD_vs_HC_raw_qat_sr_fold0.tflite)
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "MEAN"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "input_quant": [
+    0.7051063179969788,
+    2.0
+  ],
+  "output_quant": [
+    0.04627322778105736,
+    -15.0
+  ],
+  "model_bytes": 50888,
+  "n_test": 50
+}
+[B1-real] [2/2] Benchmarking model=qat_sr (nn then ansi)
+[B1-real] Running run_bench.sh for tag=real_qat_sr mode=nn...
+    "model_bytes": "50888",
+    "arena_bytes": "163840",
+    "arena_used": "21244",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.70510632",
+    "in_zp": "2",
+    "out_scale": "0.046273228",
+    "out_zp": "-15",
+    "input0_checksum": "2984",
+    "matched": "50/50",
+    "mean": "11563.7",
+    "p50": "11566",
+    "p95": "11701",
+    "min": "11376",
+    "max": "11767",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+[B1-real] Running run_bench.sh for tag=real_qat_sr mode=ansi...
+    "model_bytes": "50888",
+    "arena_bytes": "163840",
+    "arena_used": "20188",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.70510632",
+    "in_zp": "2",
+    "out_scale": "0.046273228",
+    "out_zp": "-15",
+    "input0_checksum": "2984",
+    "matched": "50/50",
+    "mean": "70317.3",
+    "p50": "70324",
+    "p95": "70384",
+    "min": "70237",
+    "max": "70404",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}
+============================================================
+[B1-real] Generating reports/board/B1_REAL_SUMMARY.txt...
+# B1 REAL MODELS BENCHMARK SUMMARY (ESP32-S3)
+Generated: 2026-11-16T01:09:08.744708+07:00
+Models: PD_vs_HC_raw_{ptq,qat,qat_sr}_fold0.tflite (DS-TCN INT8, stride (2,1), no dilation)
+Inputs: reports/p56a/models/bench_inputs_PD_vs_HC_raw.npy (n=50)
+
+Model      | Config | Bit-Exact  | MaxLSB | Latency Mean / p95 (ms)   | Arena Used (B) | Flash App Bytes (Image / Bin)  | Errors
+-----------------------------------------------------------------------------------------------------------------------------
+ptq        | nn     | 50/50      | 0      | 11.557 / 11.704 ms        | 21244          | 447606 / 447712 (0x6d4e0)      | none
+ptq        | ansi   | 50/50      | 0      | 70.293 / 70.345 ms        | 20188          | 414038 / 414144 (0x651c0)      | none
+qat        | nn     | 50/50      | 0      | 11.537 / 11.664 ms        | 21244          | 449014 / 449120 (0x6da60)      | none
+qat        | ansi   | 50/50      | 0      | 70.315 / 70.379 ms        | 20188          | 415430 / 415536 (0x65730)      | none
+qat_sr     | nn     | 50/50      | 0      | 11.564 / 11.701 ms        | 21244          | 449014 / 449120 (0x6da60)      | none
+qat_sr     | ansi   | 50/50      | 0      | 70.317 / 70.384 ms        | 20188          | 415430 / 415536 (0x65730)      | none
+
+[B1-real] Finished at 2026-11-16T01:09:08+07:00

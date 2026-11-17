@@ -1,0 +1,43 @@
+[B6] start 2026-11-16T18:48:06+07:00
+{
+ "run": "reports/p56z0",
+ "variant": "qat",
+ "ready": "#B6 READY in_bytes=1600 arena_used=22556",
+ "n_participants": 71,
+ "n_windows": 8378,
+ "n_bitexact": 8373,
+ "max_abs_lsb_diff": 1,
+ "auroc_device": 0.8886363636363637,
+ "auroc_desktop": 0.8886363636363637,
+ "latency_us_mean": 10676.825256624492,
+ "latency_us_p95": 10693.0,
+ "wall_s": 191.5
+}
+{
+ "run": "reports/p56z0",
+ "variant": "ptq",
+ "ready": "#B6 READY in_bytes=1600 arena_used=22556",
+ "n_participants": 71,
+ "n_windows": 8378,
+ "n_bitexact": 8374,
+ "max_abs_lsb_diff": 1,
+ "auroc_device": 0.8556818181818182,
+ "auroc_desktop": 0.8556818181818182,
+ "latency_us_mean": 10684.634638338506,
+ "latency_us_p95": 10703.0,
+ "wall_s": 191.3
+}
+[B6] 16x8 latency with specified-architecture model
+#model_bytes=58112 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=46/50
+#latency_us mean=562500.2 p50=562496 p95=562603 min=562376 max=562624 n=100
+Total image size: 702650 bytes (.bin may be padded larger)
+## ansi
+#esp_nn=ansi
+#model_bytes=58112 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=46/50
+#latency_us mean=562427.4 p50=562425 p95=562527 min=562298 max=562550 n=100
+Total image size: 669098 bytes (.bin may be padded larger)
+[B6] done 2026-11-16T19:09:05+07:00

@@ -1,0 +1,38 @@
+{
+ "n_patients": 469,
+ "labels": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_windows": 55342,
+ "t_build_s": 132.3,
+ "tf": "2.21.0",
+ "gpus": [],
+ "python": "3.13.18",
+ "args": {
+  "pads": "/kaggle/input",
+  "out": "reports/p4d",
+  "models": [
+   "ds_cnn",
+   "cnn1d",
+   "cnn_lstm"
+  ],
+  "inputs": [
+   "raw"
+  ],
+  "aggs": [
+   "meanprob"
+  ],
+  "seeds": [
+   0
+  ],
+  "epochs": 30,
+  "quick": false,
+  "tasks": [
+   "PD_vs_DD"
+  ],
+  "patience": 5
+ },
+ "t_total_s": 2476.9
+}

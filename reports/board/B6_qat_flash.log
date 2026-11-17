@@ -1,0 +1,60 @@
+Executing action: flash
+Running ninja in directory /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build
+Executing "ninja flash"...
+[1/5] cd /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build/esp-idf/esptool_py && /home/smartcontrol/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/smartcontrol/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build/partition_table/partition-table.bin /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build/b6_fold.bin
+b6_fold.bin binary size 0x5ccb0 bytes. Smallest app partition is 0x177000 bytes. 0x11a350 bytes (75%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build/bootloader/esp-idf/esptool_py && /home/smartcontrol/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/smartcontrol/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build/bootloader/bootloader.bin
+Bootloader binary size 0x5400 bytes. 0x2c00 bytes (34%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/smartcontrol/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/smartcontrol/esp/esp-idf -D "SERIAL_TOOL=/home/smartcontrol/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/smartcontrol/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/smartcontrol/Desktop/PARKINSON/firmware/b6_fold/build -P /home/smartcontrol/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 b6_fold.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.13.0
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: dc:b4:d9:20:f7:90
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0006cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21504 bytes to 13203...
+Writing at 0x00000000... (100 %)
+Wrote 21504 bytes (13203 compressed) at 0x00000000 in 0.3 seconds (effective 627.7 kbit/s)...
+Hash of data verified.
+Compressed 380080 bytes to 231602...
+Writing at 0x00010000... (6 %)
+Writing at 0x0001b67a... (13 %)
+Writing at 0x0001f725... (20 %)
+Writing at 0x00029be8... (26 %)
+Writing at 0x00031231... (33 %)
+Writing at 0x00036c8c... (40 %)
+Writing at 0x0003c000... (46 %)
+Writing at 0x00041047... (53 %)
+Writing at 0x000463ec... (60 %)
+Writing at 0x0004b572... (66 %)
+Writing at 0x0005082a... (73 %)
+Writing at 0x00057f71... (80 %)
+Writing at 0x0006067d... (86 %)
+Writing at 0x00065ee5... (93 %)
+Writing at 0x0006bd4e... (100 %)
+Wrote 380080 bytes (231602 compressed) at 0x00010000 in 2.5 seconds (effective 1229.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 715.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done

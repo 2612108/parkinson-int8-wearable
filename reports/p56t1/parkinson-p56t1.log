@@ -1,0 +1,123 @@
+[{"stream_name":"stderr","time":9.240320315,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.240374185,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.240381379,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.240389762,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.076387339,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.076428625,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.076434607,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.076438898,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.571945281,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":13.454603269,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":13.454639841,"data":"I0000 00:00:1794844055.931386      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":30.566163579,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":30.566201534,"data":"I0000 00:00:1794844073.034954      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":42.28337225,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":42.283415023,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":42.283422032,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":42.768942703,"data":"\u001b[0mWriting src/monipar_io.py\n"}
+,{"stream_name":"stdout","time":42.786153696,"data":"Writing src/evalkit.py\n"}
+,{"stream_name":"stdout","time":42.804016618,"data":"Writing src/pads_io.py\n"}
+,{"stream_name":"stdout","time":42.820164999,"data":"Writing src/features.py\n"}
+,{"stream_name":"stdout","time":42.855995735,"data":"Writing scripts/p56x_quant_extra.py\n"}
+,{"stream_name":"stdout","time":42.886199843,"data":"3db24a49f2f8ccfcbfaaabe40c441dcd  scripts/p56x_quant_extra.py\r\n"}
+,{"stream_name":"stdout","time":1267.254072138,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1267.25420631,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1267.254212711,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":1267.254216334,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1267.254219817,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1267.254234691,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":1267.25423758,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1267.254240385,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":1267.254243377,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":1267.254245879,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":1267.254248359,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":1267.254250692,"data":"    \r\n"}
+,{"stream_name":"stdout","time":1267.254253194,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":1267.254258552,"data":"raw {\"fp32_epochs\": 2, \"fp32_ft_epochs\": 1, \"cle_check_maxdiff\": [1.7881393432617188e-07, 2.384185791015625e-07], \"qat_epochs\": 1, \"fp32_sr_epochs\": 2, \"qat_sr_epochs\": 1, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 49488, \"ptqca300_0\": 49488, \"ptqca2k_0\": 49488, \"ptqc300_0\": 49488, \"ptqc2k_0\": 49488, \"ptqcb300_0\": 49488, \"ptqcb2k_0\": 49488, \"qat\": 50888, \"ptq_sr\": 49488, \"qat_sr\": 50888}, \"fold\": 4, \"sec\": 231.4, \"maxrss_gb\": 3.38}\r\n"}
+,{"stream_name":"stdout","time":1267.254265856,"data":"xong 1207.1\r\n"}
+,{"stream_name":"stdout","time":11000.106803105,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.10685723,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.106865493,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.106871018,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.106876373,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.106881845,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.10688665,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.106891674,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.106945827,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.106954592,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.106959946,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.106965402,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.106970656,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.106975967,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.106992948,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.106997283,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107001225,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.10700578,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107009087,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107013363,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107017994,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107023692,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107028081,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107032376,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107035811,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107040154,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.10704472,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107048488,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.10705259,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107057063,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107060725,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107064743,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107069003,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107072693,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107093036,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107101295,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107105486,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107109622,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107119604,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107123463,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107127873,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107132281,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107136599,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107140686,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107144982,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107153165,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107157234,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107161587,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107165368,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.107168636,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":11000.107172425,"data":"  warnings.warn(\r\n"}
+,{"stream_name":"stdout","time":11000.107175662,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":11000.10717972,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":11000.10718445,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":11000.107188384,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":11000.107192782,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":11000.107196774,"data":"    \r\n"}
+,{"stream_name":"stdout","time":11000.107200866,"data":"  warnings.warn(_INTERPRETER_DELETION_WARNING)\r\n"}
+,{"stream_name":"stdout","time":11000.107209576,"data":"raw {\"fp32_epochs\": 16, \"fp32_ft_epochs\": 5, \"cle_check_maxdiff\": [1.9073486328125e-06, 2.384185791015625e-06], \"qat_epochs\": 5, \"fp32_sr_epochs\": 17, \"qat_sr_epochs\": 5, \"params\": 22737, \"tflite_bytes\": {\"ptq\": 49488, \"ptq_c2k\": 49488, \"ptq_a16\": 58117, \"ptq_ft\": 49488, \"ptq_fold\": 47528, \"ptq_cle\": 47528, \"ptqd300_0\": 49488, \"ptqd2k_0\": 49488, \"ptqca300_0\": 49488, \"ptqca2k_0\": 49488, \"ptqc300_0\": 49488, \"ptqc2k_0\": 49488, \"ptqcb300_0\": 49488, \"ptqcb2k_0\": 49488, \"ptqd300_1\": 49488, \"ptqd2k_1\": 49488, \"ptqca300_1\": 49488, \"ptqca2k_1\": 49488, \"ptqc300_1\": 49488, \"ptqc2k_1\": 49488, \"ptqcb300_1\": 49488, \"ptqcb2k_1\": 49488, \"ptqd300_2\": 49488, \"ptqd2k_2\": 49488, \"ptqca300_2\": 49488, \"ptqca2k_2\": 49488, \"ptqc300_2\": 49488, \"ptqc2k_2\": 49488, \"ptqcb300_2\": 49488, \"ptqcb2k_2\": 49488, \"ptqd300_3\": 49488, \"ptqd2k_3\": 49488, \"ptqca300_3\": 49488, \"ptqca2k_3\": 49488, \"ptqc300_3\": 49488, \"ptqc2k_3\": 49488, \"ptqcb300_3\": 49488, \"ptqcb2k_3\": 49488, \"ptqd300_4\": 49488, \"ptqd2k_4\": 49488, \"ptqca300_4\": 49488, \"ptqca2k_4\": 49488, \"ptqc300_4\": 49488, \"ptqc2k_4\": 49488, \"ptqcb300_4\": 49488, \"ptqcb2k_4\": 49488, \"ptqd300_5\": 49488, \"ptqd2k_5\": 49488, \"ptqca300_5\": 49488, \"ptqca2k_5\": 49488, \"ptqc300_5\": 49488, \"ptqc2k_5\": 49488, \"ptqcb300_5\": 49488, \"ptqcb2k_5\": 49488, \"ptqd300_6\": 49488, \"ptqd2k_6\": 49488, \"ptqca300_6\": 49488, \"ptqca2k_6\": 49488, \"ptqc300_6\": 49488, \"ptqc2k_6\": 49488, \"ptqcb300_6\": 49488, \"ptqcb2k_6\": 49488, \"ptqd300_7\": 49488, \"ptqd2k_7\": 49488, \"ptqca300_7\": 49488, \"ptqca2k_7\": 49488, \"ptqc300_7\": 49488, \"ptqc2k_7\": 49488, \"ptqcb300_7\": 49488, \"ptqcb2k_7\": 49488, \"ptqd300_8\": 49488, \"ptqd2k_8\": 49488, \"ptqca300_8\": 49488, \"ptqca2k_8\": 49488, \"ptqc300_8\": 49488, \"ptqc2k_8\": 49488, \"ptqcb300_8\": 49488, \"ptqcb2k_8\": 49488, \"ptqd300_9\": 49488, \"ptqd2k_9\": 49488, \"ptqca300_9\": 49488, \"ptqca2k_9\": 49488, \"ptqc300_9\": 49488, \"ptqc2k_9\": 49488, \"ptqcb300_9\": 49488, \"ptqcb2k_9\": 49488, \"qat\": 50888, \"ptq_sr\": 49488, \"qat_sr\": 50888}, \"fold\": 4, \"sec\": 1799.3, \"maxrss_gb\": 5.92}\r\n"}
+,{"stream_name":"stdout","time":11000.10723868,"data":"xong 9717.8\r\n"}
+,{"stream_name":"stdout","time":11000.231837196,"data":"-rw-r--r-- 1 root root 140187 Nov 16 18:50 reports/p56t1_run.log\r\n"}
+,{"stream_name":"stdout","time":11000.231925411,"data":"\r\n"}
+,{"stream_name":"stdout","time":11000.231942514,"data":"reports/p56m:\r\n"}
+,{"stream_name":"stdout","time":11000.231947278,"data":"total 8\r\n"}
+,{"stream_name":"stdout","time":11000.231950926,"data":"drwxr-xr-x 2 root root 4096 Nov 16 15:47 .\r\n"}
+,{"stream_name":"stdout","time":11000.2319548,"data":"drwxr-xr-x 4 root root 4096 Nov 16 18:50 ..\r\n"}
+,{"stream_name":"stdout","time":11000.231958508,"data":"\r\n"}
+,{"stream_name":"stdout","time":11000.231962357,"data":"reports/p56t1:\r\n"}
+,{"stream_name":"stdout","time":11000.231965289,"data":"total 1284\r\n"}
+,{"stream_name":"stdout","time":11000.231967891,"data":"drwxr-xr-x 3 root root    4096 Nov 16 18:50 .\r\n"}
+,{"stream_name":"stdout","time":11000.231970411,"data":"drwxr-xr-x 4 root root    4096 Nov 16 18:50 ..\r\n"}
+,{"stream_name":"stdout","time":11000.231973058,"data":"-rw-r--r-- 1 root root   66323 Nov 16 18:43 calib.jsonl\r\n"}
+,{"stream_name":"stdout","time":11000.231975595,"data":"-rw-r--r-- 1 root root   10085 Nov 16 18:50 fold_meta.jsonl\r\n"}
+,{"stream_name":"stdout","time":11000.23197871,"data":"drwxr-xr-x 2 root root    4096 Nov 16 16:42 models\r\n"}
+,{"stream_name":"stdout","time":11000.23198246,"data":"-rw-r--r-- 1 root root 1013609 Nov 16 18:50 patient_preds_PD_vs_HC_raw.csv\r\n"}
+,{"stream_name":"stdout","time":11000.231986326,"data":"-rw-r--r-- 1 root root     840 Nov 16 18:50 run_info.json\r\n"}
+,{"stream_name":"stdout","time":11000.231989296,"data":"-rw-r--r-- 1 root root  200098 Nov 16 18:50 shift_results.csv\r\n"}
+,{"stream_name":"stderr","time":11003.768210377,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":11003.768246786,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":11003.994981629,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":11003.995014592,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11004.946625153,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":11005.048423021,"data":"[NbConvertApp] Writing 74173 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":11008.301163229,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":11009.187034651,"data":"[NbConvertApp] Writing 604598 bytes to __results__.html\n"}
+]

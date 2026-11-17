@@ -1,0 +1,43 @@
+Downloading fold_meta.jsonl to /tmp/p56s1/reports/p56s1
+  0%|          | 0.00/1.15k [00:00<?, ?B/s]100%|██████████| 1.15k/1.15k [00:00<00:00, 1.53MB/s]
+
+Output file downloaded to /tmp/p56s1/reports/p56s1/fold_meta.jsonl
+Downloading patient_preds_PD_vs_HC_raw.csv to /tmp/p56s1/reports/p56s1
+  0%|          | 0.00/330k [00:00<?, ?B/s]100%|██████████| 330k/330k [00:00<00:00, 431kB/s]100%|██████████| 330k/330k [00:00<00:00, 431kB/s]
+
+Output file downloaded to /tmp/p56s1/reports/p56s1/patient_preds_PD_vs_HC_raw.csv
+Downloading run_info.json to /tmp/p56s1/reports/p56s1
+  0%|          | 0.00/649 [00:00<?, ?B/s]100%|██████████| 649/649 [00:00<00:00, 1.04MB/s]
+
+Output file downloaded to /tmp/p56s1/reports/p56s1/run_info.json
+Downloading shift_results.csv to /tmp/p56s1/reports/p56s1
+  0%|          | 0.00/51.7k [00:00<?, ?B/s]100%|██████████| 51.7k/51.7k [00:00<00:00, 214kB/s]100%|██████████| 51.7k/51.7k [00:00<00:00, 213kB/s]
+
+Output file downloaded to /tmp/p56s1/reports/p56s1/shift_results.csv
+Downloading p56s1_run.log to /tmp/p56s1/reports
+  0%|          | 0.00/9.91k [00:00<?, ?B/s]100%|██████████| 9.91k/9.91k [00:00<00:00, 2.65MB/s]
+
+Output file downloaded to /tmp/p56s1/reports/p56s1_run.log
+Kernel log downloaded to /tmp/p56s1/parkinson-p56s1.log 
+Downloading fold_meta.jsonl to /tmp/p56s2/reports/p56s2
+  0%|          | 0.00/1.15k [00:00<?, ?B/s]100%|██████████| 1.15k/1.15k [00:00<00:00, 1.48MB/s]
+
+Output file downloaded to /tmp/p56s2/reports/p56s2/fold_meta.jsonl
+Downloading patient_preds_PD_vs_HC_raw.csv to /tmp/p56s2/reports/p56s2
+  0%|          | 0.00/330k [00:00<?, ?B/s]100%|██████████| 330k/330k [00:00<00:00, 401kB/s]100%|██████████| 330k/330k [00:00<00:00, 399kB/s]
+
+Output file downloaded to /tmp/p56s2/reports/p56s2/patient_preds_PD_vs_HC_raw.csv
+Downloading run_info.json to /tmp/p56s2/reports/p56s2
+  0%|          | 0.00/649 [00:00<?, ?B/s]100%|██████████| 649/649 [00:00<00:00, 1.54MB/s]
+
+Output file downloaded to /tmp/p56s2/reports/p56s2/run_info.json
+Downloading shift_results.csv to /tmp/p56s2/reports/p56s2
+  0%|          | 0.00/51.6k [00:00<?, ?B/s]100%|██████████| 51.6k/51.6k [00:00<00:00, 211kB/s]100%|██████████| 51.6k/51.6k [00:00<00:00, 210kB/s]
+
+Output file downloaded to /tmp/p56s2/reports/p56s2/shift_results.csv
+Downloading p56s2_run.log to /tmp/p56s2/reports
+  0%|          | 0.00/9.91k [00:00<?, ?B/s]100%|██████████| 9.91k/9.91k [00:00<00:00, 1.44MB/s]
+
+Output file downloaded to /tmp/p56s2/reports/p56s2_run.log
+Kernel log downloaded to /tmp/p56s2/parkinson-p56s2.log 
+DONE

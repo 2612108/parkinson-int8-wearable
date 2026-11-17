@@ -1,0 +1,50 @@
+{
+ "task": "PD_vs_HC",
+ "n": 30,
+ "n_pos": 15,
+ "n_windows": 3540,
+ "t_load_s": 33.6,
+ "tf": "2.21.0",
+ "tfmot": "0.8.1",
+ "gpus": [],
+ "args": {
+  "data": "/kaggle/input",
+  "out": "reports/p56q",
+  "task": "PD_vs_HC",
+  "inputs": [
+   "raw"
+  ],
+  "folds": 5,
+  "seed": 0,
+  "epochs": 5,
+  "qat_epochs": 1,
+  "monipar": false,
+  "monipar_inputs": [
+   "acc",
+   "invacc"
+  ],
+  "skip_cv": false,
+  "quick": true,
+  "arch": "ds_tcn",
+  "extra": true,
+  "causal": true
+ },
+ "shifts": [
+  "clean",
+  "fs50",
+  "fs25",
+  "jitter10",
+  "jitter30",
+  "adc4g12b",
+  "adc2g10b",
+  "adc2g8b",
+  "noise_lo",
+  "noise_hi",
+  "rot15",
+  "rot45",
+  "rot180",
+  "mirror",
+  "nogyro"
+ ],
+ "t_total_s": 723.1
+}

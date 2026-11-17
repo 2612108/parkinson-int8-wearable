@@ -1,0 +1,29 @@
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "MEAN"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "input_quant": [
+    0.36910200119018555,
+    -19.0
+  ],
+  "output_quant": [
+    0.0561676025390625,
+    -24.0
+  ],
+  "model_bytes": 50888,
+  "n_test": 4
+}

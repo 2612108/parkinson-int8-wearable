@@ -1,0 +1,9 @@
+[2026-11-15 15:18:09] chain2: dừng P3 cũ (loader chưa nội suy theo Time)
+[2026-11-15 15:18:11] Monipar: cài requests/tqdm vào .venv rồi tải
+[2026-11-15 15:22:08] Monipar xong: 34M, 10 file
+[2026-11-15 15:22:08] audit lại (có Monipar)
+[2026-11-15 15:22:14] Kaggle Dataset: thêm phiên bản có Monipar
+[2026-11-15 15:28:47] dataset version rc=0: Dataset version is being created. Please check progress at https://www.kaggle.com/datasets/nguynthqunhlu/parkinson-pads-monipar-raw
+[2026-11-15 15:28:47] P3 bản mới (3 seed)
+[2026-11-15 19:22:13] P3 xong rc=0
+[2026-11-15 19:22:13] HẾT CHUỖI 2

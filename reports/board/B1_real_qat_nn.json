@@ -1,0 +1,33 @@
+{
+  "kv": {
+    "cores": "2",
+    "rev": "2",
+    "cpu_mhz": "240",
+    "psram_bytes": "8388608",
+    "internal_free": "375875",
+    "esp_nn": "optimized",
+    "model_bytes": "50888",
+    "arena_bytes": "163840",
+    "arena_used": "21244",
+    "arena_mem": "internal",
+    "in_bytes": "1600",
+    "out_bytes": "1",
+    "in_scale": "0.42093837",
+    "in_zp": "-25",
+    "out_scale": "0.051099107",
+    "out_zp": "-8",
+    "input0_checksum": "-40372",
+    "matched": "50/50",
+    "mean": "11537.3",
+    "p50": "11545",
+    "p95": "11664",
+    "min": "11345",
+    "max": "11735",
+    "n": "1000"
+  },
+  "n_ref": 50,
+  "n_received": 50,
+  "n_bitexact": 50,
+  "max_abs_lsb_diff": 0,
+  "errors": []
+}

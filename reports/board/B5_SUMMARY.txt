@@ -1,0 +1,16 @@
+# B5 SUMMARY — 16x8 model reports/p56z0/models/PD_vs_HC_raw_ptq_a16_fold0.tflite
+2026-11-16T19:09:05+07:00
+## nn
+#esp_nn=optimized
+#model_bytes=58112 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=46/50
+#latency_us mean=562500.2 p50=562496 p95=562603 min=562376 max=562624 n=100
+Total image size: 702650 bytes (.bin may be padded larger)
+## ansi
+#esp_nn=ansi
+#model_bytes=58112 arena_bytes=262144 arena_used=27768 arena_mem=internal in_bytes=6400 out_bytes=4
+#in_type=1 out_type=1
+#bitexact matched=46/50
+#latency_us mean=562427.4 p50=562425 p95=562527 min=562298 max=562550 n=100
+Total image size: 669098 bytes (.bin may be padded larger)

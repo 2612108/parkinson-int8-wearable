@@ -1,0 +1,145 @@
+[{"stream_name":"stderr","time":8.826980703,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.827031967,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.82703825,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.827042081,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.590469181,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.590505227,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.590510093,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.590513942,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.955224833,"data":"/kaggle/working\n"}
+,{"stream_name":"stdout","time":12.843318817,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":12.843374202,"data":"I0000 00:00:1794772965.909120      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":28.640772451,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\r\n"}
+,{"stream_name":"stdout","time":28.640812203,"data":"I0000 00:00:1794772981.709265      38 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\r\n"}
+,{"stream_name":"stdout","time":38.983594448,"data":"\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n"}
+,{"stream_name":"stdout","time":38.983640597,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":38.983646095,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\u001b[0m\u001b[31m\r\n"}
+,{"stream_name":"stdout","time":39.39022184,"data":"\u001b[0mWriting src/monipar_io.py\n"}
+,{"stream_name":"stdout","time":39.405660413,"data":"Writing src/evalkit.py\n"}
+,{"stream_name":"stdout","time":39.420331395,"data":"Writing src/pads_io.py\n"}
+,{"stream_name":"stdout","time":39.43531388,"data":"Writing src/features.py\n"}
+,{"stream_name":"stdout","time":39.460145518,"data":"Writing scripts/p56_quant_shift.py\n"}
+,{"stream_name":"stdout","time":39.494588792,"data":"f6a7e8240d7e1f117a4c9fd6de781b9b  scripts/p56_quant_shift.py\r\n"}
+,{"stream_name":"stdout","time":39.494626201,"data":"3c7e7a6c45f588448e5d622259660566  src/evalkit.py\r\n"}
+,{"stream_name":"stdout","time":39.494629676,"data":"78c715a21028c0936e2e6f01f73303fe  src/features.py\r\n"}
+,{"stream_name":"stdout","time":39.49463238,"data":"d41d8cd98f00b204e9800998ecf8427e  src/__init__.py\r\n"}
+,{"stream_name":"stdout","time":39.494635017,"data":"6e23bc08c6d404ce51bcaf6cf00eb5a3  src/monipar_io.py\r\n"}
+,{"stream_name":"stdout","time":39.494637527,"data":"9b352769b4ec5c6d206e200b93385863  src/pads_io.py\r\n"}
+,{"stream_name":"stdout","time":48.539661426,"data":"Monipar database organization week:subject.png 46203 md5 OK\n"}
+,{"stream_name":"stdout","time":77.53750584,"data":"MONIPAR_HEALTHYCONTROL.mat 11158508 md5 OK\n"}
+,{"stream_name":"stdout","time":117.049567105,"data":"MONIPAR_PD_REMOTE.mat 14960473 md5 OK\n"}
+,{"stream_name":"stdout","time":117.925709534,"data":"Fast_watch_Signals.m 1706 md5 OK\n"}
+,{"stream_name":"stdout","time":119.070578612,"data":"MONIPAR_PD_REMOTE_TREMOR_LABEL.mat 21348 md5 OK\n"}
+,{"stream_name":"stdout","time":120.144250759,"data":"MONIPAR_PD_SUPERVISED_TREMOR_LABEL.mat 14586 md5 OK\n"}
+,{"stream_name":"stdout","time":127.013336592,"data":"MONIPAR_PD_SUPERVISED.mat 9191156 md5 OK\n"}
+,{"stream_name":"stdout","time":127.892330634,"data":"Monipar_README.txt 2078 md5 OK\n"}
+,{"stream_name":"stdout","time":128.791015199,"data":"MONIPAR SUBJECTS DATA.xlsx 13574 md5 OK\n"}
+,{"stream_name":"stdout","time":128.791047571,"data":"/kaggle/working/all/monipar\r\n"}
+,{"stream_name":"stdout","time":128.79105368,"data":"/kaggle/working/all/monipar/MONIPAR_PD_REMOTE.mat\r\n"}
+,{"stream_name":"stdout","time":128.791057804,"data":"/kaggle/working/all/monipar/MONIPAR_PD_REMOTE_TREMOR_LABEL.mat\r\n"}
+,{"stream_name":"stdout","time":128.791061084,"data":"/kaggle/working/all/monipar/MONIPAR SUBJECTS DATA.xlsx\r\n"}
+,{"stream_name":"stdout","time":128.791064283,"data":"/kaggle/working/all/monipar/MONIPAR_PD_SUPERVISED_TREMOR_LABEL.mat\r\n"}
+,{"stream_name":"stdout","time":128.791067334,"data":"/kaggle/working/all/monipar/Monipar database organization week:subject.png\r\n"}
+,{"stream_name":"stdout","time":128.79107036,"data":"/kaggle/working/all/monipar/Monipar_README.txt\r\n"}
+,{"stream_name":"stdout","time":128.791073373,"data":"/kaggle/working/all/monipar/MONIPAR_HEALTHYCONTROL.mat\r\n"}
+,{"stream_name":"stdout","time":128.791076316,"data":"/kaggle/working/all/monipar/MONIPAR_PD_SUPERVISED.mat\r\n"}
+,{"stream_name":"stdout","time":1103.153326295,"data":"  \"folds\": 5,\r\n"}
+,{"stream_name":"stdout","time":1103.153424969,"data":"  \"seed\": 0,\r\n"}
+,{"stream_name":"stdout","time":1103.15342951,"data":"  \"epochs\": 30,\r\n"}
+,{"stream_name":"stdout","time":1103.153432827,"data":"  \"qat_epochs\": 5,\r\n"}
+,{"stream_name":"stdout","time":1103.153435985,"data":"  \"monipar\": true,\r\n"}
+,{"stream_name":"stdout","time":1103.153438983,"data":"  \"monipar_inputs\": [\r\n"}
+,{"stream_name":"stdout","time":1103.153442031,"data":"   \"acc\",\r\n"}
+,{"stream_name":"stdout","time":1103.153445031,"data":"   \"invacc\"\r\n"}
+,{"stream_name":"stdout","time":1103.153447971,"data":"  ],\r\n"}
+,{"stream_name":"stdout","time":1103.153450715,"data":"  \"skip_cv\": true,\r\n"}
+,{"stream_name":"stdout","time":1103.153453517,"data":"  \"quick\": false\r\n"}
+,{"stream_name":"stdout","time":1103.153456318,"data":" },\r\n"}
+,{"stream_name":"stdout","time":1103.15345954,"data":" \"shifts\": [\r\n"}
+,{"stream_name":"stdout","time":1103.153463128,"data":"  \"clean\",\r\n"}
+,{"stream_name":"stdout","time":1103.153466742,"data":"  \"fs50\",\r\n"}
+,{"stream_name":"stdout","time":1103.153470292,"data":"  \"fs25\",\r\n"}
+,{"stream_name":"stdout","time":1103.153473934,"data":"  \"jitter10\",\r\n"}
+,{"stream_name":"stdout","time":1103.153478277,"data":"  \"jitter30\",\r\n"}
+,{"stream_name":"stdout","time":1103.153481765,"data":"  \"adc4g12b\",\r\n"}
+,{"stream_name":"stdout","time":1103.153485915,"data":"  \"adc2g10b\",\r\n"}
+,{"stream_name":"stdout","time":1103.153498824,"data":"  \"adc2g8b\",\r\n"}
+,{"stream_name":"stdout","time":1103.153502758,"data":"  \"noise_lo\",\r\n"}
+,{"stream_name":"stdout","time":1103.153506239,"data":"  \"noise_hi\",\r\n"}
+,{"stream_name":"stdout","time":1103.153509752,"data":"  \"rot15\",\r\n"}
+,{"stream_name":"stdout","time":1103.153513295,"data":"  \"rot45\",\r\n"}
+,{"stream_name":"stdout","time":1103.153516915,"data":"  \"rot180\",\r\n"}
+,{"stream_name":"stdout","time":1103.153528562,"data":"  \"mirror\",\r\n"}
+,{"stream_name":"stdout","time":1103.153556246,"data":"  \"nogyro\"\r\n"}
+,{"stream_name":"stdout","time":1103.153562484,"data":" ]\r\n"}
+,{"stream_name":"stdout","time":1103.153567306,"data":"}\r\n"}
+,{"stream_name":"stdout","time":1103.153571965,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.15357744,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153582645,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153586762,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153589799,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153593092,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153596209,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.15359944,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153602435,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":1103.153605748,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":1103.153608709,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":1103.153611735,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":1103.153614605,"data":"    \r\n"}
+,{"stream_name":"stdout","time":1103.153617393,"data":"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\r\n"}
+,{"stream_name":"stdout","time":1103.153622085,"data":"monipar acc {\"fp32_epochs\": 19, \"qat_epochs\": 5, \"fp32_sr_epochs\": 13, \"qat_sr_epochs\": 5, \"params\": 20945, \"tflite_bytes\": {\"ptq\": 47528, \"qat\": 49480, \"ptq_sr\": 47528, \"qat_sr\": 49480}}\r\n"}
+,{"stream_name":"stdout","time":1103.15363162,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153635138,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153638226,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153641471,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153644449,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153652109,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153655847,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.\r\n"}
+,{"stream_name":"stdout","time":1103.153659366,"data":"fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8\r\n"}
+,{"stream_name":"stdout","time":1103.153662417,"data":"/usr/local/lib/python3.13/dist-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in\r\n"}
+,{"stream_name":"stdout","time":1103.153665673,"data":"    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.\r\n"}
+,{"stream_name":"stdout","time":1103.153668627,"data":"    See the [migration guide](https://ai.google.dev/edge/litert/migration)\r\n"}
+,{"stream_name":"stdout","time":1103.153671712,"data":"    for details.\r\n"}
+,{"stream_name":"stdout","time":1103.153674565,"data":"    \r\n"}
+,{"stream_name":"stdout","time":1103.153677703,"data":"monipar invacc {\"fp32_epochs\": 11, \"qat_epochs\": 5, \"fp32_sr_epochs\": 26, \"qat_sr_epochs\": 5, \"params\": 20497, \"tflite_bytes\": {\"ptq\": 47080, \"qat\": 49032, \"ptq_sr\": 47080, \"qat_sr\": 49032}}\r\n"}
+,{"stream_name":"stdout","time":1103.15368212,"data":"xong 963.0\r\n"}
+,{"stream_name":"stdout","time":1103.278743983,"data":"reports/p56m:\r\n"}
+,{"stream_name":"stdout","time":1103.278777403,"data":"total 28\r\n"}
+,{"stream_name":"stdout","time":1103.278780799,"data":"drwxr-xr-x 3 root root 4096 Nov 15 20:20 .\r\n"}
+,{"stream_name":"stdout","time":1103.278783506,"data":"drwxr-xr-x 3 root root 4096 Nov 15 20:04 ..\r\n"}
+,{"stream_name":"stdout","time":1103.278786021,"data":"drwxr-xr-x 2 root root 4096 Nov 15 20:20 models\r\n"}
+,{"stream_name":"stdout","time":1103.278788879,"data":"-rw-r--r-- 1 root root 2154 Nov 15 20:13 monipar_preds_acc.csv\r\n"}
+,{"stream_name":"stdout","time":1103.278791423,"data":"-rw-r--r-- 1 root root 2143 Nov 15 20:20 monipar_preds_invacc.csv\r\n"}
+,{"stream_name":"stdout","time":1103.278794031,"data":"-rw-r--r-- 1 root root 2246 Nov 15 20:20 monipar_results.csv\r\n"}
+,{"stream_name":"stdout","time":1103.278797668,"data":"-rw-r--r-- 1 root root  651 Nov 15 20:20 run_info.json\r\n"}
+,{"stream_name":"stdout","time":1103.278801114,"data":"\r\n"}
+,{"stream_name":"stdout","time":1103.278804503,"data":"reports/p56m/models:\r\n"}
+,{"stream_name":"stdout","time":1103.278808165,"data":"total 204\r\n"}
+,{"stream_name":"stdout","time":1103.278811621,"data":"drwxr-xr-x 2 root root  4096 Nov 15 20:20 .\r\n"}
+,{"stream_name":"stdout","time":1103.278814997,"data":"drwxr-xr-x 3 root root  4096 Nov 15 20:20 ..\r\n"}
+,{"stream_name":"stdout","time":1103.278818648,"data":"-rw-r--r-- 1 root root 47528 Nov 15 20:13 monipar_acc_ptq.tflite\r\n"}
+,{"stream_name":"stdout","time":1103.278822137,"data":"-rw-r--r-- 1 root root 49480 Nov 15 20:13 monipar_acc_qat_sr.tflite\r\n"}
+,{"stream_name":"stdout","time":1103.278825993,"data":"-rw-r--r-- 1 root root 47080 Nov 15 20:20 monipar_invacc_ptq.tflite\r\n"}
+,{"stream_name":"stdout","time":1103.278829573,"data":"-rw-r--r-- 1 root root 49032 Nov 15 20:20 monipar_invacc_qat_sr.tflite\r\n"}
+,{"stream_name":"stdout","time":1103.278833025,"data":"input,variant,n,n_pd,auroc,bal_acc,ece,brier,agree_fp32,auroc_lo,auroc_hi,bal_acc_lo,bal_acc_hi\r\n"}
+,{"stream_name":"stdout","time":1103.278836988,"data":"acc,fp32,28,21,0.8571428571428572,0.8333333333333333,0.2187047622033528,0.22282052383454717,1.0,0.7006802721088435,0.9795918367346939,0.7142857142857143,0.9285714285714286\r\n"}
+,{"stream_name":"stdout","time":1103.27885718,"data":"acc,ptq,28,21,0.945578231292517,0.7142857142857143,0.12253470718860625,0.1397622942023245,0.8214285714285714,0.8299319727891157,1.0,0.6190476190476191,0.8095238095238095\r\n"}
+,{"stream_name":"stdout","time":1103.278861235,"data":"acc,qat,28,21,0.8639455782312926,0.8095238095238095,0.14499730297497343,0.19270192553265092,0.8214285714285714,0.7074829931972788,0.9931972789115646,0.6904761904761905,0.9047619047619048\r\n"}
+,{"stream_name":"stdout","time":1103.27886523,"data":"acc,fp32_sr,28,21,0.7959183673469388,0.7142857142857143,0.23818566543715342,0.24031039833126938,1.0,0.5916666666666667,0.9591836734693877,0.6190476190476191,0.8095238095238095\r\n"}
+,{"stream_name":"stdout","time":1103.278869253,"data":"acc,ptq_sr,28,21,0.4897959183673469,0.5,0.14415571306432998,0.19343838507905814,0.75,0.2789115646258503,0.7006802721088436,0.2857142857142857,0.7142857142857142\r\n"}
+,{"stream_name":"stdout","time":1103.278873151,"data":"acc,qat_sr,28,21,0.7074829931972789,0.5952380952380952,0.09553244071347376,0.1728884094542762,0.8214285714285714,0.4897959183673469,0.891156462585034,0.40476190476190477,0.7619047619047619\r\n"}
+,{"stream_name":"stdout","time":1103.278878636,"data":"invacc,fp32,28,21,0.7278911564625851,0.6428571428571428,0.0945640802383423,0.18106325710947577,1.0,0.5102040816326531,0.8913265306122441,0.42857142857142855,0.8333333333333333\r\n"}
+,{"stream_name":"stdout","time":1103.278882786,"data":"invacc,ptq,28,21,0.5238095238095238,0.47619047619047616,0.03942975189004629,0.18715626392259338,0.75,0.2857142857142857,0.7482993197278911,0.2857142857142857,0.6428571428571428\r\n"}
+,{"stream_name":"stdout","time":1103.278885421,"data":"invacc,qat,28,21,0.7823129251700681,0.6190476190476191,0.1429228207894734,0.17539914379212287,0.9642857142857143,0.5782312925170068,0.9387755102040816,0.40476190476190477,0.8095238095238095\r\n"}
+,{"stream_name":"stdout","time":1103.278888067,"data":"invacc,fp32_sr,28,21,0.7687074829931972,0.47619047619047616,0.06421010834830149,0.24688567708126047,1.0,0.5782312925170068,0.9183673469387755,0.42857142857142855,0.5\r\n"}
+,{"stream_name":"stdout","time":1103.278890587,"data":"invacc,ptq_sr,28,21,0.836734693877551,0.7619047619047619,0.23512600149427143,0.25651173748945116,0.42857142857142855,0.6666666666666667,0.9659863945578231,0.6666666666666666,0.8571428571428572\r\n"}
+,{"stream_name":"stdout","time":1103.278894447,"data":"invacc,qat_sr,28,21,0.7006802721088434,0.6666666666666666,0.16414451599121094,0.20434615226290262,0.2857142857142857,0.5034013605442176,0.8775510204081632,0.5714285714285714,0.7624999999999967\r\n"}
+,{"stream_name":"stderr","time":1106.514217968,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1106.514269782,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1106.72662477,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1106.726661332,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1107.535651828,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1107.622177713,"data":"[NbConvertApp] Writing 55919 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1110.561848356,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1111.307122713,"data":"[NbConvertApp] Writing 502889 bytes to __results__.html\n"}
+]

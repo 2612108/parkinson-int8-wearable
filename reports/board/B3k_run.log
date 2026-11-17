@@ -1,0 +1,252 @@
+[B3] Starting at 2026-11-16T21:27:11+07:00 on PORT=/dev/ttyACM0
+[B3] Step 1: Generating C data via firmware/tools/gen_b3k_data.py...
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "FULLY_CONNECTED",
+    "MEAN"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "input_quant": [
+    0.36910200119018555,
+    -19.0
+  ],
+  "output_quant": [
+    0.0561676025390625,
+    -24.0
+  ],
+  "model_bytes": 50888,
+  "n_test": 10
+}
+Generated b3_data.{h,cc} and b3_meta.json successfully.
+  005_Relaxed_LeftWrist (fold0_test PD, 20.46s): 9 windows -> probs=[0.9609, 0.8645, 0.871, 0.9966, 0.9974, 0.9987, 0.9943, 0.9976, 0.9901]
+  001_Relaxed_LeftWrist (PD, 20.46s): 9 windows -> probs=[0.597, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  081_Relaxed_LeftWrist (fold0_test HC, 20.46s): 9 windows -> probs=[0.542, 0.458, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.458]
+[B3] Step 2: Sourcing ESP-IDF environment & building firmware/b3_causal...
+[B3] Build succeeded.
+[B3] Step 3: Flashing firmware/b3_causal to /dev/ttyACM0...
+[B3] Flash succeeded.
+[B3] Step 4: Capturing serial log from /dev/ttyACM0...
+[  0.12s] [0;32mI (128) esp_image: segment 4: paddr=00091b20 vaddr=4037ecESP-ROM:esp32s3-20210327
+[  0.13s] Build:Mar 27 2021
+[  0.13s] rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+[  0.13s] Saved PC:0x420078b9
+[  0.13s] SPIWP:0xee
+[  0.13s] mode:DIO, clock div:1
+[  0.13s] load:0x3fce2810,len:0x1870
+[  0.13s] load:0x403c8700,len:0x4
+[  0.14s] load:0x403c8704,len:0xc40
+[  0.14s] load:0x403cb700,len:0x2ee8
+[  0.14s] entry 0x403c8908
+[  0.14s] [0;32mI (26) boot: ESP-IDF v5.3.2 2nd stage bootloader[0m
+[  0.14s] [0;32mI (27) boot: compile time Nov 16 2026 11:46:08[0m
+[  0.14s] [0;32mI (27) boot: Multicore bootloader[0m
+[  0.14s] [0;32mI (27) boot: chip revision: v0.2[0m
+[  0.14s] [0;32mI (27) boot: efuse block revision: v1.3[0m
+[  0.15s] [0;32mI (28) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[  0.15s] [0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[  0.15s] [0;32mI (28) boot.esp32s3: SPI Flash Size : 16MB[0m
+[  0.15s] [0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[  0.15s] [0;32mI (28) boot: Partition Table:[0m
+[  0.15s] [0;32mI (29) boot: ## Label            Usage          Type ST Offset   Length[0m
+[  0.16s] [0;32mI (29) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[  0.16s] [0;32mI (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[  0.16s] [0;32mI (30) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[  0.16s] [0;32mI (30) boot: End of partition table[0m
+[  0.17s] [0;32mI (30) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=425f0h (271856) map[0m
+[  0.17s] [0;32mI (79) esp_image: segment 1: paddr=00052618 vaddr=3fc92000 size=02da4h ( 11684) load[0m
+[  0.17s] [0;32mI (82) esp_image: segment 2: paddr=000553c4 vaddr=40374000 size=0ac54h ( 44116) load[0m
+[  0.17s] [0;32mI (92) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=31af8h (203512) map[0m
+[  0.18s] [0;32mI (128) esp_image: segment 4: paddr=00091b20 vaddr=4037ec54 size=03398h ( 13208) load[0m
+[  0.18s] [0;32mI (137) boot: Loaded app from partition at offset 0x10000[0m
+[  0.18s] [0;32mI (137) boot: Disabling RNG early entropy source...[0m
+[  0.18s] [0;32mI (138) octal_psram: vendor id    : 0x0d (AP)[0m
+[  0.18s] [0;32mI (138) octal_psram: dev id       : 0x02 (generation 3)[0m
+[  0.18s] [0;32mI (139) octal_psram: density      : 0x03 (64 Mbit)[0m
+[  0.18s] [0;32mI (139) octal_psram: good-die     : 0x01 (Pass)[0m
+[  0.18s] [0;32mI (139) octal_psram: Latency      : 0x01 (Fixed)[0m
+[  0.19s] [0;32mI (139) octal_psram: VCC          : 0x01 (3V)[0m
+[  0.19s] [0;32mI (140) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[  0.19s] [0;32mI (140) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[  0.19s] [0;32mI (140) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[  0.19s] [0;32mI (140) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[  0.19s] [0;32mI (141) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[  0.19s] [0;32mI (142) MSPI Timing: PSRAM timing tuning index: 5[0m
+[  0.19s] [0;32mI (142) esp_psram: Found 8MB PSRAM device[0m
+[  0.20s] [0;32mI (142) esp_psram: Speed: 80MHz[0m
+[  0.20s] [0;32mI (142) cpu_start: Multicore app[0m
+[  0.56s] [0;32mI (556) esp_psram: SPI SRAM memory test OK[0m
+[  0.57s] [0;32mI (564) cpu_start: Pro cpu start user code[0m
+[  0.57s] [0;32mI (564) cpu_start: cpu freq: 240000000 Hz[0m
+[  0.57s] [0;32mI (565) app_init: Application information:[0m
+[  0.57s] [0;32mI (565) app_init: Project name:     b3_causal[0m
+[  0.57s] [0;32mI (565) app_init: App version:      1[0m
+[  0.57s] [0;32mI (565) app_init: Compile time:     Nov 16 2026 11:45:47[0m
+[  0.58s] [0;32mI (565) app_init: ELF file SHA256:  d00b54767...[0m
+[  0.58s] [0;32mI (565) app_init: ESP-IDF:          v5.3.2[0m
+[  0.58s] [0;32mI (566) efuse_init: Min chip rev:     v0.0[0m
+[  0.58s] [0;32mI (566) efuse_init: Max chip rev:     v0.99 [0m
+[  0.58s] [0;32mI (566) efuse_init: Chip rev:         v0.2[0m
+[  0.58s] [0;32mI (566) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[  0.58s] [0;32mI (566) heap_init: At 3FC99EA8 len 0004F868 (318 KiB): RAM[0m
+[  0.59s] [0;32mI (567) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[  0.59s] [0;32mI (567) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[  0.59s] [0;32mI (567) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[  0.59s] [0;32mI (568) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[  0.59s] [0;32mI (568) spi_flash: detected chip: boya[0m
+[  0.59s] [0;32mI (568) spi_flash: flash io: dio[0m
+[  0.59s] [0;32mI (569) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[  0.60s] [0;32mI (569) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[  0.60s] [0;32mI (570) main_task: Started on CPU0[0m
+[  0.60s] [0;32mI (580) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[  0.60s] [0;32mI (580) main_task: Calling app_main()[0m
+[  2.08s] #B3 BEGIN
+[  2.08s] #chip cores=2 rev=2 cpu_mhz=240 internal_total=421491 internal_free_before=341579 psram_total=8388608 psram_free_before=8385916
+[  2.08s] #esp_nn=optimized
+[  2.10s] #memory model_bytes=50888 arena_alloc=163840 arena_used=22556 arena_mem=internal dsp_static_buf_bytes=17792 biquad_state_bytes=192 total_e2e_ram_bytes=40348 internal_free_after=177559 in_bytes=1600 out_bytes=1
+[  2.10s] #quant in_scale=0.369102 in_zp=-19 out_scale=0.056167603 out_zp=-24
+[  2.20s] #bitexact_model_only matched=10/10
+[  2.20s] #B3 CONTINUOUS STREAMING REPLAY BEGIN
+[  2.21s] #record_begin rec_idx=0 file=data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt label=PD raw_samples=2046 n_blocks=10 n_win=9 desc="005_Relaxed_LeftWrist (fold0_test PD, 20.46s)"
+[  2.22s] #win_stream rec=0 win=0 block=1 t_start_s=0.0 t_end_s=4.0 qin_cksum=2907 ref_cksum=-30790 q_board=33 prob_board=0.960893 q_py_cont=33 prob_py_cont=0.960893 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=33 prob_py_reset=0.960893 diff_vs_reset=+0.000000 q_py_zp=33 prob_py_zp=0.960893 diff_vs_zp=+0.000000
+[  2.23s] #win_stream rec=0 win=1 block=2 t_start_s=2.0 t_end_s=6.0 qin_cksum=508 ref_cksum=-30801 q_board=9 prob_board=0.864541 q_py_cont=9 prob_py_cont=0.864541 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=12 prob_py_reset=0.883091 diff_vs_reset=-0.018550 q_py_zp=25 prob_py_zp=0.940038 diff_vs_zp=-0.075497
+[  2.24s] #win_stream rec=0 win=2 block=3 t_start_s=4.0 t_end_s=8.0 qin_cksum=1381 ref_cksum=-30797 q_board=10 prob_board=0.870985 q_py_cont=10 prob_py_cont=0.870985 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=12 prob_py_reset=0.883091 diff_vs_reset=-0.012106 q_py_zp=36 prob_py_zp=0.966756 diff_vs_zp=-0.095770
+[  2.27s] #win_stream rec=0 win=3 block=4 t_start_s=6.0 t_end_s=10.0 qin_cksum=2828 ref_cksum=-30798 q_board=77 prob_board=0.996574 q_py_cont=77 prob_py_cont=0.996574 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=74 prob_py_reset=0.995948 diff_vs_reset=+0.000626 q_py_zp=49 prob_py_zp=0.983701 diff_vs_zp=+0.012873
+[  2.28s] #win_stream rec=0 win=4 block=5 t_start_s=8.0 t_end_s=12.0 qin_cksum=3912 ref_cksum=-30802 q_board=82 prob_board=0.997411 q_py_cont=82 prob_py_cont=0.997411 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=70 prob_py_reset=0.994932 diff_vs_reset=+0.002479 q_py_zp=90 prob_py_zp=0.998346 diff_vs_zp=-0.000936
+[  2.29s] #win_stream rec=0 win=5 block=6 t_start_s=10.0 t_end_s=14.0 qin_cksum=3666 ref_cksum=-30794 q_board=94 prob_board=0.998679 q_py_cont=94 prob_py_cont=0.998679 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=93 prob_py_reset=0.998602 diff_vs_reset=+0.000076 q_py_zp=87 prob_py_zp=0.998043 diff_vs_zp=+0.000635
+[  2.30s] #win_stream rec=0 win=6 block=7 t_start_s=12.0 t_end_s=16.0 qin_cksum=2724 ref_cksum=-30794 q_board=68 prob_board=0.994333 q_py_cont=68 prob_py_cont=0.994333 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=77 prob_py_reset=0.996574 diff_vs_reset=-0.002241 q_py_zp=81 prob_py_zp=0.997261 diff_vs_zp=-0.002928
+[  2.32s] #win_stream rec=0 win=7 block=8 t_start_s=14.0 t_end_s=18.0 qin_cksum=3910 ref_cksum=-30794 q_board=83 prob_board=0.997552 q_py_cont=83 prob_py_cont=0.997552 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=73 prob_py_reset=0.995715 diff_vs_reset=+0.001837 q_py_zp=48 prob_py_zp=0.982776 diff_vs_zp=+0.014776
+[  2.33s] #win_stream rec=0 win=8 block=9 t_start_s=16.0 t_end_s=20.0 qin_cksum=3323 ref_cksum=-30787 q_board=58 prob_board=0.990105 q_py_cont=58 prob_py_cont=0.990105 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=58 prob_py_reset=0.990105 diff_vs_reset=+0.000000 q_py_zp=61 prob_py_zp=0.991626 diff_vs_zp=-0.001522
+[  2.34s] #record_summary rec_idx=0 file=data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt label=PD bit_exact=9/9 max_abs_dp=0.000000 max_abs_dq=0 mean_prob_board=0.963452 mean_prob_py=0.963452
+[  2.34s] #record_begin rec_idx=1 file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt label=PD raw_samples=2046 n_blocks=10 n_win=9 desc="001_Relaxed_LeftWrist (PD, 20.46s)"
+[  2.35s] #win_stream rec=1 win=0 block=1 t_start_s=0.0 t_end_s=4.0 qin_cksum=-415 ref_cksum=-30798 q_board=-17 prob_board=0.597046 q_py_cont=-17 prob_py_cont=0.597046 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-17 prob_py_reset=0.597046 diff_vs_reset=-0.000000 q_py_zp=-28 prob_py_zp=0.444067 diff_vs_zp=+0.152979
+[  2.36s] #win_stream rec=1 win=1 block=2 t_start_s=2.0 t_end_s=6.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.38s] #win_stream rec=1 win=2 block=3 t_start_s=4.0 t_end_s=8.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.39s] #win_stream rec=1 win=3 block=4 t_start_s=6.0 t_end_s=10.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.40s] #win_stream rec=1 win=4 block=5 t_start_s=8.0 t_end_s=12.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.42s] #win_stream rec=1 win=5 block=6 t_start_s=10.0 t_end_s=14.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.44s] #win_stream rec=1 win=6 block=7 t_start_s=12.0 t_end_s=16.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.45s] #win_stream rec=1 win=7 block=8 t_start_s=14.0 t_end_s=18.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.46s] #win_stream rec=1 win=8 block=9 t_start_s=16.0 t_end_s=20.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.47s] #record_summary rec_idx=1 file=data/raw/pads/movement/timeseries/001_Relaxed_LeftWrist.txt label=PD bit_exact=9/9 max_abs_dp=0.000000 max_abs_dq=0 mean_prob_board=0.510783 mean_prob_py=0.510783
+[  2.48s] #record_begin rec_idx=2 file=data/raw/pads/movement/timeseries/081_Relaxed_LeftWrist.txt label=HC raw_samples=2046 n_blocks=10 n_win=9 desc="081_Relaxed_LeftWrist (fold0_test HC, 20.46s)"
+[  2.48s] #win_stream rec=2 win=0 block=1 t_start_s=0.0 t_end_s=4.0 qin_cksum=-619 ref_cksum=-30800 q_board=-21 prob_board=0.542026 q_py_cont=-21 prob_py_cont=0.542026 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-21 prob_py_reset=0.542026 diff_vs_reset=+0.000000 q_py_zp=-27 prob_py_zp=0.457974 diff_vs_zp=+0.084053
+[  2.49s] #win_stream rec=2 win=1 block=2 t_start_s=2.0 t_end_s=6.0 qin_cksum=-1101 ref_cksum=-30800 q_board=-27 prob_board=0.457974 q_py_cont=-27 prob_py_cont=0.457974 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-27 prob_py_reset=0.457974 diff_vs_reset=+0.000000 q_py_zp=-25 prob_py_zp=0.485962 diff_vs_zp=-0.027988
+[  2.51s] #win_stream rec=2 win=2 block=3 t_start_s=4.0 t_end_s=8.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.52s] #win_stream rec=2 win=3 block=4 t_start_s=6.0 t_end_s=10.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.54s] #win_stream rec=2 win=4 block=5 t_start_s=8.0 t_end_s=12.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.55s] #win_stream rec=2 win=5 block=6 t_start_s=10.0 t_end_s=14.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.56s] #win_stream rec=2 win=6 block=7 t_start_s=12.0 t_end_s=16.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=+0.000000
+[  2.58s] #win_stream rec=2 win=7 block=8 t_start_s=14.0 t_end_s=18.0 qin_cksum=-673 ref_cksum=-30800 q_board=-24 prob_board=0.500000 q_py_cont=-24 prob_py_cont=0.500000 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-24 prob_py_reset=0.500000 diff_vs_reset=+0.000000 q_py_zp=-23 prob_py_zp=0.514038 diff_vs_zp=-0.014038
+[  2.59s] #win_stream rec=2 win=8 block=9 t_start_s=16.0 t_end_s=20.0 qin_cksum=-1406 ref_cksum=-30799 q_board=-27 prob_board=0.457974 q_py_cont=-27 prob_py_cont=0.457974 bit_exact=1 abs_dp=0.000000 abs_dq=0 q_py_reset=-27 prob_py_reset=0.457974 diff_vs_reset=+0.000000 q_py_zp=-24 prob_py_zp=0.500000 diff_vs_zp=-0.042026
+[  2.60s] #record_summary rec_idx=2 file=data/raw/pads/movement/timeseries/081_Relaxed_LeftWrist.txt label=HC bit_exact=9/9 max_abs_dp=0.000000 max_abs_dq=0 mean_prob_board=0.495330 mean_prob_py=0.495330
+[  2.60s] #b3_stream_overall primary_bit_exact=9/9 all_records_bit_exact=27/27 max_abs_dp=0.000000 max_abs_dq=0
+[  2.60s] #B3 CONTINUOUS STREAMING REPLAY END
+[  2.60s] #B3 LATENCY BENCHMARK BEGIN replays=100 blocks_total=1000 windows_total=900 file=data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt
+[ 14.67s] #step_latency step=blk_1_downsample_2s_100to50 mean_us=765.19 p50_us=770 p95_us=774 min_us=741 max_us=775 mean_ms=0.7652 p95_ms=0.7740 n=1000
+[ 14.67s] #step_latency step=blk_2_biquad_continuous_2s mean_us=157.81 p50_us=158 p95_us=163 min_us=150 max_us=168 mean_ms=0.1578 p95_ms=0.1630 n=1000
+[ 14.67s] #step_latency step=blk_3_make8ch_shift_win_2s mean_us=98.26 p50_us=100 p95_us=101 min_us=80 max_us=107 mean_ms=0.0983 p95_ms=0.1010 n=1000
+[ 14.67s] #step_latency step=blk_preprocess_2s_total mean_us=1021.26 p50_us=1028 p95_us=1033 min_us=973 max_us=1035 mean_ms=1.0213 p95_ms=1.0330 n=1000
+[ 14.68s] #step_latency step=win_4_norm_quant_4s mean_us=744.66 p50_us=745 p95_us=752 min_us=737 max_us=755 mean_ms=0.7447 p95_ms=0.7520 n=900
+[ 14.68s] #step_latency step=win_5_model_invoke_espnn mean_us=10852.50 p50_us=10836 p95_us=10989 min_us=10808 max_us=10995 mean_ms=10.8525 p95_ms=10.9890 n=900
+[ 14.68s] #step_latency step=win_infer_4s_total mean_us=11597.15 p50_us=11581 p95_us=11740 min_us=11553 max_us=11747 mean_ms=11.5972 p95_ms=11.7400 n=900
+[ 14.69s] #step_latency step=hop_2s_active_total mean_us=12620.07 p50_us=12609 p95_us=12713 min_us=12583 max_us=12720 mean_ms=12.6201 p95_ms=12.7130 n=900
+[ 14.69s] #B3 LATENCY BENCHMARK END
+[ 14.69s] #B3 END
+[B3] Saved raw serial log (126 lines) to /home/smartcontrol/Desktop/PARKINSON/reports/board/B3k_serial.log
+
+# B3 CAUSAL CONTINUOUS STREAMING MODEL SUMMARY (ESP32-S3)
+Generated: 2026-11-16T21:28:33.788223+07:00
+Board: ESP32-S3 (Sparkle IoT XH-S3E N16R8, 240 MHz, 16 MB Flash, 8 MB Octal PSRAM)
+Port: /dev/ttyACM0 (USB-Serial-JTAG)
+Model: reports/p56k0/models/PD_vs_HC_raw_qat_fold0.tflite (DS-TCN INT8, QAT fold 0 trained with --causal)
+Norm params: reports/p56k0/models/norm_PD_vs_HC_raw_fold0.npz (8 channels: ax, ay, az, wx, wy, wz, |a|, |w|)
+ESP-NN backend: optimized
+Model-only bit-exact check (n=10 bench_inputs from p56x4): 10/10
+
+====================================================================================================
+1. TÀI NGUYÊN BỘ NHỚ (FLASH & RAM)
+====================================================================================================
+- Flash App Size (idf.py size)  : 544,374 B (531.6 KB) (binary: 544,480 B (0x84ee0))
+- Model FlatBuffer Size         : 50888 B (49.70 KB)
+- TFLM Tensor Arena Used        : 22556 B / 163840 B (vùng nhớ: internal)
+- DSP Streaming Buffers (SRAM)  : 17792 B (khối 2s s_blk50: 2400B, s_blkbp: 2400B, trạng thái biquad s_biquad_z: 192B, cửa sổ 4s s_win_x8: 6400B, s_win_xn: 6400B)
+- Tổng RAM đường ống Streaming  : 40348 B (39.40 KB)
+- Used Static DRAM (idf.py size): N/A
+- Internal SRAM Free (sau cấp)  : 177559 B / 421491 B
+
+====================================================================================================
+2. ĐỘ TRỄ MỖI KHỐI 2 GIÂY (TIỀN XỬ LÝ) & MỖI LẦN SUY LUẬN CỬA SỔ 4 GIÂY (HOP 2 GIÂY)
+   Đo trên 100 lần phát lại toàn bộ bản ghi data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt (1000 khối 2s, 900 lần suy luận cửa sổ 4s)
+====================================================================================================
+Bước xử lý                                                                           |  Mean (us) |  p50 (us) |  p95 (us) |  Mean (ms) |   p95 (ms)
+------------------------------------------------------------------------------------------------------------------------------------------------
+1. [Mỗi khối 2s] Hạ mẫu 100->50 Hz (FIR polyphase 41 taps, 200->100 mẫu x 6 kênh)    |     765.19 |       770 |       774 |     0.7652 |     0.7740
+2. [Mỗi khối 2s] Lọc Butterworth bậc 4 0.5-20 Hz nhân quả LIÊN TỤC (giữ trạng thái z1,z2) |     157.81 |       158 |       163 |     0.1578 |     0.1630
+3. [Mỗi khối 2s] Dịch cửa sổ trượt 4s (hop 100 mẫu) + tính 8 kênh (100 mẫu mới)      |      98.26 |       100 |       101 |     0.0983 |     0.1010
+-> TỔNG TIỀN XỬ LÝ MỖI KHỐI 2 GIÂY (Bước 1 + 2 + 3)                                  |    1021.26 |      1028 |      1033 |     1.0213 |     1.0330
+4. [Mỗi lần suy luận 4s] Chuẩn hóa z-score (mu/sd p56x4) + lượng tử hóa INT8 (200x8) |     744.66 |       745 |       752 |     0.7447 |     0.7520
+5. [Mỗi lần suy luận 4s] Suy luận mô hình DS-TCN INT8 (ESP-NN + sigmoid)             |   10852.50 |     10836 |     10989 |    10.8525 |    10.9890
+-> TỔNG MỖI LẦN SUY LUẬN CỬA SỔ 4 GIÂY (Bước 4 + 5)                                  |   11597.15 |     11581 |     11740 |    11.5972 |    11.7400
+-> TỔNG THỜI GIAN HOẠT ĐỘNG MỖI CHU KỲ HOP 2 GIÂY (Khối 2s + Suy luận cửa sổ 4s)     |   12620.07 |     12609 |     12713 |    12.6201 |    12.7130
+------------------------------------------------------------------------------------------------------------------------------------------------
+-> Độ trễ tiền xử lý mỗi khối 2 s (200 mẫu @ 100 Hz -> 100 mẫu @ 50 Hz): Mean = 1.021 ms, p95 = 1.033 ms
+-> Độ trễ mỗi lần suy luận cửa sổ 4 s (Chuẩn hóa + Lượng tử hóa + ESP-NN): Mean = 11.597 ms, p95 = 11.740 ms (riêng invoke ESP-NN: Mean = 10.852 ms, p95 = 10.989 ms)
+-> Tổng thời gian xử lý mỗi chu kỳ hop 2 s (2000 ms)                     : Mean = 12.620 ms, p95 = 12.713 ms (chiếm 0.6310% chu kỳ 2 s)
+
+====================================================================================================
+3. ĐỐI CHIẾU XÁC SUẤT TỪNG CỬA SỔ TRÊN BO VỚI ĐƯỜNGỐNG PYTHON CHUẨN (SCIPY RESAMPLE_POLY + SOSFILT CẢ BẢN GHI)
+   - Bản ghi chính (data/raw/pads/movement/timeseries/005_Relaxed_LeftWrist.txt): Bit-exact = 9/9 cửa sổ, sai khác xác suất tối đa = 0.000000 (max |Δq| = 0 LSB)
+   - Tổng hợp cả 3 bản ghi đầy đủ (27 cửa sổ x 4s, hop 2s)              : Bit-exact = 27/27 cửa sổ, sai khác xác suất tối đa = 0.000000 (max |Δq| = 0 LSB)
+====================================================================================================
+Rec | Win | Khung giờ  | q_bo |  P_bo(PD) | q_py_cont | P_py_cont | Exact | |ΔP_cont| | P_py_reset | ΔP(bo-rst) |   P_py_zp |  ΔP(bo-zp)
+------------------------------------------------------------------------------------------------------------------------------------------
+0   | 0   |  0.0.. 4.0s |   33 |  0.960893 |        33 |  0.960893 |   YES |  0.000000 |   0.960893 |  +0.000000 |  0.960893 |  +0.000000
+0   | 1   |  2.0.. 6.0s |    9 |  0.864541 |         9 |  0.864541 |   YES |  0.000000 |   0.883091 |  -0.018550 |  0.940038 |  -0.075497
+0   | 2   |  4.0.. 8.0s |   10 |  0.870985 |        10 |  0.870985 |   YES |  0.000000 |   0.883091 |  -0.012106 |  0.966756 |  -0.095770
+0   | 3   |  6.0..10.0s |   77 |  0.996574 |        77 |  0.996574 |   YES |  0.000000 |   0.995948 |  +0.000626 |  0.983701 |  +0.012873
+0   | 4   |  8.0..12.0s |   82 |  0.997411 |        82 |  0.997411 |   YES |  0.000000 |   0.994932 |  +0.002479 |  0.998346 |  -0.000936
+0   | 5   | 10.0..14.0s |   94 |  0.998679 |        94 |  0.998679 |   YES |  0.000000 |   0.998602 |  +0.000076 |  0.998043 |  +0.000635
+0   | 6   | 12.0..16.0s |   68 |  0.994333 |        68 |  0.994333 |   YES |  0.000000 |   0.996574 |  -0.002241 |  0.997261 |  -0.002928
+0   | 7   | 14.0..18.0s |   83 |  0.997552 |        83 |  0.997552 |   YES |  0.000000 |   0.995715 |  +0.001837 |  0.982776 |  +0.014776
+0   | 8   | 16.0..20.0s |   58 |  0.990105 |        58 |  0.990105 |   YES |  0.000000 |   0.990105 |  +0.000000 |  0.991626 |  -0.001522
+1   | 0   |  0.0.. 4.0s |  -17 |  0.597046 |       -17 |  0.597046 |   YES |  0.000000 |   0.597046 |  -0.000000 |  0.444067 |  +0.152979
+1   | 1   |  2.0.. 6.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 2   |  4.0.. 8.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 3   |  6.0..10.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 4   |  8.0..12.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 5   | 10.0..14.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 6   | 12.0..16.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 7   | 14.0..18.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+1   | 8   | 16.0..20.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 0   |  0.0.. 4.0s |  -21 |  0.542026 |       -21 |  0.542026 |   YES |  0.000000 |   0.542026 |  +0.000000 |  0.457974 |  +0.084053
+2   | 1   |  2.0.. 6.0s |  -27 |  0.457974 |       -27 |  0.457974 |   YES |  0.000000 |   0.457974 |  +0.000000 |  0.485962 |  -0.027988
+2   | 2   |  4.0.. 8.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 3   |  6.0..10.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 4   |  8.0..12.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 5   | 10.0..14.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 6   | 12.0..16.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.500000 |  +0.000000
+2   | 7   | 14.0..18.0s |  -24 |  0.500000 |       -24 |  0.500000 |   YES |  0.000000 |   0.500000 |  +0.000000 |  0.514038 |  -0.014038
+2   | 8   | 16.0..20.0s |  -27 |  0.457974 |       -27 |  0.457974 |   YES |  0.000000 |   0.457974 |  +0.000000 |  0.500000 |  -0.042026
+------------------------------------------------------------------------------------------------------------------------------------------
+Tóm tắt theo từng bản ghi đầy đủ (20.46 s @ 100 Hz -> 10 khối 2 s -> 9 cửa sổ 4 s hop 2 s):
+  + Rec 0 (005_Relaxed_LeftWrist (fold0_test PD, 20.46s)): Bit-exact = 9/9, max |ΔP| = 0.000000, mean P_bo(PD) = 0.963452 vs mean P_py(PD) = 0.963452
+  + Rec 1 (001_Relaxed_LeftWrist (PD, 20.46s)): Bit-exact = 9/9, max |ΔP| = 0.000000, mean P_bo(PD) = 0.510783 vs mean P_py(PD) = 0.510783
+  + Rec 2 (081_Relaxed_LeftWrist (fold0_test HC, 20.46s)): Bit-exact = 9/9, max |ΔP| = 0.000000, mean P_bo(PD) = 0.495330 vs mean P_py(PD) = 0.495330
+
+Errors: none
+
+[B3] Completed successfully at 2026-11-16T21:28:33+07:00
+[B3] Launching B4 sequentially in background -> /home/smartcontrol/Desktop/PARKINSON/reports/board/B4_run.log
+[B3] B4 launched with PID=123469

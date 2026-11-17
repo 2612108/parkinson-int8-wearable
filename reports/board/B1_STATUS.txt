@@ -1,0 +1,33 @@
+# B1 STATUS REPORT — ESP32-S3 Benchmark (B1_dummy_nn)
+Timestamp: 2026-11-15T13:05:30+07:00
+
+## 1. Thông tin phần cứng (B0_chip.txt & Boot log)
+- Chip: ESP32-S3 (QFN56) revision v0.2, Dual Core + LP Core @ 240 MHz
+- Flash: 16 MB (Manufacturer 68, Device 4018, Quad, 3.3V)
+- PSRAM: 8 MB Octal PSRAM (AP_3v3, 80 MHz, 8,388,608 bytes)
+- USB mode: USB-Serial/JTAG (`/dev/ttyACM0`)
+- ESP-IDF: v5.3.2
+
+## 2. Kết quả đo mô hình Dummy INT8 với ESP-NN (`reports/board/B1_dummy_nn.json`)
+- Cấu hình kernel: `esp_nn = optimized` (`CONFIG_NN_OPTIMIZED=y`)
+- Kích thước model (`model_bytes`): 38,520 bytes
+- Bộ nhớ Tensor Arena:
+  - `arena_bytes` (cấp phát): 163,840 bytes (internal RAM)
+  - `arena_used` (thực dùng): **23,788 bytes** (~23.23 KiB)
+  - `internal_free` trước cấp phát: 375,731 bytes
+- Kích thước tensor: `in_bytes = 1600`, `out_bytes = 2`
+- Độ trễ suy luận (`latency_us`, n = 1000, warmup = 10):
+  - **Mean**: **19,480.0 µs** (19.48 ms)
+  - **p50**: **19,482 µs** (19.48 ms)
+  - **p95**: **19,557 µs** (19.56 ms)
+  - **Min / Max**: 19,361 µs / 19,611 µs
+- So khớp bit-exact với `ref_outputs.npy` (`n_ref = 50`):
+  - **Bit-exact (`n_bitexact` / `matched`)**: **0/50**
+  - **Sai lệch tuyệt đối lớn nhất (`max_abs_lsb_diff`)**: **108 LSB**
+  - Lỗi runtime (`errors`): `[]` (không có lỗi)
+
+## 3. Tệp log và báo cáo đã ghi
+- `reports/board/B0_chip.txt`: Thông tin chip/flash từ `esptool.py` (đã loại bỏ mọi dòng chứa MAC).
+- `reports/board/B1_flash_nn.log`: 15 dòng cuối log nạp firmware `b1_bench` (ESP-NN).
+- `reports/board/B1_dummy_nn.log`: Toàn bộ serial log thu từ `/dev/ttyACM0` (`#B1 BEGIN` .. `#B1 END`).
+- `reports/board/B1_dummy_nn.json`: Kết quả phân tích JSON từ `firmware/tools/check_serial.py`.

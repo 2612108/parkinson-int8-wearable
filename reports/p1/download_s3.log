@@ -1,0 +1,10 @@
+== PADS (S3 physionet-open) ==
+                           PRE 1.0.0/
+2024-09-27 03:36:54  770744328 parkinsons-disease-smartwatch-1.0.0.zip
+nguồn: s3://physionet-open/parkinsons-disease-smartwatch/1.0.0/
+PADS xong sau 505s, 12700 file
+PADS checksum OK
+== Monipar ==
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ModuleNotFoundError: No module named 'tqdm'

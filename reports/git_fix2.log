@@ -1,0 +1,12 @@
+   1660 b1_bench/build_ansi
+   1642 b5_a16/build_ansi
+     14 b1_bench/variants
+     13 b3_causal/main
+     13 b2_e2e/main
+     10 b6_fold/main
+     10 b5_a16/main
+     10 b1_bench/main
+      7 b4_rf/main
+      7 b1_bench/gen_real_qat_sr
+      7 b1_bench/gen_real_qat
+      7 b1_bench/gen_real_ptq

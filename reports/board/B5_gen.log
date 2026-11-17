@@ -1,0 +1,33 @@
+{
+  "ops": [
+    "ADD",
+    "CONV_2D",
+    "DEPTHWISE_CONV_2D",
+    "DEQUANTIZE",
+    "FULLY_CONNECTED",
+    "MEAN",
+    "QUANTIZE"
+  ],
+  "in_dtype": "float32",
+  "out_dtype": "float32",
+  "tensor_dtypes": [
+    "float32",
+    "int16",
+    "int32",
+    "int64",
+    "int8"
+  ],
+  "input_shape": [
+    1,
+    200,
+    1,
+    8
+  ],
+  "model_bytes": 58112,
+  "n_test": 50,
+  "ref_out_first": [
+    7.80424690246582,
+    4.180935859680176,
+    11.6025972366333
+  ]
+}

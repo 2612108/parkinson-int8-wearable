@@ -1,0 +1,15 @@
+{
+ "run": "reports/p56k0",
+ "variant": "ptq",
+ "causal": true,
+ "ready": "#B6 READY in_bytes=1600 arena_used=22556",
+ "n_participants": 71,
+ "n_windows": 8378,
+ "n_bitexact": 8372,
+ "max_abs_lsb_diff": 1,
+ "auroc_device": 0.9079545454545455,
+ "auroc_desktop": 0.9079545454545455,
+ "latency_us_mean": 10685.866674624016,
+ "latency_us_p95": 10696.0,
+ "wall_s": 191.7
+}

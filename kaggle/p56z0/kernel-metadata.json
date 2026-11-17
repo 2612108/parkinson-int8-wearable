@@ -1,0 +1,16 @@
+{
+  "id": "nguynthqunhlu/parkinson-p56z0",
+  "title": "parkinson-p56z0",
+  "code_file": "p56z0.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "nguynthqunhlu/parkinson-pads-monipar-raw"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

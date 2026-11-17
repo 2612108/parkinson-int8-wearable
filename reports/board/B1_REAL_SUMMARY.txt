@@ -1,0 +1,13 @@
+# B1 REAL MODELS BENCHMARK SUMMARY (ESP32-S3)
+Generated: 2026-11-16T01:09:08.744708+07:00
+Models: PD_vs_HC_raw_{ptq,qat,qat_sr}_fold0.tflite (DS-TCN INT8, stride (2,1), no dilation)
+Inputs: reports/p56a/models/bench_inputs_PD_vs_HC_raw.npy (n=50)
+
+Model      | Config | Bit-Exact  | MaxLSB | Latency Mean / p95 (ms)   | Arena Used (B) | Flash App Bytes (Image / Bin)  | Errors
+-----------------------------------------------------------------------------------------------------------------------------
+ptq        | nn     | 50/50      | 0      | 11.557 / 11.704 ms        | 21244          | 447606 / 447712 (0x6d4e0)      | none
+ptq        | ansi   | 50/50      | 0      | 70.293 / 70.345 ms        | 20188          | 414038 / 414144 (0x651c0)      | none
+qat        | nn     | 50/50      | 0      | 11.537 / 11.664 ms        | 21244          | 449014 / 449120 (0x6da60)      | none
+qat        | ansi   | 50/50      | 0      | 70.315 / 70.379 ms        | 20188          | 415430 / 415536 (0x65730)      | none
+qat_sr     | nn     | 50/50      | 0      | 11.564 / 11.701 ms        | 21244          | 449014 / 449120 (0x6da60)      | none
+qat_sr     | ansi   | 50/50      | 0      | 70.317 / 70.384 ms        | 20188          | 415430 / 415536 (0x65730)      | none

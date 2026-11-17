@@ -1,0 +1,27 @@
+# CÁC VIỆC CẦN ANH TUYẾN HỖ TRỢ (B0 - ESP32-S3)
+
+## 1. Cài đặt gói hệ thống (cần quyền sudo)
+Máy hiện chưa có `git`, `cmake`, `ninja-build`, `python3-venv` (thiếu `ensurepip`), `flex`, `bison`, `gperf`, `ccache`, `dfu-util` nên chưa thể chạy `git clone` và `./install.sh esp32s3` cho ESP-IDF.
+
+Anh Tuyến vui lòng chạy lệnh sau trong terminal:
+
+```bash
+sudo apt-get update && sudo apt-get install -y git wget flex bison gperf python3 python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+```
+
+*(Lưu ý: User `smartcontrol` ĐÃ nằm trong nhóm `dialout` (`uid=1000, groups=...,20(dialout)`), nên KHÔNG cần chạy lại `sudo usermod -aG dialout $USER`).*
+
+## 2. Kiểm tra lại cáp/cổng USB-C của bo ESP32-S3 (Sparkle IoT XH-S3E N16R8)
+- Hiện tại hệ thống không có `/dev/ttyACM*` hoặc `/dev/ttyUSB*`.
+- `lsusb` không thấy thiết bị Espressif (`303a:*`), CH34x (`1a86:*`) hay CP210x (`10c4:*`).
+- Log kernel (`journalctl -k`) lúc 10:26:06 ghi nhận lỗi USB trên `usb 1-1`:
+  `usb 1-1: device descriptor read/64, error -71` / `Device not responding to setup address`.
+
+Anh Tuyến vui lòng kiểm tra:
+1. Đổi sang cáp USB-C có truyền dữ liệu (tránh cáp chỉ sạc) hoặc cắm sang cổng USB khác trên máy tính.
+2. Nếu bo XH-S3E có 2 cổng USB-C (`USB` và `UART`/`COM`), thử cắm cổng còn lại.
+3. Giữ nút **BOOT**, nhấn nhả nút **RST**, rồi thả **BOOT** để đưa ESP32-S3 vào chế độ Download Mode, sau đó kiểm tra lại bằng:
+   ```bash
+   ls -la /dev/ttyACM* /dev/ttyUSB*
+   lsusb
+   ```

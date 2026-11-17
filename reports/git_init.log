@@ -1,0 +1,6 @@
+skip large: ./firmware/b1_bench/build_ansi/esp-idf/espressif__esp-tflite-micro/libespressif__esp-tflite-micro.a
+skip large: ./firmware/b5_a16/build_ansi/esp-idf/espressif__esp-tflite-micro/libespressif__esp-tflite-micro.a
+committed: Initial import: scripts, Kaggle notebooks, firmware sources, results, manuscript (BSPC R6)
+49b4a60 Initial import: scripts, Kaggle notebooks, firmware sources, results, manuscript (BSPC R6)
+{"name":"parkinson-int8-wearable","url":"https://github.com/2612108/parkinson-int8-wearable","visibility":"PRIVATE"}
+size-pack: 0 bytes

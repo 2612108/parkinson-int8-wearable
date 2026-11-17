@@ -1,0 +1,27 @@
+# --- never commit ---
+.venv/
+data/
+_ref/
+**/kaggle.json
+.env
+*.key
+*.pem
+# --- firmware build artefacts / vendored deps ---
+firmware/.pydeps/
+firmware/*/build*/
+firmware/*/managed_components/
+firmware/*/sdkconfig.old
+firmware/*/dependencies.lock
+# --- large or transient ---
+reports/**/_dl/
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc
+paper_bspc/*.aux
+paper_bspc/*.log
+paper_bspc/*.out
+paper_bspc/*.blg
+paper_bspc/*.spl
+paper/*.aux
+paper/*.log

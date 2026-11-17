@@ -1,0 +1,6 @@
+tag   | mode | n_bitexact/50 | max_abs_lsb_diff | latency_us (mean/p95) | arena_used | #quant                                                                    | #input0_checksum
+------+------+---------------+------------------+-----------------------+------------+---------------------------------------------------------------------------+------------------------
+dil   | nn   | 0/50          | 106              | 19430.8 / 19488       | 23788      | #quant in_scale=0.036180686 in_zp=-4 out_scale=0.0010975964 out_zp=-42    | #input0_checksum=-6797
+dil   | ansi | 0/50          | 113              | 66056.2 / 66091       | 20188      | #quant in_scale=0.036180686 in_zp=-4 out_scale=0.0010975964 out_zp=-42    | #input0_checksum=-6797
+nodil | nn   | 50/50         | 0                | 9801.9 / 9878         | 26188      | #quant in_scale=0.036180686 in_zp=-4 out_scale=0.00095994648 out_zp=-54   | #input0_checksum=-6797
+nodil | ansi | 50/50         | 0                | 61604.3 / 61632       | 19388      | #quant in_scale=0.036180686 in_zp=-4 out_scale=0.00095994648 out_zp=-54   | #input0_checksum=-6797

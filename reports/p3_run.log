@@ -1,0 +1,59 @@
+{
+ "n_patients": 469,
+ "label_counts": {
+  "PD": 276,
+  "DD": 114,
+  "HC": 79
+ },
+ "n_records": 22,
+ "records": [
+  "CrossArms|LeftWrist",
+  "CrossArms|RightWrist",
+  "DrinkGlas|LeftWrist",
+  "DrinkGlas|RightWrist",
+  "Entrainment|LeftWrist",
+  "Entrainment|RightWrist",
+  "HoldWeight|LeftWrist",
+  "HoldWeight|RightWrist",
+  "LiftHold|LeftWrist",
+  "LiftHold|RightWrist",
+  "PointFinger|LeftWrist",
+  "PointFinger|RightWrist",
+  "Relaxed|LeftWrist",
+  "Relaxed|RightWrist",
+  "RelaxedTask|LeftWrist",
+  "RelaxedTask|RightWrist",
+  "StretchHold|LeftWrist",
+  "StretchHold|RightWrist",
+  "TouchIndex|LeftWrist",
+  "TouchIndex|RightWrist",
+  "TouchNose|LeftWrist",
+  "TouchNose|RightWrist"
+ ],
+ "n_features": 2112,
+ "nan_frac": 0.0,
+ "n_windows": 55342,
+ "t_features_s": 1286.7,
+ "python": "3.12.3",
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "quick": false
+}
+PD_vs_HC rf 0 {'bal_acc': 0.821, 'auroc': 0.9, 'sens': 0.87, 'spec': 0.772, 'ece': 0.078, 'brier': 0.113}
+PD_vs_HC rf 1 {'bal_acc': 0.818, 'auroc': 0.908, 'sens': 0.851, 'spec': 0.785, 'ece': 0.067, 'brier': 0.113}
+PD_vs_HC rf 2 {'bal_acc': 0.842, 'auroc': 0.912, 'sens': 0.873, 'spec': 0.81, 'ece': 0.096, 'brier': 0.111}
+PD_vs_HC xgb 0 {'bal_acc': 0.805, 'auroc': 0.915, 'sens': 0.812, 'spec': 0.797, 'ece': 0.032, 'brier': 0.095}
+PD_vs_HC xgb 1 {'bal_acc': 0.82, 'auroc': 0.888, 'sens': 0.779, 'spec': 0.861, 'ece': 0.052, 'brier': 0.104}
+PD_vs_HC xgb 2 {'bal_acc': 0.81, 'auroc': 0.918, 'sens': 0.822, 'spec': 0.797, 'ece': 0.026, 'brier': 0.087}
+PD_vs_HC leakage {'random_window': {'window_bal_acc': 0.5658346003998644, 'window_auroc': 0.861925502522249, 'n_windows': 41890}, 'by_patient': {'window_bal_acc': 0.5259231706824125, 'window_auroc': 0.7482358088021506, 'n_windows': 41890}}
+PD_vs_DD rf 0 {'bal_acc': 0.656, 'auroc': 0.757, 'sens': 0.743, 'spec': 0.57, 'ece': 0.045, 'brier': 0.173}
+PD_vs_DD rf 1 {'bal_acc': 0.674, 'auroc': 0.733, 'sens': 0.725, 'spec': 0.623, 'ece': 0.03, 'brier': 0.176}
+PD_vs_DD rf 2 {'bal_acc': 0.682, 'auroc': 0.752, 'sens': 0.732, 'spec': 0.632, 'ece': 0.07, 'brier': 0.173}
+PD_vs_DD xgb 0 {'bal_acc': 0.652, 'auroc': 0.723, 'sens': 0.743, 'spec': 0.561, 'ece': 0.126, 'brier': 0.189}
+PD_vs_DD xgb 1 {'bal_acc': 0.627, 'auroc': 0.726, 'sens': 0.63, 'spec': 0.623, 'ece': 0.116, 'brier': 0.183}
+PD_vs_DD xgb 2 {'bal_acc': 0.64, 'auroc': 0.719, 'sens': 0.772, 'spec': 0.509, 'ece': 0.088, 'brier': 0.183}
+PD_vs_DD leakage {'random_window': {'window_bal_acc': 0.5990211573517434, 'window_auroc': 0.8265037940607882, 'n_windows': 46020}, 'by_patient': {'window_bal_acc': 0.5424649963154017, 'window_auroc': 0.6387740852908743, 'n_windows': 46020}}
+xong 14001.5 s

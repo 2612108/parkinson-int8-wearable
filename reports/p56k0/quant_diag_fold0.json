@@ -1,0 +1,412 @@
+{
+ "layers": [
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/re_lu/Relu;model/batch_normalization/FusedBatchNormV3;model/conv2d/BiasAdd/ReadVariableOp;model/conv2d/BiasAdd;model/conv2d/Conv2D1",
+   "scale": 0.08462118,
+   "mean_squared_error": 0.0016350942,
+   "max_abs_error": 0.20084831,
+   "rmse_over_scale": 0.4778507939754919
+  },
+  {
+   "op_name": "DEPTHWISE_CONV_2D",
+   "tensor_name": "model/batch_normalization_1/FusedBatchNormV3;model/depthwise_conv2d/depthwise;model/depthwise_conv2d/BiasAdd;model/depthwise_conv2d/BiasAdd/ReadVariableOp2",
+   "scale": 0.17751378,
+   "mean_squared_error": 0.0027591488,
+   "max_abs_error": 0.09814358,
+   "rmse_over_scale": 0.2959071704968432
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/batch_normalization_2/FusedBatchNormV3;model/conv2d_1/BiasAdd/ReadVariableOp;model/conv2d_1/BiasAdd;model/conv2d_1/Conv2D1",
+   "scale": 0.17188767,
+   "mean_squared_error": 0.0024519826,
+   "max_abs_error": 0.09460638,
+   "rmse_over_scale": 0.2880805698128487
+  },
+  {
+   "op_name": "ADD",
+   "tensor_name": "model/re_lu_1/Relu;model/add/add",
+   "scale": 0.09529454,
+   "mean_squared_error": 0.0005282404,
+   "max_abs_error": 0.04734165,
+   "rmse_over_scale": 0.2411836084672085
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/conv2d_3/BiasAdd;model/conv2d_3/Conv2D;1",
+   "scale": 0.17167126,
+   "mean_squared_error": 0.0024452615,
+   "max_abs_error": 0.09250538,
+   "rmse_over_scale": 0.2880481301185795
+  },
+  {
+   "op_name": "DEPTHWISE_CONV_2D",
+   "tensor_name": "model/batch_normalization_3/FusedBatchNormV3;model/depthwise_conv2d_1/depthwise;model/depthwise_conv2d_1/BiasAdd;model/depthwise_conv2d_1/BiasAdd/ReadVariableOp2",
+   "scale": 0.19069406,
+   "mean_squared_error": 0.0029304144,
+   "max_abs_error": 0.105572015,
+   "rmse_over_scale": 0.2838751355686589
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/batch_normalization_4/FusedBatchNormV3;model/conv2d_2/BiasAdd/ReadVariableOp;model/conv2d_2/BiasAdd;model/conv2d_2/Conv2D1",
+   "scale": 0.13495007,
+   "mean_squared_error": 0.001582605,
+   "max_abs_error": 0.07461575,
+   "rmse_over_scale": 0.2947902752262196
+  },
+  {
+   "op_name": "ADD",
+   "tensor_name": "model/re_lu_2/Relu;model/add_1/add",
+   "scale": 0.09877061,
+   "mean_squared_error": 0.0003559214,
+   "max_abs_error": 0.04840061,
+   "rmse_over_scale": 0.19100701365818712
+  },
+  {
+   "op_name": "DEPTHWISE_CONV_2D",
+   "tensor_name": "model/batch_normalization_5/FusedBatchNormV3;model/depthwise_conv2d_2/depthwise;model/depthwise_conv2d_2/BiasAdd;model/depthwise_conv2d_2/BiasAdd/ReadVariableOp2",
+   "scale": 0.1682718,
+   "mean_squared_error": 0.002385051,
+   "max_abs_error": 0.092922375,
+   "rmse_over_scale": 0.29022678747334424
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/batch_normalization_6/FusedBatchNormV3;model/conv2d_4/BiasAdd/ReadVariableOp;model/conv2d_4/BiasAdd;model/conv2d_4/Conv2D1",
+   "scale": 0.17187072,
+   "mean_squared_error": 0.002520173,
+   "max_abs_error": 0.093000025,
+   "rmse_over_scale": 0.2920877080384446
+  },
+  {
+   "op_name": "ADD",
+   "tensor_name": "model/re_lu_3/Relu;model/add_2/add",
+   "scale": 0.10438657,
+   "mean_squared_error": 0.0005354315,
+   "max_abs_error": 0.0516214,
+   "rmse_over_scale": 0.2216702092837113
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/conv2d_6/BiasAdd;model/conv2d_6/Conv2D;1",
+   "scale": 0.15829022,
+   "mean_squared_error": 0.0021418508,
+   "max_abs_error": 0.08692623,
+   "rmse_over_scale": 0.29237519517606675
+  },
+  {
+   "op_name": "DEPTHWISE_CONV_2D",
+   "tensor_name": "model/batch_normalization_7/FusedBatchNormV3;model/depthwise_conv2d_3/depthwise;model/depthwise_conv2d_3/BiasAdd;model/depthwise_conv2d_3/BiasAdd/ReadVariableOp2",
+   "scale": 0.13062328,
+   "mean_squared_error": 0.0014297899,
+   "max_abs_error": 0.072185956,
+   "rmse_over_scale": 0.2894779761097769
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/batch_normalization_8/FusedBatchNormV3;model/conv2d_5/BiasAdd/ReadVariableOp;model/conv2d_5/BiasAdd;model/conv2d_5/Conv2D1",
+   "scale": 0.111186564,
+   "mean_squared_error": 0.0010522254,
+   "max_abs_error": 0.062196013,
+   "rmse_over_scale": 0.2917440994417921
+  },
+  {
+   "op_name": "ADD",
+   "tensor_name": "model/re_lu_4/Relu;model/add_3/add",
+   "scale": 0.08308219,
+   "mean_squared_error": 0.0001542477,
+   "max_abs_error": 0.042007484,
+   "rmse_over_scale": 0.14948630691506323
+  },
+  {
+   "op_name": "DEPTHWISE_CONV_2D",
+   "tensor_name": "model/batch_normalization_9/FusedBatchNormV3;model/depthwise_conv2d_4/depthwise;model/depthwise_conv2d_4/BiasAdd;model/depthwise_conv2d_4/BiasAdd/ReadVariableOp2",
+   "scale": 0.13617302,
+   "mean_squared_error": 0.0014845392,
+   "max_abs_error": 0.0731674,
+   "rmse_over_scale": 0.2829467863767487
+  },
+  {
+   "op_name": "CONV_2D",
+   "tensor_name": "model/batch_normalization_10/FusedBatchNormV3;model/conv2d_7/BiasAdd/ReadVariableOp;model/conv2d_7/BiasAdd;model/conv2d_7/Conv2D1",
+   "scale": 0.13033558,
+   "mean_squared_error": 0.0014289949,
+   "max_abs_error": 0.07179786,
+   "rmse_over_scale": 0.29003629619993787
+  },
+  {
+   "op_name": "ADD",
+   "tensor_name": "model/re_lu_5/Relu;model/add_4/add",
+   "scale": 0.08380106,
+   "mean_squared_error": 0.00031409602,
+   "max_abs_error": 0.04161228,
+   "rmse_over_scale": 0.2114860396827429
+  },
+  {
+   "op_name": "MEAN",
+   "tensor_name": "model/global_average_pooling2d/Mean",
+   "scale": 0.03420089,
+   "mean_squared_error": 8.9104244e-05,
+   "max_abs_error": 0.016756667,
+   "rmse_over_scale": 0.2760017191407867
+  },
+  {
+   "op_name": "FULLY_CONNECTED",
+   "tensor_name": "StatefulPartitionedCall:0",
+   "scale": 0.079533555,
+   "mean_squared_error": 0.00062844984,
+   "max_abs_error": 0.020988218,
+   "rmse_over_scale": 0.31519906095860295
+  }
+ ],
+ "stem_float_model": true,
+ "channel_ranges": [
+  {
+   "layer": "conv2d",
+   "type": "Conv2D",
+   "ch": 32,
+   "max_over_median": 1.6988743543624878,
+   "tensor_max": 15.017269134521484
+  },
+  {
+   "layer": "batch_normalization",
+   "type": "BatchNormalization",
+   "ch": 32,
+   "max_over_median": 1.4584254026412964,
+   "tensor_max": 21.578397750854492
+  },
+  {
+   "layer": "re_lu",
+   "type": "ReLU",
+   "ch": 32,
+   "max_over_median": 1.812946081161499,
+   "tensor_max": 21.578397750854492
+  },
+  {
+   "layer": "depthwise_conv2d",
+   "type": "DepthwiseConv2D",
+   "ch": 32,
+   "max_over_median": 1.6591072082519531,
+   "tensor_max": 4.454467296600342
+  },
+  {
+   "layer": "batch_normalization_1",
+   "type": "BatchNormalization",
+   "ch": 32,
+   "max_over_median": 1.5226218700408936,
+   "tensor_max": 25.63743782043457
+  },
+  {
+   "layer": "conv2d_1",
+   "type": "Conv2D",
+   "ch": 32,
+   "max_over_median": 1.3873389959335327,
+   "tensor_max": 18.826766967773438
+  },
+  {
+   "layer": "batch_normalization_2",
+   "type": "BatchNormalization",
+   "ch": 32,
+   "max_over_median": 1.3955239057540894,
+   "tensor_max": 19.531248092651367
+  },
+  {
+   "layer": "add",
+   "type": "Add",
+   "ch": 32,
+   "max_over_median": 1.4397492408752441,
+   "tensor_max": 24.300111770629883
+  },
+  {
+   "layer": "re_lu_1",
+   "type": "ReLU",
+   "ch": 32,
+   "max_over_median": 1.4397492408752441,
+   "tensor_max": 24.300111770629883
+  },
+  {
+   "layer": "depthwise_conv2d_1",
+   "type": "DepthwiseConv2D",
+   "ch": 32,
+   "max_over_median": 4.196722030639648,
+   "tensor_max": 11.911274909973145
+  },
+  {
+   "layer": "batch_normalization_3",
+   "type": "BatchNormalization",
+   "ch": 32,
+   "max_over_median": 2.1862423419952393,
+   "tensor_max": 31.02450942993164
+  },
+  {
+   "layer": "conv2d_2",
+   "type": "Conv2D",
+   "ch": 48,
+   "max_over_median": 1.4662164449691772,
+   "tensor_max": 17.570417404174805
+  },
+  {
+   "layer": "conv2d_3",
+   "type": "Conv2D",
+   "ch": 48,
+   "max_over_median": 1.6430063247680664,
+   "tensor_max": 18.58967399597168
+  },
+  {
+   "layer": "batch_normalization_4",
+   "type": "BatchNormalization",
+   "ch": 48,
+   "max_over_median": 1.3178514242172241,
+   "tensor_max": 17.249435424804688
+  },
+  {
+   "layer": "add_1",
+   "type": "Add",
+   "ch": 48,
+   "max_over_median": 1.413996696472168,
+   "tensor_max": 25.724891662597656
+  },
+  {
+   "layer": "re_lu_2",
+   "type": "ReLU",
+   "ch": 48,
+   "max_over_median": 2.152994394302368,
+   "tensor_max": 25.186506271362305
+  },
+  {
+   "layer": "depthwise_conv2d_2",
+   "type": "DepthwiseConv2D",
+   "ch": 48,
+   "max_over_median": 2.3771049976348877,
+   "tensor_max": 4.787624359130859
+  },
+  {
+   "layer": "batch_normalization_5",
+   "type": "BatchNormalization",
+   "ch": 48,
+   "max_over_median": 1.6246930360794067,
+   "tensor_max": 22.143293380737305
+  },
+  {
+   "layer": "conv2d_4",
+   "type": "Conv2D",
+   "ch": 48,
+   "max_over_median": 1.5307914018630981,
+   "tensor_max": 17.82491683959961
+  },
+  {
+   "layer": "batch_normalization_6",
+   "type": "BatchNormalization",
+   "ch": 48,
+   "max_over_median": 1.4995485544204712,
+   "tensor_max": 17.208457946777344
+  },
+  {
+   "layer": "add_2",
+   "type": "Add",
+   "ch": 48,
+   "max_over_median": 1.6262829303741455,
+   "tensor_max": 26.618574142456055
+  },
+  {
+   "layer": "re_lu_3",
+   "type": "ReLU",
+   "ch": 48,
+   "max_over_median": 1.658074140548706,
+   "tensor_max": 26.618574142456055
+  },
+  {
+   "layer": "depthwise_conv2d_3",
+   "type": "DepthwiseConv2D",
+   "ch": 48,
+   "max_over_median": 2.3889076709747314,
+   "tensor_max": 5.607676982879639
+  },
+  {
+   "layer": "batch_normalization_7",
+   "type": "BatchNormalization",
+   "ch": 48,
+   "max_over_median": 1.5061674118041992,
+   "tensor_max": 16.75239372253418
+  },
+  {
+   "layer": "conv2d_5",
+   "type": "Conv2D",
+   "ch": 64,
+   "max_over_median": 1.9220086336135864,
+   "tensor_max": 18.63762855529785
+  },
+  {
+   "layer": "conv2d_6",
+   "type": "Conv2D",
+   "ch": 64,
+   "max_over_median": 1.5487531423568726,
+   "tensor_max": 19.178043365478516
+  },
+  {
+   "layer": "batch_normalization_8",
+   "type": "BatchNormalization",
+   "ch": 64,
+   "max_over_median": 1.4475563764572144,
+   "tensor_max": 14.667386054992676
+  },
+  {
+   "layer": "add_3",
+   "type": "Add",
+   "ch": 64,
+   "max_over_median": 1.6693660020828247,
+   "tensor_max": 25.586280822753906
+  },
+  {
+   "layer": "re_lu_4",
+   "type": "ReLU",
+   "ch": 64,
+   "max_over_median": 2.5203213691711426,
+   "tensor_max": 21.18596076965332
+  },
+  {
+   "layer": "depthwise_conv2d_4",
+   "type": "DepthwiseConv2D",
+   "ch": 64,
+   "max_over_median": 3.288666009902954,
+   "tensor_max": 3.916588544845581
+  },
+  {
+   "layer": "batch_normalization_9",
+   "type": "BatchNormalization",
+   "ch": 64,
+   "max_over_median": 1.9651046991348267,
+   "tensor_max": 18.78123664855957
+  },
+  {
+   "layer": "conv2d_7",
+   "type": "Conv2D",
+   "ch": 64,
+   "max_over_median": 1.403253436088562,
+   "tensor_max": 10.702132225036621
+  },
+  {
+   "layer": "batch_normalization_10",
+   "type": "BatchNormalization",
+   "ch": 64,
+   "max_over_median": 1.4182544946670532,
+   "tensor_max": 11.866303443908691
+  },
+  {
+   "layer": "add_4",
+   "type": "Add",
+   "ch": 64,
+   "max_over_median": 2.007598400115967,
+   "tensor_max": 21.3692684173584
+  },
+  {
+   "layer": "re_lu_5",
+   "type": "ReLU",
+   "ch": 64,
+   "max_over_median": 2.0383026599884033,
+   "tensor_max": 21.3692684173584
+  }
+ ]
+}

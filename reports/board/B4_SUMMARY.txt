@@ -1,0 +1,82 @@
+# B4 RANDOM FOREST & ON-BOARD FEATURE EXTRACTION SUMMARY (ESP32-S3)
+Generated: 2026-11-16T21:29:55.972713+07:00
+Board: ESP32-S3 (Sparkle IoT XH-S3E N16R8, 240 MHz, 16 MB Flash, 8 MB Octal PSRAM)
+Port: /dev/ttyACM0 (USB-Serial-JTAG)
+
+====================================================================================================
+1. MÔ HÌNH RANDOM FOREST (PYTHON SCIKIT-LEARN -> EMLEARN C FLOAT) & AUROC TEST FOLD 0
+====================================================================================================
+- Bài toán & Chia dữ liệu     : PD vs HC (355 bệnh nhân), StratifiedKFold(n_splits=5, shuffle=True, random_state=0), fold=0
+- Tập Train / Test Fold 0     : n_train = 284, n_test = 71 (PD=55, HC=16)
+- Số đặc trưng (Features)     : 2112 đặc trưng/bệnh nhân (22 bản ghi [11 bài x 2 cổ tay] x 96 đặc trưng/bản ghi [12 đặc trưng/kênh x 8 kênh])
+- Cấu hình Random Forest      : n_estimators=100, max_depth=8, class_weight='balanced', random_state=0
+- Quy mô rừng cây             : 3848 nút (nodes), 1974 lá (leaves), độ sâu thực tế tối đa = 8
+- AUROC Test Fold 0 (sklearn) : 0.922727 (Balanced Acc = 0.834659, Acc = 0.915493, Sens = 0.981818, Spec = 0.6875)
+- AUROC Test Fold 0 (emlearn) : 0.922727 (soft leaf_bits=8) / 0.923295 (hard majority vote)
+  (Chi tiết lưu tại: reports/board/B4_rf_python.json)
+
+====================================================================================================
+2. TÀI NGUYÊN BỘ NHỚ TRÊN BO (FLASH & RAM)
+====================================================================================================
+- Tổng Flash Image (idf.py size) : 532,614 B (520.1 KB) (binary: 532,720 B (0x820f0))
+- Flash Code / Flash Rodata      : Code = 224,668 B (219.4 KB) | Rodata = 239,172 B (233.6 KB) (gồm cả 20 vector test nhúng sẵn = 168.96 KB)
+- Bảng lá RF (pd_rf_leaves)      : 48 B trong Flash Rodata; RAM động khi suy luận RF = 0 B (stack ~64 B)
+- DSP & Welch FFT Static Buffers : 47252 B (46.14 KB SRAM nội cho bản ghi 10s)
+- Tổng Static DRAM (idf.py size) : 102,007 B (99.6 KB)
+- Internal SRAM Free             : 312691 B / 392603 B
+
+====================================================================================================
+3. ĐỘ TRỄ SUY LUẬN RANDOM FOREST & ĐỐI CHIẾU 20 VECTOR TEST VỚI SCIKIT-LEARN
+====================================================================================================
+- Khớp nhãn dự đoán với sklearn trên 20 vector test : 20/20 (soft voting leaf_bits=8) | 20/20 (hard voting leaf_bits=0)
+- Khớp bit-exact với mô hình emlearn tham chiếu PC  : 19/20
+- Sai số xác suất |P_bo - P_sklearn| (soft voting)  : Max = 0.010000, Mean = 0.000579 (do lượng tử hóa lá 8-bit 1/255)
+- Sai số xác suất |P_bo - P_sklearn| (hard voting)  : Max = 0.018666
+- Độ trễ suy luận RF (n=1000 lần, 100 cây, 2112 đặc trưng):
+  + Suy luận xác suất mềm (pd_rf_predict_proba)     : Mean = 2467.38 us (2.4674 ms) | p50 = 2447 us | p95 = 2677.00 us (2.6770 ms)
+  + Suy luận nhãn đa số (pd_rf_hard_predict)        : Mean = 1640.77 us (1.6408 ms) | p50 = 1625 us | p95 = 1872.00 us (1.8720 ms)
+
+Idx | SID  | y_true | y_sk | P_sklearn | y_bo_soft | P_bo_soft | |dP_soft| | y_bo_hard | P_bo_hard
+------------------------------------------------------------------------------------------------
+0   | 005  |      1 |    1 |  0.979693 |         1 |  0.979608 |  0.000085 |         1 |  0.980000
+1   | 009  |      1 |    1 |  0.959693 |         1 |  0.959608 |  0.000085 |         1 |  0.960000
+2   | 029  |      1 |    1 |  0.949693 |         1 |  0.949608 |  0.000085 |         1 |  0.950000
+3   | 038  |      1 |    1 |  0.919693 |         1 |  0.919608 |  0.000085 |         1 |  0.920000
+4   | 053  |      1 |    1 |  0.840008 |         1 |  0.839961 |  0.000048 |         1 |  0.840000
+5   | 060  |      1 |    1 |  0.883750 |         1 |  0.883726 |  0.000024 |         1 |  0.880000
+6   | 081  |      0 |    0 |  0.426494 |         0 |  0.426314 |  0.000180 |         0 |  0.420000
+7   | 085  |      1 |    1 |  0.708109 |         1 |  0.708078 |  0.000031 |         1 |  0.710000
+8   | 102  |      1 |    1 |  0.772830 |         1 |  0.772706 |  0.000125 |         1 |  0.770000
+9   | 108  |      0 |    0 |  0.268666 |         0 |  0.258667 |  0.010000 |         0 |  0.250000
+10  | 122  |      1 |    1 |  0.672096 |         1 |  0.672000 |  0.000096 |         1 |  0.670000
+11  | 125  |      1 |    1 |  0.930169 |         1 |  0.930078 |  0.000091 |         1 |  0.930000
+12  | 129  |      1 |    1 |  0.939876 |         1 |  0.939804 |  0.000072 |         1 |  0.940000
+13  | 132  |      0 |    1 |  0.600586 |         1 |  0.600549 |  0.000037 |         1 |  0.600000
+14  | 145  |      1 |    1 |  0.779995 |         1 |  0.779922 |  0.000074 |         1 |  0.780000
+15  | 154  |      1 |    1 |  0.772818 |         1 |  0.772667 |  0.000151 |         1 |  0.770000
+16  | 159  |      1 |    1 |  0.840672 |         1 |  0.840588 |  0.000084 |         1 |  0.840000
+17  | 184  |      0 |    1 |  0.573669 |         1 |  0.573647 |  0.000022 |         1 |  0.570000
+18  | 185  |      1 |    1 |  0.594719 |         1 |  0.594627 |  0.000092 |         1 |  0.590000
+19  | 187  |      1 |    1 |  0.620435 |         1 |  0.620314 |  0.000122 |         1 |  0.620000
+
+====================================================================================================
+4. ĐỘ TRỄ & ĐỘ CHÍNH XÁC TRÍCH XUẤT 96 ĐẶC TRƯNG TRÊN BO CHO 1 BẢN GHI 10 GIÂY (1000 MẪU x 6 KÊNH @ 100 Hz)
+   Bản ghi: data/raw/pads/movement/timeseries/005_HoldWeight_LeftWrist.txt [0..10s]
+====================================================================================================
+- Số đặc trưng mỗi bản ghi     : 96 (12 đặc trưng/kênh x 8 kênh: std, iqr, skew, kurt, rms_diff, log_pow, peak_f, spec_ent, 4 band powers)
+- Sai số tương đối tối đa so với Python (scipy/numpy): 3.383414e-04 (0.033834%) tại đặc trưng #62 (wz_skew)
+- Sai số tương đối trung bình (trên 96 đặc trưng)    : 6.570349e-06
+- Sai số tuyệt đối tối đa (trên 96 đặc trưng)        : 7.629395e-06
+
+Bước xử lý (1 bản ghi 10s x 6 kênh @ 100 Hz)                             |  Mean (us) |  p50 (us) |  p95 (us) |  Mean (ms) |   p95 (ms) | Tỷ trọng
+----------------------------------------------------------------------------------------------------------------------------------------------
+1. Hạ mẫu 100->50 Hz (FIR polyphase 41 taps, 1000->500 mẫu x 6 kênh)     |    2850.00 |      2850 |      2850 |     2.8500 |     2.8500 |   27.04%
+2. Lọc thông dải 0.5-20 Hz (Butterworth bậc 4 nhân quả, 500 mẫu x 6 kênh) |     735.00 |       735 |       735 |     0.7350 |     0.7350 |    6.97%
+3. Tạo 8 kênh (ax, ay, az, wx, wy, wz, |a|, |w|, 500 mẫu x 8 kênh)       |     399.88 |       400 |       400 |     0.3999 |     0.4000 |    3.79%
+4. Trích xuất 96 đặc trưng (12 đặc trưng x 8 kênh, gồm Welch PSD FFT-256) |    6556.01 |      6556 |      6556 |     6.5560 |     6.5560 |   62.20%
+TỔNG TRÍCH XUẤT ĐẶC TRƯNG 1 BẢN GHI 10s (Bước 1 -> 4)                    |   10540.89 |     10541 |     10541 |    10.5409 |    10.5410 |  100.00%
+----------------------------------------------------------------------------------------------------------------------------------------------
+-> Thời gian tính đặc trưng cho 1 bản ghi 10s x 6 kênh @ 100 Hz: Mean = 10.541 ms (p95 = 10.541 ms).
+-> Nếu tính đủ 22 bản ghi (11 bài x 2 cổ tay = 2112 đặc trưng) + suy luận RF 100 cây: 22 x 10.541 ms + 2.467 ms = 234.37 ms.
+
+Errors: none

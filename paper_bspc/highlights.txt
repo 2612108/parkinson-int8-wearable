@@ -1,0 +1,7 @@
+Highlights
+
+• Planned pooled tests failed because temperature-only fold calibration was unstable
+• Default INT8 post-training quantization loss depended on the calibration sample
+• Clipping calibration inputs at the 1/99 percentiles removed most large losses
+• Whole-fold replay on an ESP32-S3 reproduced the desktop AUROC exactly
+• Zero-phase-trained models tended to lose accuracy on causally filtered input
